@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Entrenamiento</title>
+    <style>
+        .bloque-ejercicio {
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .bloque-ejercicio:nth-child(1) {
+            background-color: #f0f0f0;
+            /* Gris claro */
+        }
+
+        .bloque-ejercicio:nth-child(3) {
+            background-color: #e6f0fa;
+            /* Azul claro */
+        }
+
+        .bloque-ejercicio:nth-child(5) {
+            background-color: #f5f5e6;
+            /* Amarillo claro */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        blockquote {
+            border-left: 4px solid #ccc;
+            padding-left: 15px;
+            color: #b40000;
+            margin: 15px 0;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        #semanas {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            width: 100%;
+            min-height: 100vh;
+            align-items: center;
+        }
+
+        #semanas div {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 60px;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+            width: 400px;
+            max-width: 400px;
+            font-size: 4rem;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        #semanas div:hover {
+            transform: scale(1.05);
+        }
+
+        #dias-semana1,
+        #dias-semana2 {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 95vw;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        #dias-semana1 h2,
+        #dias-semana2 h2 {
+            color: #333;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        #dias-semana1 div,
+        #dias-semana2 div {
+            background-color: #e0e0e0;
+            padding: 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-size: 2.2rem;
+            transition: background-color 0.2s;
+        }
+
+        #dias-semana1 div:hover,
+        #dias-semana2 div:hover {
+            background-color: #d0d0d0;
+        }
+
+        #entrenamiento {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 95vw;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        #entrenamiento h3 {
+            color: rgba(135, 206, 250, 0.8);
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .boton-volver {
+            background-color: #0e59aa;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            transition: background-color 0.2s;
+        }
+
+        .boton-volver-dias {
+            background-color: #1e3a8a;
+            /* Azul oscuro */
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 1.5rem;
+            transition: background-color 0.2s;
+        }
+
+        .boton-volver:hover {
+            background-color: #0056b3;
+        }
+
+        .boton-volver-dias:hover {
+            background-color: #2b4db7;
+            /* Azul oscuro más claro para el hover */
+        }
+
+        .ejercicio {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            font-size: 1.6rem;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .ejercicio input[type="checkbox"] {
+            transform: scale(2);
+        }
+
+        .ejercicio label {
+            flex: 1;
+            cursor: pointer;
+        }
+
+        .ejercicio.tachado label {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        details {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            background-color: #ffffff;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #333;
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 3rem;
+                display: none;
+            }
+
+            #semanas div {
+                width: 300px;
+                max-width: 300px;
+                font-size: 3.5rem;
+                padding: 50px;
+            }
+
+            #dias-semana1,
+            #dias-semana2 {
+                width: 98vw;
+                max-width: 600px;
+                padding: 15px;
+            }
+
+            #dias-semana1 h2,
+            #dias-semana2 h2 {
+                font-size: 3.2rem;
+            }
+
+            #dias-semana1 div,
+            #dias-semana2 div {
+                font-size: 2.5rem;
+                padding: 30px;
+            }
+
+            #entrenamiento {
+                width: 95vw;
+                padding: 15px;
+            }
+
+            #entrenamiento h3 {
+                font-size: 2.5rem;
+                color: rgba(135, 206, 250, 0.8);
+                font-family: "Roboto", sans-serif;
+            }
+
+            .ejercicio {
+                font-size: 2rem;
+                gap: 20px;
+                margin-bottom: 25px;
+                font-family: "Roboto", sans-serif;
+            }
+
+            .ejercicio input[type="checkbox"] {
+                transform: scale(2.5);
+            }
+
+            .boton-volver,
+            .boton-volver-dias {
+                font-size: 1.8rem;
+                padding: 15px 30px;
+            }
+
+            summary {
+                font-size: 1.8rem;
+            }
+
+            details p {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="semanas">
+        <div id="semana1" onclick="mostrarDias('semana1')">
+            SEMANA 1
+        </div>
+        <div id="semana2" onclick="mostrarDias('semana2')">
+            SEMANA 2
+        </div>
+    </div>
+
+    <div id="dias-semana1" style="display: none;">
+        <h2>SEMANA 1</h2>
+        <button onclick="volverASemanas()" class="boton-volver">Volver atrás</button>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div onclick="mostrarEntrenamiento('lunes1')">LUNES</div>
+            <div onclick="mostrarEntrenamiento('martes1')">MARTES</div>
+            <div onclick="mostrarEntrenamiento('miercoles1')">MIÉRCOLES</div>
+            <div onclick="mostrarEntrenamiento('jueves1')">JUEVES</div>
+            <div onclick="mostrarEntrenamiento('viernes1')">VIERNES</div>
+        </div>
+    </div>
+
+    <div id="dias-semana2" style="display: none;">
+        <h2>SEMANA 2</h2>
+        <button onclick="volverASemanas()" class="boton-volver">Volver atrás</button>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div onclick="mostrarEntrenamiento('lunes2')">LUNES</div>
+            <div onclick="mostrarEntrenamiento('martes2')">MARTES</div>
+            <div onclick="mostrarEntrenamiento('miercoles2')">MIÉRCOLES</div>
+            <div onclick="mostrarEntrenamiento('jueves2')">JUEVES</div>
+            <div onclick="mostrarEntrenamiento('viernes2')">VIERNES</div>
+        </div>
+    </div>
+
+    <div id="entrenamiento" style="display: none;">
+        <h3 id="dia-titulo"></h3>
+        <div id="contenido-entrenamiento"></div>
+        <button onclick="volverADias()" class="boton-volver-dias">Volver a los días</button>
+    </div>
+
+    <script>
+        let semanaActiva = '';
+
+        function mostrarDias(semana) {
+            semanaActiva = semana;
+            document.getElementById('semanas').style.display = 'none';
+            document.getElementById('dias-semana1').style.display = 'none';
+            document.getElementById('dias-semana2').style.display = 'none';
+            document.getElementById('entrenamiento').style.display = 'none';
+
+            if (semana === 'semana1') {
+                document.getElementById('dias-semana1').style.display = 'block';
+            } else if (semana === 'semana2') {
+                document.getElementById('dias-semana2').style.display = 'block';
+            }
+        }
+
+        function mostrarEntrenamiento(dia) {
+            const dias = {
+                'lunes1': {
+                    titulo: 'LUNES - SEMANA 1',
+                    contenido: `
+            <div class="ejercicio bloque-ejercicio">
+              <input type="checkbox" id="lunes1-ej1" onchange="tacharEjercicio('lunes1-ej1')">
+              <label for="lunes1-ej1"><strong>Calentamiento:</strong> Manguito Rotador</label>
+            </div>
+            <details>
+                <summary>Detalles</summary>
+                <p>Video:</p>
+                <video controls width="320" height="240">
+                    <source src="lunes/manguito_rotador.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+                <p>Descripción: 2 series de 10 - 15 reps (activación SIN fatigar)</p>
+                <blockquote>
+                    “Cuando haces trabajo de <strong>rotación externa</strong> antes de hacer press de banca, calientas el hombro <strong>más eficazmente</strong> y ayudas a <strong>despertar el manguito rotador</strong>, que es muy importante preparar antes de hacer press de banca."
+                </blockquote>
+            </details>
+              <p><strong>🔎 ¿Por qué?</strong><br>
+              Porque el <strong>manguito rotador</strong> es el encargado de <strong>mantener la cabeza del húmero centrada</strong> en la articulación. Si no está activo, la cabeza del húmero se desplaza y puede causar molestias o lesiones al hacer el press.</p>
+            </details>
+            <div class="ejercicio bloque-ejercicio">
+              <input type="checkbox" id="lunes1-ej2" onchange="tacharEjercicio('lunes1-ej2')">
+              <label for="lunes1-ej2">Ejercicio 2: Press de Cable Inclinado con Cruce (2 series de 8-10 repeticiones)</label>
+            </div>
+            <details>
+              <summary>Detalles</summary>
+              <p>Video: [Enlace al video del ejercicio](#)</p>
+              <p>Descripción: Maximiza la contracción cruzando las manos en la parte alta. Tensión continua en las fibras superiores.</p>
+            </details>
+            <div class="ejercicio bloque-ejercicio">
+              <input type="checkbox" id="lunes1-ej3" onchange="tacharEjercicio('lunes1-ej3')">
+              <label for="lunes1-ej3">Ejercicio 3: Fly con Mancuernas en el Suelo (2 series de 8-10 repeticiones)</label>
+            </div>
+            <details>
+              <summary>Detalles</summary>
+              <p>Video: [Enlace al video del ejercicio](#)</p>
+              <p>Descripción: Limita el rango para proteger el hombro. Termina con press si fallas en el fly (descendente mecánica).</p>
+            </details>
+          `
+                },
+                'martes1': {
+                    titulo: 'MARTES - SEMANA 1',
+                    contenido: `
+            <div class="ejercicio bloque-ejercicio">
+              <input type="checkbox" id="martes1-ej1" onchange="tacharEjercicio('martes1-ej1')">
+              <label for="martes1-ej1">Ejercicio 1: Sentadilla Búlgara con Mancuerna (4 series de 6 repeticiones por pierna)</label>
+            </div>
+            <details>
+              <summary>Detalles</summary>
+              <p>Video: [Enlace al video del ejercicio](#)</p>
+              <p>Descripción: Trabajo unilateral intenso. Mantén el torso levemente inclinado para más glúteo.</p>
+            </details>
+            <div class="ejercicio bloque-ejercicio">
+              <input type="checkbox" id="martes1-ej2" onchange="tacharEjercicio('martes1-ej2')">
+              <label for="martes1-ej2">Ejercicio 2: Extensiones de Cuádriceps (4 series de 10+10 repeticiones)</label>
+            </div>
+            <details>
+              <summary>Detalles</summary>
+              <p>Video: [Enlace al video del ejercicio](#)</p>
+              <p>Descripción: 10 reps con puntas hacia afuera, 10 al frente. Enfócate en el tiempo bajo tensión.</p>
+            </details>
+          `
+                },
+                'miercoles1': {
+                    titulo: 'MIÉRCOLES - SEMANA 1',
+                    contenido: `
+            <div class="ejercicio bloque-ejercicio">
+              <input type="checkbox" id="miercoles1-ej1" onchange="tacharEjercicio('miercoles1-ej1')">
+              <label for="miercoles1-ej1">Ejercicio 1: Remo Muerto Explosivo con Barra (3 series de 8-10 repeticiones)</label>
+            </div>
+            <details>
+              <summary>Detalles</summary>
+              <p>Video: [Enlace al video del ejercicio](#)</p>
+              <p>Descripción: Desarrolla potencia y explosividad. Refuerza la parte media de la espalda.</p>
+            </details>
+          `
+                },
+                'jueves1': {
+                    titulo: 'JUEVES - SEMANA 1',
+                    contenido: `
+            <div class="ejercicio bloque-ejercicio">
+              <input type="checkbox" id="jueves1-ej1" onchange="tacharEjercicio('jueves1-ej1')">
+              <label for="jueves1-ej1">Ejercicio 1: Press de Banca Plano con Mancuernas (3 series de 5-8 repeticiones)</label>
+            </div>
+            <details>
+              <summary>Detalles</summary>
+              <p>Video: [Enlace al video del ejercicio](#)</p>
+              <p>Descripción: Enfócate en el pectoral medio. Carga pesada para fuerza y masa muscular.</p>
+            </details>
+          `
+                },
+                'viernes1': {
+                    titulo: 'VIERNES - SEMANA 1',
+                    contenido: `
+            <div class="ejercicio bloque-ejercicio">
+              <input type="checkbox" id="viernes1-ej1" onchange="tacharEjercicio('viernes1-ej1')">
+              <label for="viernes1-ej1">Ejercicio 1: Remo con Barra (20 repeticiones efectivas)</label>
+            </div>
+            <details>
+              <summary>Detalles</summary>
+              <p>Video: [Enlace al video del ejercicio](#)</p>
+              <p>Descripción: Usa impulso desde abajo. Trabaja dorsales, trapecio medio y romboides.</p>
+            </details>
+          `
+                },
+                'lunes2': {
+                    titulo: 'LUNES - SEMANA 2',
+                    contenido: `
+            <div class="ejercicio bloque-ejercicio">
+              <input type="checkbox" id="lunes2-ej1" onchange="tacharEjercicio('lunes2-ej1')">
+              <label for="lunes2-ej1">Ejercicio 1: Press Inclinado con Mancuernas (3 series de 5-8 repeticiones)</label>
+            </div>
+            <details>
+              <summary>Detalles</summary>
+              <p>Video: [Enlace al video del ejercicio](#)</p>
+              <p>Descripción: Enfócate en la parte superior del pecho (clavicular). Usa un banco a 30° y mantén los pulgares arriba para más aducción.</p>
+            </details>
+          `
+                },
+                'martes2': {
+                    titulo: 'MARTES - SEMANA 2',
+                    contenido: `
+            <div class="ejercicio bloque-ejercicio">
+              <input type="checkbox" id="martes2-ej1" onchange="tacharEjercicio('martes2-ej1')">
+              <label for="martes2-ej1">Ejercicio 1: Sentadilla Búlgara con Mancuerna (4 series de 6 repeticiones por pierna)</label>
+            </div>
+            <details>
+              <summary>Detalles</summary>
+              <p>Video: [Enlace al video del ejercicio](#)</p>
+              <p>Descripción: Trabajo unilateral intenso. Mantén el torso levemente inclinado para más glúteo.</p>
+            </details>
+          `
+                },
+                'miercoles2': {
+                    titulo: 'MIÉRCOLES - SEMANA 2',
+                    contenido: `
+            <div class="ejercicio bloque-ejercicio">
+              <input type="checkbox" id="miercoles2-ej1" onchange="tacharEjercicio('miercoles2-ej1')">
+              <label for="miercoles2-ej1">Ejercicio 1: Remo Muerto Explosivo con Barra (3 series de 8-10 repeticiones)</label>
+            </div>
+            <details>
+              <summary>Detalles</summary>
+              <p>Video: [Enlace al video del ejercicio](#)</p>
+              <p>Descripción: Desarrolla potencia y explosividad. Refuerza la parte media de la espalda.</p>
+            </details>
+          `
+                },
+                'jueves2': {
+                    titulo: 'JUEVES - SEMANA 2',
+                    contenido: `
+            <div class="ejercicio bloque-ejercicio">
+              <input type="checkbox" id="jueves2-ej1" onchange="tacharEjercicio('jueves2-ej1')">
+              <label for="jueves2-ej1">Ejercicio 1: Press de Banca Plano con Mancuernas (3 series de 5-8 repeticiones)</label>
+            </div>
+            <details>
+              <summary>Detalles</summary>
+              <p>Video: [Enlace al video del ejercicio](#)</p>
+              <p>Descripción: Enfócate en el pectoral medio. Carga pesada para fuerza y masa muscular.</p>
+            </details>
+          `
+                },
+                'viernes2': {
+                    titulo: 'VIERNES - SEMANA 2',
+                    contenido: `
+            <div class="ejercicio bloque-ejercicio">
+              <input type="checkbox" id="viernes2-ej1" onchange="tacharEjercicio('viernes2-ej1')">
+              <label for="viernes2-ej1">Ejercicio 1: Remo con Barra (20 repeticiones efectivas)</label>
+            </div>
+            <details>
+              <summary>Detalles</summary>
+              <p>Video: [Enlace al video del ejercicio](#)</p>
+              <p>Descripción: Usa impulso desde abajo. Trabaja dorsales, trapecio medio y romboides.</p>
+            </details>
+          `
+                }
+            };
+
+            document.getElementById('dias-semana1').style.display = 'none';
+            document.getElementById('dias-semana2').style.display = 'none';
+            document.getElementById('entrenamiento').style.display = 'block';
+            document.getElementById('dia-titulo').innerText = dias[dia].titulo;
+            document.getElementById('contenido-entrenamiento').innerHTML = dias[dia].contenido;
+        }
+
+        function volverADias() {
+            document.getElementById('entrenamiento').style.display = 'none';
+            document.getElementById('semanas').style.display = 'none';
+            document.getElementById('dias-semana1').style.display = semanaActiva === 'semana1' ? 'block' : 'none';
+            document.getElementById('dias-semana2').style.display = semanaActiva === 'semana2' ? 'block' : 'none';
+        }
+
+        function volverASemanas() {
+            document.getElementById('dias-semana1').style.display = 'none';
+            document.getElementById('dias-semana2').style.display = 'none';
+            document.getElementById('entrenamiento').style.display = 'none';
+            document.getElementById('semanas').style.display = 'flex';
+        }
+
+        function tacharEjercicio(id) {
+            const checkbox = document.getElementById(id);
+            const ejercicioDiv = checkbox.parentElement;
+            if (checkbox.checked) {
+                ejercicioDiv.classList.add('tachado');
+            } else {
+                ejercicioDiv.classList.remove('tachado');
+            }
+        }
+    </script>
+</body>
+
+</html>
