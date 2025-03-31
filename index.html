@@ -7,30 +7,6 @@
     <title>Plan de Entrenamiento</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        .bloque-ejercicio {
-            border-radius: 10px;
-            padding: 15px 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            transition: transform 0.2s ease;
-        }
-    
-        .bloque-ejercicio:hover {
-            transform: translateY(-3px);
-        }
-    
-        .bloque-ejercicio:nth-child(1) {
-            background-color: #f1f3f5; /* Gris claro más moderno */
-        }
-    
-        .bloque-ejercicio:nth-child(3) {
-            background-color: #e3f2fd; /* Azul claro más vibrante */
-        }
-    
-        .bloque-ejercicio:nth-child(5) {
-            background-color: #fff3e0; /* Amarillo claro más cálido */
-        }
-    
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f8f9fa;
@@ -41,7 +17,7 @@
             align-items: center;
             min-height: 100vh;
         }
-    
+
         blockquote {
             border-left: 4px solid #e91e63; /* Rosa más vibrante para destacar */
             padding-left: 15px;
@@ -49,7 +25,7 @@
             margin: 15px 0;
             font-style: italic;
         }
-    
+
         h1 {
             color: #2c3e50;
             font-size: 2.5rem;
@@ -57,7 +33,7 @@
             margin-bottom: 20px;
             display: none;
         }
-    
+
         #semanas {
             display: flex;
             gap: 30px;
@@ -68,7 +44,7 @@
             min-height: 100vh;
             align-items: center;
         }
-    
+
         #semanas div {
             background: linear-gradient(45deg, #1e3a8a, #3b82f6); /* Gradiente azul */
             color: white;
@@ -83,50 +59,143 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-    
+
         #semanas div:hover {
             transform: scale(1.05);
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
         }
-    
+
         #dias-semana1,
         #dias-semana2 {
-            background-color: #ffffff;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            background: linear-gradient(135deg, #f8f9fa, #e0e7ff); /* Gradiente suave */
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             width: 95vw;
-            max-width: 650px;
+            max-width: 700px;
             text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
         }
-    
+
         #dias-semana1 h2,
         #dias-semana2 h2 {
             color: #2c3e50;
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            font-weight: 600;
-            letter-spacing: 1px;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            background: linear-gradient(45deg, #1e88e5, #e91e63);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
         }
-    
-        #dias-semana1 div,
-        #dias-semana2 div {
-            background: linear-gradient(45deg, #e0e0e0, #f5f5f5);
-            padding: 25px;
-            border-radius: 10px;
+
+        #dias-semana1 h2::after,
+        #dias-semana2 h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(45deg, #1e88e5, #e91e63);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .dias-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .dia {
+            padding: 20px;
+            border-radius: 12px;
             cursor: pointer;
-            margin-bottom: 15px;
             font-size: 2.2rem;
-            font-weight: 500;
-            transition: background 0.3s ease, transform 0.2s ease;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            animation: slideIn 0.5s ease-in-out forwards;
+            opacity: 0;
         }
-    
-        #dias-semana1 div:hover,
-        #dias-semana2 div:hover {
-            background: linear-gradient(45deg, #d0d0d0, #e0e0e0);
-            transform: translateY(-3px);
+
+        /* Colores y gradientes para cada día */
+        .dia[data-day="lunes"] {
+            background: linear-gradient(45deg, #175286, #42a5f5);
         }
-    
+        .dia[data-day="lunes"]::before {
+            content: "💪";
+        }
+
+        .dia[data-day="martes"] {
+            background: linear-gradient(45deg, #b6003d, #f06292);
+        }
+        .dia[data-day="martes"]::before {
+            content: "🏋️";
+        }
+
+        .dia[data-day="miercoles"] {
+            background: linear-gradient(45deg, #2a5d66, #5cdddd);
+        }
+        .dia[data-day="miercoles"]::before {
+            content: "💪";
+        }
+
+        .dia[data-day="jueves"] {
+            background: linear-gradient(45deg, #e004a9, #f096eb);
+        }
+        .dia[data-day="jueves"]::before {
+            content: "🏋️";
+        }
+
+        .dia[data-day="viernes"] {
+            background: linear-gradient(45deg, #277902, #96ff59);
+        }
+        .dia[data-day="viernes"]::before {
+            content: "🔥";
+        }
+
+        .dia:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            filter: brightness(1.1);
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Retraso en la animación para cada día */
+        .dia:nth-child(1) { animation-delay: 0.1s; }
+        .dia:nth-child(2) { animation-delay: 0.2s; }
+        .dia:nth-child(3) { animation-delay: 0.3s; }
+        .dia:nth-child(4) { animation-delay: 0.4s; }
+        .dia:nth-child(5) { animation-delay: 0.5s; }
+
         #entrenamiento {
             background-color: #ffffff;
             padding: 30px;
@@ -136,7 +205,7 @@
             max-width: 650px;
             text-align: left;
         }
-    
+
         #entrenamiento h3 {
             color: #2c3e50;
             font-size: 2.5rem;
@@ -145,22 +214,23 @@
             font-weight: 600;
             letter-spacing: 1px;
             background: linear-gradient(45deg, #1e88e5, #42a5f5);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-    
+
         .grupo-muscular {
             margin-bottom: 30px;
             padding: 20px;
             border-radius: 12px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-    
+
         .grupo-muscular:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         }
-    
+
         .grupo-muscular h4 {
             font-size: 1.8rem;
             margin-bottom: 20px;
@@ -173,59 +243,85 @@
             color: #fff;
             position: relative;
         }
-    
+
         .grupo-muscular.calentamiento {
             background-color: #f1f3f5;
         }
-    
+
         .grupo-muscular.calentamiento h4 {
             background: linear-gradient(45deg, #6c757d, #95a5a6);
         }
-    
+
         .grupo-muscular.calentamiento h4::before {
             content: "🔥";
             font-size: 1.5rem;
         }
-    
+
         .grupo-muscular.pecho {
             background-color: #e3f2fd;
         }
-    
+
         .grupo-muscular.pecho h4 {
             background: linear-gradient(45deg, #1e88e5, #42a5f5);
         }
-    
+
         .grupo-muscular.pecho h4::before {
             content: "💪";
             font-size: 1.5rem;
         }
-    
+
         .grupo-muscular.hombros {
             background-color: #fce4ec;
         }
-    
+
         .grupo-muscular.hombros h4 {
             background: linear-gradient(45deg, #e91e63, #f06292);
         }
-    
+
         .grupo-muscular.hombros h4::before {
             content: "🏋️";
             font-size: 1.5rem;
         }
-    
+
         .grupo-muscular.triceps {
             background-color: #fff3e0;
         }
-    
+
         .grupo-muscular.triceps h4 {
             background: linear-gradient(45deg, #fb8c00, #ffca28);
         }
-    
+
         .grupo-muscular.triceps h4::before {
             content: "💥";
             font-size: 1.5rem;
         }
-    
+
+        .grupo-muscular.cuadriceps {
+            background-color: #e0f7fa;
+        }
+
+        .grupo-muscular.cuadriceps h4 {
+            background: linear-gradient(45deg, #0288d1, #4fc3f7);
+        }
+
+        .grupo-muscular.cuadriceps h4::before {
+            content: "🏋️‍♀️";
+            font-size: 1.5rem;
+        }
+
+        .grupo-muscular.espalda {
+            background-color: #f3e5f5;
+        }
+
+        .grupo-muscular.espalda h4 {
+            background: linear-gradient(45deg, #8e24aa, #ab47bc);
+        }
+
+        .grupo-muscular.espalda h4::before {
+            content: "🏋️‍♂️";
+            font-size: 1.5rem;
+        }
+
         .boton-volver {
             background: linear-gradient(45deg, #1e3a8a, #3b82f6);
             color: white;
@@ -233,17 +329,24 @@
             padding: 12px 24px;
             border-radius: 8px;
             cursor: pointer;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             font-size: 1.5rem;
             font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
             transition: transform 0.2s ease, background 0.3s ease;
         }
-    
+
         .boton-volver:hover {
             background: linear-gradient(45deg, #1e3a8a, #2563eb);
             transform: translateY(-2px);
         }
-    
+
+        .boton-volver .icon {
+            font-size: 1.2rem;
+        }
+
         .boton-volver-dias {
             background: linear-gradient(45deg, #1e88e5, #42a5f5);
             color: white;
@@ -259,12 +362,12 @@
             margin-left: auto;
             margin-right: auto;
         }
-    
+
         .boton-volver-dias:hover {
             background: linear-gradient(45deg, #1565c0, #1e88e5);
             transform: translateY(-2px);
         }
-    
+
         .ejercicio {
             display: flex;
             align-items: center;
@@ -277,29 +380,29 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
             transition: background-color 0.2s ease, transform 0.2s ease;
         }
-    
+
         .ejercicio:hover {
             background-color: #f9f9f9;
             transform: translateY(-2px);
         }
-    
+
         .ejercicio input[type="checkbox"] {
             transform: scale(1.8);
             accent-color: #1e88e5;
         }
-    
+
         .ejercicio label {
             flex: 1;
             cursor: pointer;
             font-weight: 500;
             color: #2c3e50;
         }
-    
+
         .ejercicio.tachado label {
             text-decoration: line-through;
             color: #95a5a6;
         }
-    
+
         details {
             margin-bottom: 15px;
             padding: 15px;
@@ -308,11 +411,11 @@
             border: 1px solid #e9ecef;
             transition: background-color 0.2s ease;
         }
-    
+
         details:hover {
             background-color: #f1f3f5;
         }
-    
+
         summary {
             cursor: pointer;
             font-weight: 500;
@@ -322,11 +425,11 @@
             border-radius: 5px;
             transition: background-color 0.2s ease;
         }
-    
+
         summary:hover {
             background-color: #e9ecef;
         }
-    
+
         summary::marker {
             color: #1e88e5;
         }
@@ -361,69 +464,72 @@
         .biserie .ejercicio:last-child {
             margin-bottom: 0; /* Eliminar el margen del último ejercicio */
         }
-    
+
         @media (max-width: 600px) {
             h1 {
                 font-size: 3rem;
                 display: none;
             }
-    
+
             #semanas div {
                 width: 300px;
                 max-width: 300px;
                 font-size: 3.5rem;
                 padding: 50px;
             }
-    
+
             #dias-semana1,
             #dias-semana2 {
                 width: 98vw;
                 max-width: 600px;
-                padding: 15px;
+                padding: 20px;
             }
-    
+
             #dias-semana1 h2,
             #dias-semana2 h2 {
-                font-size: 3.2rem;
-            }
-    
-            #dias-semana1 div,
-            #dias-semana2 div {
                 font-size: 2.5rem;
-                padding: 30px;
             }
-    
+
             #entrenamiento {
                 width: 95vw;
                 padding: 20px;
             }
-    
+
             #entrenamiento h3 {
                 font-size: 2.2rem;
             }
-    
+
             .grupo-muscular h4 {
                 font-size: 1.6rem;
             }
-    
+
             .ejercicio {
                 font-size: 1.3rem;
                 padding: 12px;
             }
-    
+
             .ejercicio input[type="checkbox"] {
                 transform: scale(1.5);
             }
-    
+
             summary {
                 font-size: 1.2rem;
             }
-    
+
             details p {
                 font-size: 1.1rem;
             }
-    
-            .boton-volver,
+
+            .dia {
+                font-size: 2rem;
+                padding: 18px;
+            }
+
+            .boton-volver {
+                font-size: 1.3rem;
+                padding: 10px 20px;
+            }
+
             .boton-volver-dias {
                 font-size: 1.3rem;
                 padding: 10px 25px;
@@ -445,28 +551,28 @@
     <div id="dias-semana1" style="display: none;">
         <h2>SEMANA 1</h2>
         <button onclick="volverASemanas()" class="boton-volver">
-            Volver atrás
+            <span class="icon">⬅️</span> Volver atrás
         </button>
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-            <div onclick="mostrarEntrenamiento('lunes1')">LUNES</div>
-            <div onclick="mostrarEntrenamiento('martes1')">MARTES</div>
-            <div onclick="mostrarEntrenamiento('miercoles1')">MIÉRCOLES</div>
-            <div onclick="mostrarEntrenamiento('jueves1')">JUEVES</div>
-            <div onclick="mostrarEntrenamiento('viernes1')">VIERNES</div>
+        <div class="dias-container">
+            <div class="dia" data-day="lunes" onclick="mostrarEntrenamiento('lunes1')">LUNES</div>
+            <div class="dia" data-day="martes" onclick="mostrarEntrenamiento('martes1')">MARTES</div>
+            <div class="dia" data-day="miercoles" onclick="mostrarEntrenamiento('miercoles1')">MIÉRCOLES</div>
+            <div class="dia" data-day="jueves" onclick="mostrarEntrenamiento('jueves1')">JUEVES</div>
+            <div class="dia" data-day="viernes" onclick="mostrarEntrenamiento('viernes1')">VIERNES</div>
         </div>
     </div>
 
     <div id="dias-semana2" style="display: none;">
         <h2>SEMANA 2</h2>
         <button onclick="volverASemanas()" class="boton-volver">
-            Volver atrás
+            <span class="icon">⬅️</span> Volver atrás
         </button>
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-            <div onclick="mostrarEntrenamiento('lunes2')">LUNES</div>
-            <div onclick="mostrarEntrenamiento('martes2')">MARTES</div>
-            <div onclick="mostrarEntrenamiento('miercoles2')">MIÉRCOLES</div>
-            <div onclick="mostrarEntrenamiento('jueves2')">JUEVES</div>
-            <div onclick="mostrarEntrenamiento('viernes2')">VIERNES</div>
+        <div class="dias-container">
+            <div class="dia" data-day="lunes" onclick="mostrarEntrenamiento('lunes2')">LUNES</div>
+            <div class="dia" data-day="martes" onclick="mostrarEntrenamiento('martes2')">MARTES</div>
+            <div class="dia" data-day="miercoles" onclick="mostrarEntrenamiento('miercoles2')">MIÉRCOLES</div>
+            <div class="dia" data-day="jueves" onclick="mostrarEntrenamiento('jueves2')">JUEVES</div>
+            <div class="dia" data-day="viernes" onclick="mostrarEntrenamiento('viernes2')">VIERNES</div>
         </div>
     </div>
 
@@ -694,176 +800,250 @@
                 martes1: {
                     titulo: "MARTES - SEMANA 1",
                     contenido: `
-                        <div class="ejercicio bloque-ejercicio">
-                            <input type="checkbox" id="martes1-ej1" onchange="tacharEjercicio('martes1-ej1')" />
-                            <label for="martes1-ej1">Ejercicio 1: Sentadilla Búlgara con Mancuerna (4 series de 6 repeticiones por pierna)</label>
+                        <div id="contenido-entrenamiento">
+                        <!-- Cuádriceps -->
+                        <div class="grupo-muscular cuadriceps">
+                            <h4>CUÁDRICEPS</h4>
+                            <div class="ejercicio">
+                                <input type="checkbox" id="martes1-ej1" onchange="tacharEjercicio('martes1-ej1')" />
+                                <label for="martes1-ej1"><strong>Sentadilla Búlgara con Mancuerna</strong></label>
+                            </div>
+                            <details>
+                                <summary>Detalles</summary>
+                                <p>Video:</p>
+                                <video controls width="320" height="240">
+                                    <source src="${get_videos_path('martes', 'sentadilla_bulgara.mp4')}" type="video/mp4" />
+                                    Tu navegador no soporta la reproducción de videos.
+                                </video>
+                                <p><strong>Series:</strong> 4 series</p>
+                                <p><strong>Reps:</strong> 6 repeticiones por pierna</p>
+                                <p><strong>Descripción:</strong> Trabajo unilateral intenso. Mantén el torso levemente inclinado para más glúteo.</p>
+                            </details>
+                            <div class="ejercicio">
+                                <input type="checkbox" id="martes1-ej2" onchange="tacharEjercicio('martes1-ej2')" />
+                                <label for="martes1-ej2"><strong>Extensiones de Cuádriceps</strong></label>
+                            </div>
+                            <details>
+                                <summary>Detalles</summary>
+                                <p>Video:</p>
+                                <video controls width="320" height="240">
+                                    <source src="${get_videos_path('martes', 'extensiones_cuadriceps.mp4')}" type="video/mp4" />
+                                    Tu navegador no soporta la reproducción de videos.
+                                </video>
+                                <p><strong>Series:</strong> 4 series</p>
+                                <p><strong>Reps:</strong> 10+10 repeticiones</p>
+                                <p><strong>Descripción:</strong> 10 reps con puntas hacia afuera, 10 al frente. Enfócate en el tiempo bajo tensión.</p>
+                            </details>
                         </div>
-                        <details>
-                            <summary>Detalles</summary>
-                            <p>Video:</p>
-                            <video controls width="320" height="240">
-                                <source src="${get_videos_path('martes', 'sentadilla_bulgara.mp4')}" type="video/mp4" />
-                                Tu navegador no soporta la reproducción de videos.
-                            </video>
-                            <p>Descripción: Trabajo unilateral intenso. Mantén el torso levemente inclinado para más glúteo.</p>
-                        </details>
-                        <div class="ejercicio bloque-ejercicio">
-                            <input type="checkbox" id="martes1-ej2" onchange="tacharEjercicio('martes1-ej2')" />
-                            <label for="martes1-ej2">Ejercicio 2: Extensiones de Cuádriceps (4 series de 10+10 repeticiones)</label>
-                        </div>
-                        <details>
-                            <summary>Detalles</summary>
-                            <p>Video:</p>
-                            <video controls width="320" height="240">
-                                <source src="${get_videos_path('martes', 'extensiones_cuadriceps.mp4')}" type="video/mp4" />
-                                Tu navegador no soporta la reproducción de videos.
-                            </video>
-                            <p>Descripción: 10 reps con puntas hacia afuera, 10 al frente. Enfócate en el tiempo bajo tensión.</p>
-                        </details>
+                    </div>
                     `
                 },
                 miercoles1: {
                     titulo: "MIÉRCOLES - SEMANA 1",
                     contenido: `
-                        <div class="ejercicio bloque-ejercicio">
-                            <input type="checkbox" id="miercoles1-ej1" onchange="tacharEjercicio('miercoles1-ej1')" />
-                            <label for="miercoles1-ej1">Ejercicio 1: Remo Muerto Explosivo con Barra (3 series de 8-10 repeticiones)</label>
+                        <div id="contenido-entrenamiento">
+                        <!-- Espalda -->
+                        <div class="grupo-muscular espalda">
+                            <h4>ESPALDA</h4>
+                            <div class="ejercicio">
+                                <input type="checkbox" id="miercoles1-ej1" onchange="tacharEjercicio('miercoles1-ej1')" />
+                                <label for="miercoles1-ej1"><strong>Remo Muerto Explosivo con Barra</strong></label>
+                            </div>
+                            <details>
+                                <summary>Detalles</summary>
+                                <p>Video:</p>
+                                <video controls width="320" height="240">
+                                    <source src="${get_videos_path('miercoles', 'remo_muerto_explosivo.mp4')}" type="video/mp4" />
+                                    Tu navegador no soporta la reproducción de videos.
+                                </video>
+                                <p><strong>Series:</strong> 3 series</p>
+                                <p><strong>Reps:</strong> 8-10 repeticiones</p>
+                                <p><strong>Descripción:</strong> Desarrolla potencia y explosividad. Refuerza la parte media de la espalda.</p>
+                            </details>
                         </div>
-                        <details>
-                            <summary>Detalles</summary>
-                            <p>Video:</p>
-                            <video controls width="320" height="240">
-                                <source src="${get_videos_path('miercoles', 'remo_muerto_explosivo.mp4')}" type="video/mp4" />
-                                Tu navegador no soporta la reproducción de videos.
-                            </video>
-                            <p>Descripción: Desarrolla potencia y explosividad. Refuerza la parte media de la espalda.</p>
-                        </details>
+                    </div>
                     `
                 },
                 jueves1: {
                     titulo: "JUEVES - SEMANA 1",
                     contenido: `
-                        <div class="ejercicio bloque-ejercicio">
-                            <input type="checkbox" id="jueves1-ej1" onchange="tacharEjercicio('jueves1-ej1')" />
-                            <label for="jueves1-ej1">Ejercicio 1: Press de Banca Plano con Mancuernas (3 series de 5-8 repeticiones)</label>
+                        <div id="contenido-entrenamiento">
+                        <!-- Pecho -->
+                        <div class="grupo-muscular pecho">
+                            <h4>PECHO</h4>
+                            <div class="ejercicio">
+                                <input type="checkbox" id="jueves1-ej1" onchange="tacharEjercicio('jueves1-ej1')" />
+                                <label for="jueves1-ej1"><strong>Press de Banca Plano con Mancuernas</strong></label>
+                            </div>
+                            <details>
+                                <summary>Detalles</summary>
+                                <p>Video:</p>
+                                <video controls width="320" height="240">
+                                    <source src="${get_videos_path('jueves', 'press_banca_plano.mp4')}" type="video/mp4" />
+                                    Tu navegador no soporta la reproducción de videos.
+                                </video>
+                                <p><strong>Series:</strong> 3 series</p>
+                                <p><strong>Reps:</strong> 5-8 repeticiones</p>
+                                <p><strong>Descripción:</strong> Enfócate en el pectoral medio. Carga pesada para fuerza y masa muscular.</p>
+                            </details>
                         </div>
-                        <details>
-                            <summary>Detalles</summary>
-                            <p>Video:</p>
-                            <video controls width="320" height="240">
-                                <source src="${get_videos_path('jueves', 'press_banca_plano.mp4')}" type="video/mp4" />
-                                Tu navegador no soporta la reproducción de videos.
-                            </video>
-                            <p>Descripción: Enfócate en el pectoral medio. Carga pesada para fuerza y masa muscular.</p>
-                        </details>
+                    </div>
                     `
                 },
                 viernes1: {
                     titulo: "VIERNES - SEMANA 1",
                     contenido: `
-                        <div class="ejercicio bloque-ejercicio">
-                            <input type="checkbox" id="viernes1-ej1" onchange="tacharEjercicio('viernes1-ej1')" />
-                            <label for="viernes1-ej1">Ejercicio 1: Remo con Barra (20 repeticiones efectivas)</label>
+                        <div id="contenido-entrenamiento">
+                        <!-- Espalda -->
+                        <div class="grupo-muscular espalda">
+                            <h4>ESPALDA</h4>
+                            <div class="ejercicio">
+                                <input type="checkbox" id="viernes1-ej1" onchange="tacharEjercicio('viernes1-ej1')" />
+                                <label for="viernes1-ej1"><strong>Remo con Barra</strong></label>
+                            </div>
+                            <details>
+                                <summary>Detalles</summary>
+                                <p>Video:</p>
+                                <video controls width="320" height="240">
+                                    <source src="${get_videos_path('viernes', 'remo_con_barra.mp4')}" type="video/mp4" />
+                                    Tu navegador no soporta la reproducción de videos.
+                                </video>
+                                <p><strong>Series:</strong> 1 serie</p>
+                                <p><strong>Reps:</strong> 20 repeticiones efectivas</p>
+                                <p><strong>Descripción:</strong> Usa impulso desde abajo. Trabaja dorsales, trapecio medio y romboides.</p>
+                            </details>
                         </div>
-                        <details>
-                            <summary>Detalles</summary>
-                            <p>Video:</p>
-                            <video controls width="320" height="240">
-                                <source src="${get_videos_path('viernes', 'remo_con_barra.mp4')}" type="video/mp4" />
-                                Tu navegador no soporta la reproducción de videos.
-                            </video>
-                            <p>Descripción: Usa impulso desde abajo. Trabaja dorsales, trapecio medio y romboides.</p>
-                        </details>
+                    </div>
                     `
                 },
                 lunes2: {
                     titulo: "LUNES - SEMANA 2",
                     contenido: `
-                        <div class="ejercicio bloque-ejercicio">
-                            <input type="checkbox" id="lunes2-ej1" onchange="tacharEjercicio('lunes2-ej1')" />
-                            <label for="lunes2-ej1">Ejercicio 1: Press Inclinado con Mancuernas (3 series de 5-8 repeticiones)</label>
+                        <div id="contenido-entrenamiento">
+                        <!-- Pecho -->
+                        <div class="grupo-muscular pecho">
+                            <h4>PECHO</h4>
+                            <div class="ejercicio">
+                                <input type="checkbox" id="lunes2-ej1" onchange="tacharEjercicio('lunes2-ej1')" />
+                                <label for="lunes2-ej1"><strong>Press Inclinado con Mancuernas</strong> (banco a 30°)</label>
+                            </div>
+                            <details>
+                                <summary>Detalles</summary>
+                                <p>Video:</p>
+                                <video controls width="320" height="240">
+                                    <source src="${get_videos_path('lunes', 'press_inclinado.mp4')}" type="video/mp4" />
+                                    Tu navegador no soporta la reproducción de videos.
+                                </video>
+                                <p><strong>Series:</strong> 3 series</p>
+                                <p><strong>Reps:</strong> 5-8 repeticiones</p>
+                                <p><strong>Descripción:</strong> Enfócate en la parte superior del pecho (clavicular). Usa un banco a 30° y mantén los pulgares arriba para más aducción.</p>
+                            </details>
                         </div>
-                        <details>
-                            <summary>Detalles</summary>
-                            <p>Video:</p>
-                            <video controls width="320" height="240">
-                                <source src="${get_videos_path('lunes', 'press_inclinado.mp4')}" type="video/mp4" />
-                                Tu navegador no soporta la reproducción de videos.
-                            </video>
-                            <p>Descripción: Enfócate en la parte superior del pecho (clavicular). Usa un banco a 30° y mantén los pulgares arriba para más aducción.</p>
-                        </details>
+                    </div>
                     `
                 },
                 martes2: {
                     titulo: "MARTES - SEMANA 2",
                     contenido: `
-                        <div class="ejercicio bloque-ejercicio">
-                            <input type="checkbox" id="martes2-ej1" onchange="tacharEjercicio('martes2-ej1')" />
-                            <label for="martes2-ej1">Ejercicio 1: Sentadilla Búlgara con Mancuerna (4 series de 6 repeticiones por pierna)</label>
+                        <div id="contenido-entrenamiento">
+                        <!-- Cuádriceps -->
+                        <div class="grupo-muscular cuadriceps">
+                            <h4>CUÁDRICEPS</h4>
+                            <div class="ejercicio">
+                                <input type="checkbox" id="martes2-ej1" onchange="tacharEjercicio('martes2-ej1')" />
+                                <label for="martes2-ej1"><strong>Sentadilla Búlgara con Mancuerna</strong></label>
+                            </div>
+                            <details>
+                                <summary>Detalles</summary>
+                                <p>Video:</p>
+                                <video controls width="320" height="240">
+                                    <source src="${get_videos_path('martes', 'sentadilla_bulgara.mp4')}" type="video/mp4" />
+                                    Tu navegador no soporta la reproducción de videos.
+                                </video>
+                                <p><strong>Series:</strong> 4 series</p>
+                                <p><strong>Reps:</strong> 6 repeticiones por pierna</p>
+                                <p><strong>Descripción:</strong> Trabajo unilateral intenso. Mantén el torso levemente inclinado para más glúteo.</p>
+                            </details>
                         </div>
-                        <details>
-                            <summary>Detalles</summary>
-                            <p>Video:</p>
-                            <video controls width="320" height="240">
-                                <source src="${get_videos_path('martes', 'sentadilla_bulgara.mp4')}" type="video/mp4" />
-                                Tu navegador no soporta la reproducción de videos.
-                            </video>
-                            <p>Descripción: Trabajo unilateral intenso. Mantén el torso levemente inclinado para más glúteo.</p>
-                        </details>
+                    </div>
                     `
                 },
                 miercoles2: {
                     titulo: "MIÉRCOLES - SEMANA 2",
                     contenido: `
-                        <div class="ejercicio bloque-ejercicio">
-                            <input type="checkbox" id="miercoles2-ej1" onchange="tacharEjercicio('miercoles2-ej1')" />
-                            <label for="miercoles2-ej1">Ejercicio 1: Remo Muerto Explosivo con Barra (3 series de 8-10 repeticiones)</label>
+                        <div id="contenido-entrenamiento">
+                        <!-- Espalda -->
+                        <div class="grupo-muscular espalda">
+                            <h4>ESPALDA</h4>
+                            <div class="ejercicio">
+                                <input type="checkbox" id="miercoles2-ej1" onchange="tacharEjercicio('miercoles2-ej1')" />
+                                <label for="miercoles2-ej1"><strong>Remo Muerto Explosivo con Barra</strong></label>
+                            </div>
+                            <details>
+                                <summary>Detalles</summary>
+                                <p>Video:</p>
+                                <video controls width="320" height="240">
+                                    <source src="${get_videos_path('miercoles', 'remo_muerto_explosivo.mp4')}" type="video/mp4" />
+                                    Tu navegador no soporta la reproducción de videos.
+                                </video>
+                                <p><strong>Series:</strong> 3 series</p>
+                                <p><strong>Reps:</strong> 8-10 repeticiones</p>
+                                <p><strong>Descripción:</strong> Desarrolla potencia y explosividad. Refuerza la parte media de la espalda.</p>
+                            </details>
                         </div>
-                        <details>
-                            <summary>Detalles</summary>
-                            <p>Video:</p>
-                            <video controls width="320" height="240">
-                                <source src="${get_videos_path('miercoles', 'remo_muerto_explosivo.mp4')}" type="video/mp4" />
-                                Tu navegador no soporta la reproducción de videos.
-                            </video>
-                            <p>Descripción: Desarrolla potencia y explosividad. Refuerza la parte media de la espalda.</p>
-                        </details>
+                    </div>
                     `
                 },
                 jueves2: {
                     titulo: "JUEVES - SEMANA 2",
                     contenido: `
-                        <div class="ejercicio bloque-ejercicio">
-                            <input type="checkbox" id="jueves2-ej1" onchange="tacharEjercicio('jueves2-ej1')" />
-                            <label for="jueves2-ej1">Ejercicio 1: Press de Banca Plano con Mancuernas (3 series de 5-8 repeticiones)</label>
+                        <div id="contenido-entrenamiento">
+                        <!-- Pecho -->
+                        <div class="grupo-muscular pecho">
+                            <h4>PECHO</h4>
+                            <div class="ejercicio">
+                                <input type="checkbox" id="jueves2-ej1" onchange="tacharEjercicio('jueves2-ej1')" />
+                                <label for="jueves2-ej1"><strong>Press de Banca Plano con Mancuernas</strong></label>
+                            </div>
+                            <details>
+                                <summary>Detalles</summary>
+                                <p>Video:</p>
+                                <video controls width="320" height="240">
+                                    <source src="${get_videos_path('jueves', 'press_banca_plano.mp4')}" type="video/mp4" />
+                                    Tu navegador no soporta la reproducción de videos.
+                                </video>
+                                <p><strong>Series:</strong> 3 series</p>
+                                <p><strong>Reps:</strong> 5-8 repeticiones</p>
+                                <p><strong>Descripción:</strong> Enfócate en el pectoral medio. Carga pesada para fuerza y masa muscular.</p>
+                            </details>
                         </div>
-                        <details>
-                            <summary>Detalles</summary>
-                            <p>Video:</p>
-                            <video controls width="320" height="240">
-                                <source src="${get_videos_path('jueves', 'press_banca_plano.mp4')}" type="video/mp4" />
-                                Tu navegador no soporta la reproducción de videos.
-                            </video>
-                            <p>Descripción: Enfócate en el pectoral medio. Carga pesada para fuerza y masa muscular.</p>
-                        </details>
+                    </div>
                     `
                 },
                 viernes2: {
                     titulo: "VIERNES - SEMANA 2",
                     contenido: `
-                        <div class="ejercicio bloque-ejercicio">
-                            <input type="checkbox" id="viernes2-ej1" onchange="tacharEjercicio('viernes2-ej1')" />
-                            <label for="viernes2-ej1">Ejercicio 1: Remo con Barra (20 repeticiones efectivas)</label>
+                        <div id="contenido-entrenamiento">
+                        <!-- Espalda -->
+                        <div class="grupo-muscular espalda">
+                            <h4>ESPALDA</h4>
+                            <div class="ejercicio">
+                                <input type="checkbox" id="viernes2-ej1" onchange="tacharEjercicio('viernes2-ej1')" />
+                                <label for="viernes2-ej1"><strong>Remo con Barra</strong></label>
+                            </div>
+                            <details>
+                                <summary>Detalles</summary>
+                                <p>Video:</p>
+                                <video controls width="320" height="240">
+                                    <source src="${get_videos_path('viernes', 'remo_con_barra.mp4')}" type="video/mp4" />
+                                    Tu navegador no soporta la reproducción de videos.
+                                </video>
+                                <p><strong>Series:</strong> 1 serie</p>
+                                <p><strong>Reps:</strong> 20 repeticiones efectivas</p>
+                                <p><strong>Descripción:</strong> Usa impulso desde abajo. Trabaja dorsales, trapecio medio y romboides.</p>
+                            </details>
                         </div>
-                        <details>
-                            <summary>Detalles</summary>
-                            <p>Video:</p>
-                            <video controls width="320" height="240">
-                                <source src="${get_videos_path('viernes', 'remo_con_barra.mp4')}" type="video/mp4" />
-                                Tu navegador no soporta la reproducción de videos.
-                            </video>
-                            <p>Descripción: Usa impulso desde abajo. Trabaja dorsales, trapecio medio y romboides.</p>
-                        </details>
+                    </div>
                     `
                 }
             };
