@@ -330,6 +330,37 @@
         summary::marker {
             color: #1e88e5;
         }
+
+        .biserie {
+            background-color: #fff;
+            border: 2px solid #e91e63; /* Borde rosa para que coincida con el tema de Hombros */
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .biserie::before {
+            content: "🔄 Biserie";
+            position: absolute;
+            top: -12px;
+            left: 15px;
+            background-color: #e91e63;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .biserie .ejercicio {
+            margin-bottom: 10px; /* Reducir el margen entre los ejercicios de la biserie */
+        }
+
+        .biserie .ejercicio:last-child {
+            margin-bottom: 0; /* Eliminar el margen del último ejercicio */
+        }
     
         @media (max-width: 600px) {
             h1 {
@@ -586,34 +617,32 @@
                         <!-- Hombros -->
                         <div class="grupo-muscular hombros">
                             <h4>HOMBROS</h4>
-                            <div class="ejercicio">
-                                <input type="checkbox" id="lunes1-ej5" onchange="tacharEjercicio('lunes1-ej5')" />
-                                <label for="lunes1-ej5"><strong>Press Unilateral de Pie con Mancuerna</strong></label>
+                            <div class="biserie">
+                                <div class="ejercicio">
+                                    <input type="checkbox" id="lunes1-ej5" onchange="tacharEjercicio('lunes1-ej5')" />
+                                    <label for="lunes1-ej5"><strong>Press Unilateral de Pie con Mancuerna</strong></label>
+                                </div>
+                                <div class="ejercicio">
+                                    <input type="checkbox" id="lunes1-ej6" onchange="tacharEjercicio('lunes1-ej6')" />
+                                    <label for="lunes1-ej6"><strong>Push Press con Mancuernas</strong></label>
+                                </div>
+                                <details>
+                                    <summary>Detalles de la Biserie</summary>
+                                    <p><strong>Series:</strong> 3 series (ambos ejercicios seguidos sin descanso)</p>
+                                    <p><strong>Reps:</strong> 6-8 repeticiones por ejercicio</p>
+                                    <p><strong>Video Press Unilateral de Pie con Mancuerna:</strong></p>
+                                    <video controls width="320" height="240">
+                                        <source src="${get_videos_path('lunes', 'press_unilateral_d_pie_c_mancuerna.mp4')}" type="video/mp4" />
+                                        Tu navegador no soporta la reproducción de videos.
+                                    </video>
+                                    <p><strong>Video Push Press con Mancuernas:</strong></p>
+                                    <video controls width="320" height="240">
+                                        <source src="${get_videos_path('lunes', 'push_press_con_mancuernas.mp4')}" type="video/mp4" />
+                                        Tu navegador no soporta la reproducción de videos.
+                                    </video>
+                                    <p><strong>Descripción:</strong> Realiza el Press Unilateral de Pie con Mancuerna seguido inmediatamente por el Push Press con Mancuernas. Descansa después de completar ambos ejercicios.</p>
+                                </details>
                             </div>
-                            <details>
-                                <summary>Detalles</summary>
-                                <p>Video:</p>
-                                <video controls width="320" height="240">
-                                    <source src="${get_videos_path('lunes', 'press_unilateral_d_pie_c_mancuerna.mp4')}" type="video/mp4" />
-                                    Tu navegador no soporta la reproducción de videos.
-                                </video>
-                                <p><strong>Series:</strong> 3 series</p>
-                                <p><strong>Reps:</strong> 6-8 reps</p>
-                            </details>
-                            <div class="ejercicio">
-                                <input type="checkbox" id="lunes1-ej6" onchange="tacharEjercicio('lunes1-ej6')" />
-                                <label for="lunes1-ej6"><strong>Push Press con Mancuernas</strong></label>
-                            </div>
-                            <details>
-                                <summary>Detalles</summary>
-                                <p>Video:</p>
-                                <video controls width="320" height="240">
-                                    <source src="${get_videos_path('lunes', 'push_press_con_mancuernas.mp4')}" type="video/mp4" />
-                                    Tu navegador no soporta la reproducción de videos.
-                                </video>
-                                <p><strong>Series:</strong> 3 series</p>
-                                <p><strong>Reps:</strong> 6-8 reps</p>
-                            </details>
                             <div class="ejercicio">
                                 <input type="checkbox" id="lunes1-ej7" onchange="tacharEjercicio('lunes1-ej7')" />
                                 <label for="lunes1-ej7"><strong>Elevación Lateral con Trampa + Descendente</strong></label>
@@ -660,8 +689,6 @@
                             </details>
                         </div>
                     </div>
-                    <button onclick="volverADias()" class="boton-volver-dias">Volver a los días</button>
-                </div>
                     `
                 },
                 martes1: {
