@@ -5,55 +5,59 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Plan de Entrenamiento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         .bloque-ejercicio {
             border-radius: 10px;
             padding: 15px 20px;
             margin-bottom: 20px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease;
         }
-
+    
+        .bloque-ejercicio:hover {
+            transform: translateY(-3px);
+        }
+    
         .bloque-ejercicio:nth-child(1) {
-            background-color: #f0f0f0;
-            /* Gris claro */
+            background-color: #f1f3f5; /* Gris claro más moderno */
         }
-
+    
         .bloque-ejercicio:nth-child(3) {
-            background-color: #e6f0fa;
-            /* Azul claro */
+            background-color: #e3f2fd; /* Azul claro más vibrante */
         }
-
+    
         .bloque-ejercicio:nth-child(5) {
-            background-color: #f5f5e6;
-            /* Amarillo claro */
+            background-color: #fff3e0; /* Amarillo claro más cálido */
         }
-
+    
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
             margin: 0;
-            padding: 15px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
         }
-
+    
         blockquote {
-            border-left: 4px solid #ccc;
+            border-left: 4px solid #e91e63; /* Rosa más vibrante para destacar */
             padding-left: 15px;
-            color: #b40000;
+            color: #d32f2f;
             margin: 15px 0;
+            font-style: italic;
         }
-
+    
         h1 {
-            color: #333;
+            color: #2c3e50;
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 20px;
             display: none;
         }
-
+    
         #semanas {
             display: flex;
             gap: 30px;
@@ -64,271 +68,334 @@
             min-height: 100vh;
             align-items: center;
         }
-
+    
         #semanas div {
-            background-color: #1e3a8a;
+            background: linear-gradient(45deg, #1e3a8a, #3b82f6); /* Gradiente azul */
             color: white;
             padding: 60px;
-            border-radius: 10px;
+            border-radius: 15px;
             cursor: pointer;
             text-align: center;
             width: 400px;
             max-width: 400px;
             font-size: 4rem;
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
+            font-weight: 600;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
+    
         #semanas div:hover {
             transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
         }
-
+    
         #dias-semana1,
         #dias-semana2 {
             background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
             width: 95vw;
-            max-width: 600px;
+            max-width: 650px;
             text-align: center;
         }
-
+    
         #dias-semana1 h2,
         #dias-semana2 h2 {
-            color: #333;
+            color: #2c3e50;
             font-size: 2.8rem;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
-
+    
         #dias-semana1 div,
         #dias-semana2 div {
-            background-color: #e0e0e0;
+            background: linear-gradient(45deg, #e0e0e0, #f5f5f5);
             padding: 25px;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             font-size: 2.2rem;
-            transition: background-color 0.2s;
+            font-weight: 500;
+            transition: background 0.3s ease, transform 0.2s ease;
         }
-
+    
         #dias-semana1 div:hover,
         #dias-semana2 div:hover {
-            background-color: #d0d0d0;
+            background: linear-gradient(45deg, #d0d0d0, #e0e0e0);
+            transform: translateY(-3px);
         }
-
+    
         #entrenamiento {
             background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
             width: 95vw;
-            max-width: 600px;
+            max-width: 650px;
             text-align: left;
         }
-
+    
         #entrenamiento h3 {
-            color: rgba(135, 206, 250, 0.8);
-            font-size: 2rem;
+            color: #2c3e50;
+            font-size: 2.5rem;
             text-align: center;
-            margin-bottom: 20px;
-            font-family: "Roboto", sans-serif;
+            margin-bottom: 30px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            background: linear-gradient(45deg, #1e88e5, #42a5f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-
+    
         .grupo-muscular {
             margin-bottom: 30px;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-
+    
+        .grupo-muscular:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+    
         .grupo-muscular h4 {
             font-size: 1.8rem;
-            margin-bottom: 15px;
-            padding-bottom: 5px;
-            border-bottom: 2px solid;
-            font-family: "Roboto", sans-serif;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: #fff;
+            position: relative;
         }
-
-        .grupo-muscular.pecho {
-            background-color: #f0f8ff; /* Azul claro */
-            border: 1px solid #b0e0e6;
-        }
-
-        .grupo-muscular.pecho h4 {
-            color: #4682b4;
-            border-bottom-color: #4682b4;
-        }
-
-        .grupo-muscular.hombros {
-            background-color: #fff0f5; /* Rosa claro */
-            border: 1px solid #ffb6c1;
-        }
-
-        .grupo-muscular.hombros h4 {
-            color: #db7093;
-            border-bottom-color: #db7093;
-        }
-
-        .grupo-muscular.triceps {
-            background-color: #f5f5e6; /* Amarillo claro */
-            border: 1px solid #eee8aa;
-        }
-
-        .grupo-muscular.triceps h4 {
-            color: #daa520;
-            border-bottom-color: #daa520;
-        }
-
+    
         .grupo-muscular.calentamiento {
-            background-color: #f0f0f0; /* Gris claro */
-            border: 1px solid #d3d3d3;
+            background-color: #f1f3f5;
         }
-
+    
         .grupo-muscular.calentamiento h4 {
-            color: #696969;
-            border-bottom-color: #696969;
+            background: linear-gradient(45deg, #6c757d, #95a5a6);
         }
-
+    
+        .grupo-muscular.calentamiento h4::before {
+            content: "🔥";
+            font-size: 1.5rem;
+        }
+    
+        .grupo-muscular.pecho {
+            background-color: #e3f2fd;
+        }
+    
+        .grupo-muscular.pecho h4 {
+            background: linear-gradient(45deg, #1e88e5, #42a5f5);
+        }
+    
+        .grupo-muscular.pecho h4::before {
+            content: "💪";
+            font-size: 1.5rem;
+        }
+    
+        .grupo-muscular.hombros {
+            background-color: #fce4ec;
+        }
+    
+        .grupo-muscular.hombros h4 {
+            background: linear-gradient(45deg, #e91e63, #f06292);
+        }
+    
+        .grupo-muscular.hombros h4::before {
+            content: "🏋️";
+            font-size: 1.5rem;
+        }
+    
+        .grupo-muscular.triceps {
+            background-color: #fff3e0;
+        }
+    
+        .grupo-muscular.triceps h4 {
+            background: linear-gradient(45deg, #fb8c00, #ffca28);
+        }
+    
+        .grupo-muscular.triceps h4::before {
+            content: "💥";
+            font-size: 1.5rem;
+        }
+    
         .boton-volver {
-            background-color: #0e59aa;
+            background: linear-gradient(45deg, #1e3a8a, #3b82f6);
             color: white;
             border: none;
             padding: 12px 24px;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             font-size: 1.5rem;
-            transition: background-color 0.2s;
+            font-weight: 500;
+            transition: transform 0.2s ease, background 0.3s ease;
         }
-
+    
+        .boton-volver:hover {
+            background: linear-gradient(45deg, #1e3a8a, #2563eb);
+            transform: translateY(-2px);
+        }
+    
         .boton-volver-dias {
-            background-color: #2554d4;
+            background: linear-gradient(45deg, #1e88e5, #42a5f5);
             color: white;
             border: none;
-            padding: 12px 24px;
-            border-radius: 5px;
+            padding: 12px 30px;
+            border-radius: 8px;
             cursor: pointer;
-            margin-top: 15px;
             font-size: 1.5rem;
-            transition: background-color 0.2s;
+            font-weight: 500;
+            margin-top: 20px;
+            transition: transform 0.2s ease, background 0.3s ease;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
-
+    
         .boton-volver-dias:hover {
-            background-color: #2b4db7;
+            background: linear-gradient(45deg, #1565c0, #1e88e5);
+            transform: translateY(-2px);
         }
-
-        .boton-volver-dias:hover {
-            background-color: #2b4db7;
-            /* Azul oscuro más claro para el hover */
-        }
-
+    
         .ejercicio {
             display: flex;
             align-items: center;
             gap: 15px;
-            margin-bottom: 25px;
-            font-size: 1.6rem;
-            font-family: "Roboto", sans-serif;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #ffffff;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: background-color 0.2s ease, transform 0.2s ease;
         }
-
+    
+        .ejercicio:hover {
+            background-color: #f9f9f9;
+            transform: translateY(-2px);
+        }
+    
         .ejercicio input[type="checkbox"] {
-            transform: scale(2);
+            transform: scale(1.8);
+            accent-color: #1e88e5;
         }
-
+    
         .ejercicio label {
             flex: 1;
             cursor: pointer;
+            font-weight: 500;
+            color: #2c3e50;
         }
-
+    
         .ejercicio.tachado label {
             text-decoration: line-through;
-            color: #888;
+            color: #95a5a6;
         }
-
+    
         details {
             margin-bottom: 15px;
-            padding: 10px;
-            border: 1px solid #e0e0e0;
-            border-radius: 5px;
-            background-color: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            border: 1px solid #e9ecef;
+            transition: background-color 0.2s ease;
         }
-
+    
+        details:hover {
+            background-color: #f1f3f5;
+        }
+    
         summary {
             cursor: pointer;
-            font-weight: bold;
-            color: #333;
-            font-size: 1.4rem;
+            font-weight: 500;
+            color: #34495e;
+            font-size: 1.3rem;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.2s ease;
         }
-
+    
+        summary:hover {
+            background-color: #e9ecef;
+        }
+    
+        summary::marker {
+            color: #1e88e5;
+        }
+    
         @media (max-width: 600px) {
             h1 {
                 font-size: 3rem;
                 display: none;
             }
-
+    
             #semanas div {
                 width: 300px;
                 max-width: 300px;
                 font-size: 3.5rem;
                 padding: 50px;
             }
-
+    
             #dias-semana1,
             #dias-semana2 {
                 width: 98vw;
                 max-width: 600px;
                 padding: 15px;
             }
-
+    
             #dias-semana1 h2,
             #dias-semana2 h2 {
                 font-size: 3.2rem;
             }
-
+    
             #dias-semana1 div,
             #dias-semana2 div {
                 font-size: 2.5rem;
                 padding: 30px;
             }
-
+    
             #entrenamiento {
                 width: 95vw;
-                padding: 15px;
+                padding: 20px;
             }
-
+    
             #entrenamiento h3 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
-
+    
             .grupo-muscular h4 {
-                font-size: 2rem;
-            }
-
-            .ejercicio {
-                font-size: 2rem;
-                gap: 20px;
-            }
-
-            .ejercicio input[type="checkbox"] {
-                transform: scale(2.5);
-            }
-
-            summary {
-                font-size: 1.8rem;
-            }
-
-            details p {
                 font-size: 1.6rem;
             }
-
+    
+            .ejercicio {
+                font-size: 1.3rem;
+                padding: 12px;
+            }
+    
+            .ejercicio input[type="checkbox"] {
+                transform: scale(1.5);
+            }
+    
+            summary {
+                font-size: 1.2rem;
+            }
+    
+            details p {
+                font-size: 1.1rem;
+            }
+    
+            .boton-volver,
             .boton-volver-dias {
-                font-size: 1.8rem;
-                padding: 15px 30px;
+                font-size: 1.3rem;
+                padding: 10px 25px;
             }
         }
     </style>
