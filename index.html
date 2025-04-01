@@ -9,13 +9,15 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f8f9fa;
+            /* Fondo de galaxia con estrellas */
+            background: url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(135deg, #0a0a23 0%, #1a1a3d 100%);
             margin: 0;
             padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            color: white;
         }
 
         blockquote {
@@ -67,10 +69,9 @@
 
         #dias-semana1,
         #dias-semana2 {
-            background: linear-gradient(135deg, #f8f9fa, #e0e7ff); /* Gradiente suave */
+            background: transparent; /* Fondo transparente para que se vea el fondo de galaxia */
             padding: 30px;
             border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             width: 95vw;
             max-width: 700px;
             text-align: center;
@@ -79,14 +80,11 @@
 
         #dias-semana1 h2,
         #dias-semana2 h2 {
-            color: #2c3e50;
+            color: white;
             font-size: 3rem;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             font-weight: 700;
-            background: linear-gradient(45deg, #1e88e5, #e91e63);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
             position: relative;
         }
 
@@ -122,48 +120,59 @@
             gap: 10px;
             animation: slideIn 0.5s ease-in-out forwards;
             opacity: 0;
+            /* Fondo oscuro semitransparente para los botones */
+            background: rgba(0, 0, 0, 0.5);
+            /* Bordes neón */
+            border: 2px solid;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
         }
 
-        /* Colores y gradientes para cada día */
+        /* Colores y bordes neón para cada día */
         .dia[data-day="lunes"] {
-            background: linear-gradient(45deg, #175286, #42a5f5);
+            border-color: #42a5f5;
+            box-shadow: 0 0 15px #42a5f5;
         }
         .dia[data-day="lunes"]::before {
             content: "💪";
         }
 
         .dia[data-day="martes"] {
-            background: linear-gradient(45deg, #b6003d, #f06292);
+            border-color: #f06292;
+            box-shadow: 0 0 15px #f06292;
         }
         .dia[data-day="martes"]::before {
             content: "🏋️";
         }
 
         .dia[data-day="miercoles"] {
-            background: linear-gradient(45deg, #2a5d66, #5cdddd);
+            border-color: #ffca28;
+            box-shadow: 0 0 15px #ffca28;
         }
         .dia[data-day="miercoles"]::before {
             content: "💪";
         }
 
         .dia[data-day="jueves"] {
-            background: linear-gradient(45deg, #e004a9, #f096eb);
+            border-color: #ab47bc;
+            box-shadow: 0 0 15px #ab47bc;
         }
         .dia[data-day="jueves"]::before {
             content: "🏋️";
         }
 
         .dia[data-day="viernes"] {
-            background: linear-gradient(45deg, #277902, #96ff59);
+            border-color: #66bb6a;
+            box-shadow: 0 0 15px #66bb6a;
         }
         .dia[data-day="viernes"]::before {
             content: "🔥";
         }
 
         .dia:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            filter: brightness(1.1);
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+            filter: brightness(1.2);
         }
 
         /* Animaciones */
@@ -407,13 +416,21 @@
             margin-bottom: 15px;
             padding: 15px;
             border-radius: 8px;
-            background-color: #f9f9f9;
+            background-color: #fff4f4e7;
             border: 1px solid #e9ecef;
             transition: background-color 0.2s ease;
         }
 
         details:hover {
-            background-color: #f1f3f5;
+            background-color: #ddeeffee;
+        }
+
+        details p {
+            color: #181616; /* Cambia el color del texto en los <p> dentro de details */
+        }
+
+        details ul {
+            color: #140d0d; /* Si hay listas dentro de details, también puedes cambiar su color */
         }
 
         summary {
