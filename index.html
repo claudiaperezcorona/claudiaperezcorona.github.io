@@ -48,14 +48,14 @@
         }
 
         #semanas div {
-            background: linear-gradient(45deg, #1e3a8a, #3b82f6); /* Gradiente azul */
+            background: linear-gradient(45deg, #6280e4, #097bee); /* Gradiente azul */
             color: white;
-            padding: 60px;
+            padding: 30px 60px;
             border-radius: 15px;
             cursor: pointer;
             text-align: center;
-            width: 400px;
-            max-width: 400px;
+            width: 500px;
+            max-width: 500px;
             font-size: 4rem;
             font-weight: 600;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -332,49 +332,59 @@
         }
 
         .boton-volver {
+            position: fixed; /* Fija el botón en la pantalla */
+            top: 20px; /* Distancia desde la parte superior */
+            right: 20px; /* Distancia desde la derecha */
             background: linear-gradient(45deg, #1e3a8a, #3b82f6);
             color: white;
             border: none;
-            padding: 12px 24px;
+            padding: 8px 16px; /* Reducimos el padding para hacerlo más pequeño */
             border-radius: 8px;
             cursor: pointer;
-            margin-bottom: 25px;
-            font-size: 1.5rem;
+            font-size: 1.2rem; /* Reducimos el tamaño de la fuente */
             font-weight: 500;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px; /* Reducimos el espacio entre el icono y el texto */
             transition: transform 0.2s ease, background 0.3s ease;
+            z-index: 1000; /* Aseguramos que el botón esté por encima de otros elementos */
         }
 
         .boton-volver:hover {
             background: linear-gradient(45deg, #1e3a8a, #2563eb);
-            transform: translateY(-2px);
+            transform: scale(1.05); /* Cambiamos el efecto hover para que no se mueva hacia arriba */
         }
 
         .boton-volver .icon {
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
         .boton-volver-dias {
-            background: linear-gradient(45deg, #1e88e5, #42a5f5);
+            position: fixed; /* Fija el botón en la pantalla */
+            top: 20px; /* Distancia desde la parte superior */
+            right: 20px; /* Distancia desde la derecha */
+            background: linear-gradient(45deg, #1e3a8a, #3b82f6);
             color: white;
             border: none;
-            padding: 12px 30px;
+            padding: 8px 16px; /* Reducimos el padding para hacerlo más pequeño */
             border-radius: 8px;
             cursor: pointer;
-            font-size: 1.5rem;
+            font-size: 1.2rem; /* Reducimos el tamaño de la fuente */
             font-weight: 500;
-            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 6px; /* Reducimos el espacio entre el icono y el texto */
             transition: transform 0.2s ease, background 0.3s ease;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+            z-index: 1000; /* Aseguramos que el botón esté por encima de otros elementos */
         }
 
         .boton-volver-dias:hover {
             background: linear-gradient(45deg, #1565c0, #1e88e5);
-            transform: translateY(-2px);
+            transform: scale(1.05); /* Cambiamos el efecto hover para que no se mueva hacia arriba */
+        }
+
+        .boton-volver-dias .icon {
+            font-size: 1rem;
         }
 
         .ejercicio {
@@ -489,22 +499,22 @@
             }
 
             #semanas div {
-                width: 300px;
-                max-width: 300px;
-                font-size: 3.5rem;
-                padding: 50px;
+                width: 200px;
+                max-width: 200px;
+                font-size: 2rem;
+                padding: 30px 60px;
             }
 
             #dias-semana1,
             #dias-semana2 {
                 width: 98vw;
-                max-width: 600px;
-                padding: 20px;
+                max-width: 400px;
+                padding: 10px;
             }
 
             #dias-semana1 h2,
             #dias-semana2 h2 {
-                font-size: 2.5rem;
+                font-size: 1.8rem;
             }
 
             #entrenamiento {
@@ -543,13 +553,25 @@
             }
 
             .boton-volver {
-                font-size: 1.3rem;
-                padding: 10px 20px;
+                top: 15px; /* Ajustamos la posición para móviles */
+                right: 15px;
+                padding: 6px 12px; /* Más pequeño en móviles */
+                font-size: 1rem; /* Texto más pequeño */
+            }
+
+            .boton-volver .icon {
+                font-size: 0.8rem; /* Icono más pequeño en móviles */
             }
 
             .boton-volver-dias {
-                font-size: 1.3rem;
-                padding: 10px 25px;
+                top: 15px; /* Ajustamos la posición para móviles */
+                right: 15px;
+                padding: 6px 12px; /* Más pequeño en móviles */
+                font-size: 1rem; /* Texto más pequeño */
+            }
+
+            .boton-volver-dias .icon {
+                font-size: 0.8rem; /* Icono más pequeño en móviles */
             }
         }
     </style>
