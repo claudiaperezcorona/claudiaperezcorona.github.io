@@ -1,0 +1,620 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Fondo de galaxia con estrellas */
+    background: url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(135deg, #0a0a23 0%, #1a1a3d 100%);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+}
+
+blockquote {
+    border-left: 4px solid #e91e63;
+    /* Rosa más vibrante para destacar */
+    padding-left: 15px;
+    color: #d32f2f;
+    margin: 15px 0;
+    font-style: italic;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    display: none;
+}
+
+#semanas {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+}
+
+#semanas div {
+    background: linear-gradient(45deg, #6280e4, #097bee);
+    /* Gradiente azul */
+    color: white;
+    padding: 30px 60px;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+    width: 500px;
+    max-width: 500px;
+    font-size: 4rem;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#semanas div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+#dias-semana1,
+#dias-semana2 {
+    background: transparent;
+    /* Fondo transparente para que se vea el fondo de galaxia */
+    padding: 30px;
+    border-radius: 20px;
+    width: 95vw;
+    max-width: 700px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#dias-semana1 h2,
+#dias-semana2 h2 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    position: relative;
+}
+
+#dias-semana1 h2::after,
+#dias-semana2 h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(45deg, #1e88e5, #e91e63);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.dias-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dia {
+    padding: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 2.2rem;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    animation: slideIn 0.5s ease-in-out forwards;
+    opacity: 0;
+    /* Fondo oscuro semitransparente para los botones */
+    background: rgba(0, 0, 0, 0.5);
+    /* Bordes neón */
+    border: 2px solid;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+/* Colores y bordes neón para cada día */
+.dia[data-day="lunes"] {
+    border-color: #42a5f5;
+    box-shadow: 0 0 15px #42a5f5;
+}
+
+.dia[data-day="lunes"]::before {
+    content: "💪";
+}
+
+.dia[data-day="martes"] {
+    border-color: #f06292;
+    box-shadow: 0 0 15px #f06292;
+}
+
+.dia[data-day="martes"]::before {
+    content: "🏋️";
+}
+
+.dia[data-day="miercoles"] {
+    border-color: #ffca28;
+    box-shadow: 0 0 15px #ffca28;
+}
+
+.dia[data-day="miercoles"]::before {
+    content: "💪";
+}
+
+.dia[data-day="jueves"] {
+    border-color: #ab47bc;
+    box-shadow: 0 0 15px #ab47bc;
+}
+
+.dia[data-day="jueves"]::before {
+    content: "🏋️";
+}
+
+.dia[data-day="viernes"] {
+    border-color: #66bb6a;
+    box-shadow: 0 0 15px #66bb6a;
+}
+
+.dia[data-day="viernes"]::before {
+    content: "🔥";
+}
+
+.dia:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    filter: brightness(1.2);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Retraso en la animación para cada día */
+.dia:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.dia:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.dia:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.dia:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.dia:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+#entrenamiento {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    width: 95vw;
+    max-width: 650px;
+    text-align: left;
+}
+
+#entrenamiento h3 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: linear-gradient(45deg, #1e88e5, #42a5f5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.grupo-muscular {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grupo-muscular:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.grupo-muscular h4 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: #fff;
+    position: relative;
+}
+
+.grupo-muscular.calentamiento {
+    background-color: #f1f3f5;
+}
+
+.grupo-muscular.calentamiento h4 {
+    background: linear-gradient(45deg, #6c757d, #95a5a6);
+}
+
+.grupo-muscular.calentamiento h4::before {
+    content: "🔥";
+    font-size: 1.5rem;
+}
+
+.grupo-muscular.pecho {
+    background-color: #e3f2fd;
+}
+
+.grupo-muscular.pecho h4 {
+    background: linear-gradient(45deg, #1e88e5, #42a5f5);
+}
+
+.grupo-muscular.pecho h4::before {
+    content: "💪";
+    font-size: 1.5rem;
+}
+
+.grupo-muscular.hombros {
+    background-color: #fce4ec;
+}
+
+.grupo-muscular.hombros h4 {
+    background: linear-gradient(45deg, #e91e63, #f06292);
+}
+
+.grupo-muscular.hombros h4::before {
+    content: "🏋️";
+    font-size: 1.5rem;
+}
+
+.grupo-muscular.triceps {
+    background-color: #fff3e0;
+}
+
+.grupo-muscular.triceps h4 {
+    background: linear-gradient(45deg, #fb8c00, #ffca28);
+}
+
+.grupo-muscular.triceps h4::before {
+    content: "💥";
+    font-size: 1.5rem;
+}
+
+.grupo-muscular.cuadriceps {
+    background-color: #e0f7fa;
+}
+
+.grupo-muscular.cuadriceps h4 {
+    background: linear-gradient(45deg, #0288d1, #4fc3f7);
+}
+
+.grupo-muscular.cuadriceps h4::before {
+    content: "🏋️‍♀️";
+    font-size: 1.5rem;
+}
+
+.grupo-muscular.espalda {
+    background-color: #f3e5f5;
+}
+
+.grupo-muscular.espalda h4 {
+    background: linear-gradient(45deg, #8e24aa, #ab47bc);
+}
+
+.grupo-muscular.espalda h4::before {
+    content: "🏋️‍♂️";
+    font-size: 1.5rem;
+}
+
+.boton-volver {
+    position: fixed;
+    /* Fija el botón en la pantalla */
+    top: 20px;
+    /* Distancia desde la parte superior */
+    right: 20px;
+    /* Distancia desde la derecha */
+    background: linear-gradient(45deg, #1e3a8a, #3b82f6);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    /* Reducimos el padding para hacerlo más pequeño */
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    /* Reducimos el tamaño de la fuente */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    /* Reducimos el espacio entre el icono y el texto */
+    transition: transform 0.2s ease, background 0.3s ease;
+    z-index: 1000;
+    /* Aseguramos que el botón esté por encima de otros elementos */
+}
+
+.boton-volver:hover {
+    background: linear-gradient(45deg, #1e3a8a, #2563eb);
+    transform: scale(1.05);
+    /* Cambiamos el efecto hover para que no se mueva hacia arriba */
+}
+
+.boton-volver .icon {
+    font-size: 1rem;
+}
+
+.boton-volver-dias {
+    position: fixed;
+    /* Fija el botón en la pantalla */
+    top: 20px;
+    /* Distancia desde la parte superior */
+    right: 20px;
+    /* Distancia desde la derecha */
+    background: linear-gradient(45deg, #1e3a8a, #3b82f6);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    /* Reducimos el padding para hacerlo más pequeño */
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    /* Reducimos el tamaño de la fuente */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    /* Reducimos el espacio entre el icono y el texto */
+    transition: transform 0.2s ease, background 0.3s ease;
+    z-index: 1000;
+    /* Aseguramos que el botón esté por encima de otros elementos */
+}
+
+.boton-volver-dias:hover {
+    background: linear-gradient(45deg, #1565c0, #1e88e5);
+    transform: scale(1.05);
+    /* Cambiamos el efecto hover para que no se mueva hacia arriba */
+}
+
+.boton-volver-dias .icon {
+    font-size: 1rem;
+}
+
+.ejercicio {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.ejercicio:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-2px);
+}
+
+.ejercicio input[type="checkbox"] {
+    transform: scale(1.8);
+    accent-color: #1e88e5;
+}
+
+.ejercicio label {
+    flex: 1;
+    cursor: pointer;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.ejercicio.tachado label {
+    text-decoration: line-through;
+    color: #95a5a6;
+}
+
+details {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff4f4e7;
+    border: 1px solid #e9ecef;
+    transition: background-color 0.2s ease;
+}
+
+details:hover {
+    background-color: #ddeeffee;
+}
+
+details p {
+    color: #181616;
+    /* Cambia el color del texto en los <p> dentro de details */
+}
+
+details ul {
+    color: #140d0d;
+    /* Si hay listas dentro de details, también puedes cambiar su color */
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 500;
+    color: #34495e;
+    font-size: 1.3rem;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+summary:hover {
+    background-color: #e9ecef;
+}
+
+summary::marker {
+    color: #1e88e5;
+}
+
+.biserie {
+    background-color: #fff;
+    border: 2px solid #e91e63;
+    /* Borde rosa para que coincida con el tema de Hombros */
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.biserie::before {
+    content: "🔄 Biserie";
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    background-color: #e91e63;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.biserie .ejercicio {
+    margin-bottom: 10px;
+    /* Reducir el margen entre los ejercicios de la biserie */
+}
+
+.biserie .ejercicio:last-child {
+    margin-bottom: 0;
+    /* Eliminar el margen del último ejercicio */
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 3rem;
+        display: none;
+    }
+
+    #semanas div {
+        width: 200px;
+        max-width: 200px;
+        font-size: 2rem;
+        padding: 30px 60px;
+    }
+
+    #dias-semana1,
+    #dias-semana2 {
+        width: 98vw;
+        max-width: 400px;
+        padding: 10px;
+    }
+
+    #dias-semana1 h2,
+    #dias-semana2 h2 {
+        font-size: 1.8rem;
+    }
+
+    #entrenamiento {
+        width: 95vw;
+        padding: 20px;
+    }
+
+    #entrenamiento h3 {
+        font-size: 2.2rem;
+    }
+
+    .grupo-muscular h4 {
+        font-size: 1.6rem;
+    }
+
+    .ejercicio {
+        font-size: 1.3rem;
+        padding: 12px;
+    }
+
+    .ejercicio input[type="checkbox"] {
+        transform: scale(1.5);
+    }
+
+    summary {
+        font-size: 1.2rem;
+    }
+
+    details p {
+        font-size: 1.1rem;
+    }
+
+    .dia {
+        font-size: 2rem;
+        padding: 18px;
+    }
+
+    .boton-volver {
+        top: 15px;
+        /* Ajustamos la posición para móviles */
+        right: 15px;
+        padding: 6px 12px;
+        /* Más pequeño en móviles */
+        font-size: 1rem;
+        /* Texto más pequeño */
+    }
+
+    .boton-volver .icon {
+        font-size: 0.8rem;
+        /* Icono más pequeño en móviles */
+    }
+
+    .boton-volver-dias {
+        top: 15px;
+        /* Ajustamos la posición para móviles */
+        right: 15px;
+        padding: 6px 12px;
+        /* Más pequeño en móviles */
+        font-size: 1rem;
+        /* Texto más pequeño */
+    }
+
+    .boton-volver-dias .icon {
+        font-size: 0.8rem;
+        /* Icono más pequeño en móviles */
+    }
+}
