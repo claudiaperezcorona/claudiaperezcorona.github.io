@@ -466,28 +466,151 @@ function mostrarEntrenamiento(dia) {
         martes2: {
             titulo: "MARTES - SEMANA 2",
             contenido: `
-                        <div id="contenido-entrenamiento">
-                        <!-- Cuádriceps -->
-                        <div class="grupo-muscular cuadriceps">
-                            <h4>CUÁDRICEPS</h4>
+                <div id="contenido-entrenamiento">
+                    <!-- Calentamiento -->
+                    <div class="grupo-muscular calentamiento">
+                        <h4>CALENTAMIENTO</h4>
+                        <div class="ejercicio">
+                            <input type="checkbox" id="martes2-ej1" onchange="tacharEjercicio('martes2-ej1')" />
+                            <label for="martes2-ej1"><strong>Sentadilla Libre (Pirámide)</strong></label>
+                        </div>
+                        <details>
+                            <summary>Detalles</summary>
+                            <p>Video:</p>
+                            <video controls width="320" height="240">
+                                <source src="${get_videos_path('martes', 'sentadilla_libre.mp4')}" type="video/mp4" />
+                                Tu navegador no soporta la reproducción de videos.
+                            </video>
+                            <p><strong>Series:</strong> 2 series.</p>
+                            <p><strong>Reps:</strong> Pirámide - 1ra serie: 15 reps (bajo peso), 12 reps (aumentar peso), 8 reps (aumentar peso); 2da serie: 8 reps, 12 reps, 15 reps (reduciendo peso).</p>
+                            <p><strong>Descripción:</strong> Realiza una pirámide ascendente en la primera serie, comenzando con bajo peso y aumentando progresivamente mientras reduces las repeticiones. En la segunda serie, haz una pirámide descendente, comenzando con el peso más alto y reduciéndolo mientras aumentas las repeticiones.</p>
+                        </details>
+                    </div>
+        
+                    <!-- Cuádriceps -->
+                    <div class="grupo-muscular cuadriceps">
+                        <h4>CUÁDRICEPS</h4>
+                        <div class="ejercicio">
+                            <input type="checkbox" id="martes2-ej2" onchange="tacharEjercicio('martes2-ej2')" />
+                            <label for="martes2-ej2"><strong>Extensiones de Cuádriceps (Dropset)</strong></label>
+                        </div>
+                        <details>
+                            <summary>Detalles</summary>
+                            <p>Video:</p>
+                            <video controls width="320" height="240">
+                                <source src="${get_videos_path('martes', 'extensiones_cuadriceps.mp4')}" type="video/mp4" />
+                                Tu navegador no soporta la reproducción de videos.
+                            </video>
+                            <p><strong>Series:</strong> 3 series.</p>
+                            <p><strong>Reps:</strong> 8 reps (máximo peso posible), baja 20% el peso y haz 10 reps, baja el peso y haz 15 reps (sin descanso entre cambios).</p>
+                            <p><strong>Descripción:</strong> Comienza con el mayor peso posible para 8 repeticiones. Inmediatamente, sin descanso, reduce el peso un 20% y haz 10 repeticiones. Finalmente, reduce el peso nuevamente y haz 15 repeticiones. Esto cuenta como una serie. Descansa y repite.</p>
+                        </details>
+        
+                        <div class="ejercicio">
+                            <input type="checkbox" id="martes2-ej3" onchange="tacharEjercicio('martes2-ej3')" />
+                            <label for="martes2-ej3"><strong>Desplante en Smith con Step</strong></label>
+                        </div>
+                        <details>
+                            <summary>Detalles</summary>
+                            <p>Video:</p>
+                            <video controls width="320" height="240">
+                                <source src="${get_videos_path('martes', 'desplante_smith_step.mp4')}" type="video/mp4" />
+                                Tu navegador no soporta la reproducción de videos.
+                            </video>
+                            <p><strong>Series:</strong> 3 series.</p>
+                            <p><strong>Reps:</strong> 12 repeticiones por serie (9 reps a velocidad normal, últimas 3 reps bajando en 3 segundos y subiendo en 3 segundos).</p>
+                            <p><strong>Descripción:</strong> Coloca un step frente a ti y realiza desplantes en la máquina Smith. Haz 9 repeticiones a velocidad normal, y para las últimas 3 repeticiones, baja en 3 segundos y sube en 3 segundos para aumentar el tiempo bajo tensión.</p>
+                        </details>
+                    </div>
+        
+                    <!-- Pantorrilla -->
+                    <div class="grupo-muscular pantorrilla">
+                        <h4>PANTORRILLA</h4>
+                        <div class="ejercicio">
+                            <input type="checkbox" id="martes2-ej4" onchange="tacharEjercicio('martes2-ej4')" />
+                            <label for="martes2-ej4"><strong>Soleo</strong></label>
+                        </div>
+                        <details>
+                            <summary>Detalles</summary>
+                            <p>Video:</p>
+                            <video controls width="320" height="240">
+                                <source src="${get_videos_path('martes', 'soleo.mp4')}" type="video/mp4" />
+                                Tu navegador no soporta la reproducción de videos.
+                            </video>
+                            <p><strong>Series:</strong> 2 series.</p>
+                            <p><strong>Reps:</strong> Al fallo.</p>
+                            <p><strong>Descripción:</strong> Realiza elevaciones de pantorrilla sentado (soleo) hasta el fallo en cada serie, enfocándote en la contracción máxima.</p>
+                        </details>
+        
+                        <div class="ejercicio">
+                            <input type="checkbox" id="martes2-ej5" onchange="tacharEjercicio('martes2-ej5')" />
+                            <label for="martes2-ej5"><strong>Pantorrilla de Pie</strong></label>
+                        </div>
+                        <details>
+                            <summary>Detalles</summary>
+                            <p>Video:</p>
+                            <video controls width="320" height="240">
+                                <source src="${get_videos_path('martes', 'pantorrilla_pie.mp4')}" type="video/mp4" />
+                                Tu navegador no soporta la reproducción de videos.
+                            </video>
+                            <p><strong>Series:</strong> 2 series.</p>
+                            <p><strong>Reps:</strong> 10 reps con puntas afuera, 10 reps rectos, 10 reps con puntas adentro.</p>
+                            <p><strong>Descripción:</strong> Realiza elevaciones de pantorrilla de pie, variando la posición de los pies: 10 repeticiones con las puntas hacia afuera, 10 con los pies rectos, y 10 con las puntas hacia adentro, para trabajar diferentes partes de la pantorrilla.</p>
+                        </details>
+                    </div>
+        
+                    <!-- Abs -->
+                    <div class="grupo-muscular abs">
+                        <h4>ABS</h4>
+                        <div class="ejercicio">
+                            <input type="checkbox" id="martes2-ej6" onchange="tacharEjercicio('martes2-ej6')" />
+                            <label for="martes2-ej6"><strong>Abdominal Remador</strong></label>
+                        </div>
+                        <details>
+                            <summary>Detalles</summary>
+                            <p>Foto:</p>
+                            <img src="${get_image_path('martes', 'abdominal_remador.png')}" alt="Abdominal Remador" width="320" height="240" />
+                            <p><strong>Reps:</strong> 20 repeticiones.</p>
+                            <p><strong>Descripción:</strong> Realiza 20 repeticiones de abdominales remador, enfocándote en la contracción del core y manteniendo una buena forma.</p>
+                        </details>
+        
+                        <div class="triserie">
                             <div class="ejercicio">
-                                <input type="checkbox" id="martes2-ej1" onchange="tacharEjercicio('martes2-ej1')" />
-                                <label for="martes2-ej1"><strong>Sentadilla Búlgara con Mancuerna</strong></label>
+                                <input type="checkbox" id="martes2-ej7" onchange="tacharEjercicio('martes2-ej7')" />
+                                <label for="martes2-ej7"><strong>Elevación de Piernas</strong></label>
+                            </div>
+                            <div class="ejercicio">
+                                <input type="checkbox" id="martes2-ej8" onchange="tacharEjercicio('martes2-ej8')" />
+                                <label for="martes2-ej8"><strong>Recto Curtinho</strong></label>
+                            </div>
+                            <div class="ejercicio">
+                                <input type="checkbox" id="martes2-ej9" onchange="tacharEjercicio('martes2-ej9')" />
+                                <label for="martes2-ej9"><strong>Obliquo Solo</strong></label>
                             </div>
                             <details>
-                                <summary>Detalles</summary>
-                                <p>Video:</p>
-                                <video controls width="320" height="240">
-                                    <source src="${get_videos_path('martes', 'sentadilla_bulgara.mp4')}" type="video/mp4" />
-                                    Tu navegador no soporta la reproducción de videos.
-                                </video>
-                                <p><strong>Series:</strong> 4 series</p>
-                                <p><strong>Reps:</strong> 6 repeticiones por pierna</p>
-                                <p><strong>Descripción:</strong> Trabajo unilateral intenso. Mantén el torso levemente inclinado para más glúteo.</p>
+                                <summary>Detalles de la Triserie</summary>
+                                <p><strong>Reps Totales:</strong> Elevación de Piernas: 10 reps; Recto Curtinho: 20 reps; Obliquo Solo: 15 reps (sin descanso entre ejercicios).</p>
+                                <h5>Elevación de Piernas</h5>
+                                <p><strong>Reps:</strong> 10 repeticiones.</p>
+                                <p><strong>Foto:</strong></p>
+                                <img src="${get_image_path('martes', 'elevacion_piernas.png')}" alt="Elevación de Piernas" width="320" height="240" />
+                                <p><strong>Descripción:</strong> Acuéstate boca arriba con las manos debajo de los glúteos o a los lados para soporte. Eleva las piernas rectas hasta formar un ángulo de 90 grados con el torso, manteniendo el core contraído. Baja lentamente sin dejar que los pies toquen el suelo y repite.</p>
+                                <h5>Recto Curtinho</h5>
+                                <p><strong>Reps:</strong> 20 repeticiones.</p>
+                                <p><strong>Foto:</strong></p>
+                                <img src="${get_image_path('martes', 'recto_curtinho.png')}" alt="Recto Curtinho" width="320" height="240" />
+                                <p><strong>Descripción:</strong> Acuéstate boca arriba con las rodillas dobladas y los pies apoyados en el suelo. Realiza un crunch corto, levantando solo los hombros del suelo mientras contraes el abdomen. Mantén el movimiento controlado y enfócate en la contracción del recto abdominal.</p>
+                                <h5>Obliquo Solo</h5>
+                                <p><strong>Reps:</strong> 15 repeticiones.</p>
+                                <p><strong>Foto:</strong></p>
+                                <img src="${get_image_path('martes', 'obliquo_solo.png')}" alt="Obliquo Solo" width="320" height="240" />
+                                <p><strong>Descripción:</strong> Acuéstate de lado con las piernas juntas y el cuerpo apoyado sobre un antebrazo. Eleva las piernas y el torso simultáneamente, contrayendo los oblicuos del lado que está trabajando. Baja lentamente y repite, luego cambia de lado.</p>
+                                <p><strong>Instrucciones Generales:</strong> Realiza los tres ejercicios de forma consecutiva sin descanso: 10 repeticiones de elevación de piernas, 20 repeticiones de recto curtinho, y 15 repeticiones de obliquo solo. Esto cuenta como una triserie.</p>
                             </details>
                         </div>
                     </div>
-                    `
+                </div>
+            `
         },
         miercoles2: {
             titulo: "MIÉRCOLES - SEMANA 2",
