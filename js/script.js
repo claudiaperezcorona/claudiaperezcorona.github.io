@@ -615,28 +615,164 @@ function mostrarEntrenamiento(dia) {
         miercoles2: {
             titulo: "MIÉRCOLES - SEMANA 2",
             contenido: `
-                        <div id="contenido-entrenamiento">
-                        <!-- Espalda -->
-                        <div class="grupo-muscular espalda">
-                            <h4>ESPALDA</h4>
+                <div id="contenido-entrenamiento">
+                    <!-- Calentamiento -->
+                    <div class="grupo-muscular calentamiento">
+                        <h4>CALENTAMIENTO</h4>
+                        <div class="ejercicio">
+                            <input type="checkbox" id="miercoles2-ej1" onchange="tacharEjercicio('miercoles2-ej1')" />
+                            <label for="miercoles2-ej1"><strong>Calentamiento Manguito Rotador</strong></label>
+                        </div>
+                        <details>
+                            <summary>Detalles</summary>
+                            <p>Video:</p>
+                            <video controls width="320" height="240">
+                                <source src="${get_videos_path('miercoles', 'manguito_rotador.mp4')}" type="video/mp4" />
+                                Tu navegador no soporta la reproducción de videos.
+                            </video>
+                            <p><strong>Series:</strong> 1-2 series.</p>
+                            <p><strong>Reps:</strong> 10-15 repeticiones (submáximas, sin fatigar).</p>
+                            <p><strong>Descripción:</strong> Realiza rotaciones externas con una banda elástica o mancuerna ligera para activar el manguito rotador. Mantén el codo pegado al cuerpo y rota el antebrazo hacia afuera, enfocándote en la activación sin llegar al fallo.</p>
+                            <p><strong>Por qué es importante:</strong> El manguito rotador mantiene la cabeza del húmero centrada en la articulación. Si no está activo, puede causar molestias o lesiones al hacer press. Se hacen solo 1 o 2 series submáximas para activarlo sin fatigarlo, porque si se cansa, no podrá estabilizar el hombro durante el press.</p>
+                        </details>
+        
+                        <div class="ejercicio">
+                            <input type="checkbox" id="miercoles2-ej2" onchange="tacharEjercicio('miercoles2-ej2')" />
+                            <label for="miercoles2-ej2"><strong>Elevación Frontal ISO Alternada con Mancuernas</strong></label>
+                        </div>
+                        <details>
+                            <summary>Detalles</summary>
+                            <p>Video:</p>
+                            <video controls width="320" height="240">
+                                <source src="${get_videos_path('miercoles', 'elevacion_frontal_ISO_alternada.mp4')}" type="video/mp4" />
+                                Tu navegador no soporta la reproducción de videos.
+                            </video>
+                            <p><strong>Series:</strong> 1-2 series.</p>
+                            <p><strong>Reps:</strong> 8 repeticiones por brazo.</p>
+                            <p><strong>Descripción:</strong> Sostén una mancuerna en cada mano. Eleva una mancuerna frontalmente hasta la altura del hombro mientras la otra permanece abajo, manteniendo la tensión. Alterna los brazos, enfocándote en el deltoide anterior.</p>
+                            <p><strong>Beneficios:</strong> Aísla el deltoide anterior desde el inicio del movimiento, evita que el trapecio o la espalda baja roben protagonismo, y mejora la activación y el control.</p>
+                        </details>
+                    </div>
+        
+                    <!-- Pecho (Ejercicio Independiente) -->
+                    <div class="grupo-muscular pecho">
+                        <h4>PECHO</h4>
+                        <div class="ejercicio">
+                            <input type="checkbox" id="miercoles2-ej3" onchange="tacharEjercicio('miercoles2-ej3')" />
+                            <label for="miercoles2-ej3"><strong>Press Inclinado con Mancuernas (banco a 30°)</strong></label>
+                        </div>
+                        <details>
+                            <summary>Detalles</summary>
+                            <p><strong>Series:</strong> 3 series.</p>
+                            <p><strong>Reps:</strong> 5-8 repeticiones.</p>
+                            <p><strong>Video:</strong></p>
+                            <video controls width="320" height="240">
+                                <source src="${get_videos_path('miercoles', 'press_inclinado.mp4')}" type="video/mp4" />
+                                Tu navegador no soporta la reproducción de videos.
+                            </video>
+                            <p><strong>Descripción:</strong> Ajusta el banco a 30°. Sostén una mancuerna en cada mano con los pulgares hacia arriba para maximizar la aducción. Baja las mancuernas controladamente hasta que los codos estén a la altura del torso, y empuja hacia arriba, juntando las mancuernas al final para mayor contracción del pecho.</p>
+                            <p><strong>Enfoque:</strong> Parte superior del pecho (clavicular).</p>
+                            <p><strong>Beneficio:</strong> El ángulo de 30° permite trabajar fibras superiores, comúnmente subdesarrolladas. Con mancuernas y pulgares arriba, logras mayor aducción, lo que activa más el pecho y menos los hombros. Carga pesada = tensión mecánica alta, clave para ganar fuerza y masa muscular.</p>
+                            <p><strong>Por qué es de los mejores:</strong> Combina el estímulo pesado (clave para fuerza y crecimiento) y la aducción, optimizando la activación del pectoral superior.</p>
+                        </details>
+                    </div>
+        
+                    <!-- Biserie: Pecho + Tríceps -->
+                    <div class="grupo-muscular pecho">
+                        <h4>PECHO + TRÍCEPS (Biserie)</h4>
+                        <div class="biserie">
                             <div class="ejercicio">
-                                <input type="checkbox" id="miercoles2-ej1" onchange="tacharEjercicio('miercoles2-ej1')" />
-                                <label for="miercoles2-ej1"><strong>Remo Muerto Explosivo con Barra</strong></label>
+                                <input type="checkbox" id="miercoles2-ej4" onchange="tacharEjercicio('miercoles2-ej4')" />
+                                <label for="miercoles2-ej4"><strong>Peck Deck</strong></label>
+                            </div>
+                            <div class="ejercicio">
+                                <input type="checkbox" id="miercoles2-ej5" onchange="tacharEjercicio('miercoles2-ej5')" />
+                                <label for="miercoles2-ej5"><strong>Jalón con Rotación para Tríceps</strong></label>
                             </div>
                             <details>
-                                <summary>Detalles</summary>
-                                <p>Video:</p>
+                                <summary>Detalles de la Biserie</summary>
+                                <h5>Peck Deck</h5>
+                                <p><strong>Series:</strong> 2 series.</p>
+                                <p><strong>Reps:</strong> 8-10 repeticiones.</p>
+                                <p><strong>Video:</strong></p>
+                                <p>Foto:</p>
+                                <img src="${get_image_path('miercoles', 'pec_deck.png')}" alt="Pec Deck" width="320" height="240" />
+                                <p><strong>Descripción:</strong> Siéntate en la máquina Peck Deck con los codos a la altura de los hombros y los antebrazos apoyados en las almohadillas. Junta las almohadillas frente a tu pecho, enfocándote en la contracción del pectoral, y regresa lentamente a la posición inicial para maximizar el estiramiento.</p>
+                                <p><strong>Enfoque:</strong> Trabajo de aislamiento para el pecho, con énfasis en la contracción y el estiramiento.</p>
+                                <p><strong>Beneficio:</strong> La máquina permite un movimiento controlado que aísla el pecho, minimizando la intervención de otros músculos. Es ideal para trabajar la parte media del pectoral con seguridad.</p>
+                                <h5>Jalón con Rotación para Tríceps</h5>
+                                <p><strong>Series:</strong> 2 series.</p>
+                                <p><strong>Reps:</strong> 6 repeticiones.</p>
+                                <p><strong>Video:</strong></p>
                                 <video controls width="320" height="240">
-                                    <source src="${get_videos_path('miercoles', 'remo_muerto_explosivo.mp4')}" type="video/mp4" />
+                                    <source src="${get_videos_path('miercoles', 'jalon_con_rotacion__triceps.mp4')}" type="video/mp4" />
                                     Tu navegador no soporta la reproducción de videos.
                                 </video>
-                                <p><strong>Series:</strong> 3 series</p>
-                                <p><strong>Reps:</strong> 8-10 repeticiones</p>
-                                <p><strong>Descripción:</strong> Desarrolla potencia y explosividad. Refuerza la parte media de la espalda.</p>
+                                <p><strong>Descripción:</strong> En una polea alta, usa una barra o cuerda. Baja la barra como en un jalón de tríceps clásico, y al final, rota el brazo hacia atrás del cuerpo para aumentar la contracción de la cabeza larga del tríceps.</p>
+                                <p><strong>Por qué es de los mejores:</strong> Ataca directamente la cabeza larga del tríceps. Esa rotación final aumenta la contracción y el rango de movimiento. Rompe con la ejecución típica, aumentando la efectividad del ejercicio.</p>
+                                <p><strong>Instrucciones Generales:</strong> Realiza las 2 series del Peck Deck (8-10 reps) inmediatamente seguidas de 2 series del Jalón con Rotación para Tríceps (6 reps) sin descanso entre ejercicios. Descansa después de completar cada biserie.</p>
                             </details>
                         </div>
                     </div>
-                    `
+        
+                    <!-- Pecho (Ejercicio Final) -->
+                    <div class="grupo-muscular pecho">
+                        <h4>PECHO</h4>
+                        <div class="ejercicio">
+                            <input type="checkbox" id="miercoles2-ej7" onchange="tacharEjercicio('miercoles2-ej7')" />
+                            <label for="miercoles2-ej7"><strong>High to Low Crossover</strong></label>
+                        </div>
+                        <details>
+                            <summary>Detalles</summary>
+                            <p><strong>Series:</strong> 3 series.</p>
+                            <p><strong>Reps:</strong> 10-12 repeticiones + parciales.</p>
+                            <p><strong>Video:</strong></p>
+                            <video controls width="320" height="240">
+                                <source src="${get_videos_path('miercoles', 'high_to_low_crossover.mp4')}" type="video/mp4" />
+                                Tu navegador no soporta la reproducción de videos.
+                            </video>
+                            <p><strong>Descripción:</strong> En una polea alta, ajusta las poleas a la posición más alta. Con un agarre en cada mano, cruza los brazos hacia abajo y hacia afuera, enfocándote en la abducción para trabajar la parte inferior del pecho. Después de 10-12 repeticiones, realiza parciales en la posición de máxima contracción hasta el fallo.</p>
+                            <p><strong>Enfoque:</strong> Parte inferior del pecho.</p>
+                        </details>
+                    </div>
+        
+                    <!-- Hombros -->
+                    <div class="grupo-muscular hombros">
+                        <h4>HOMBROS</h4>
+                        <div class="ejercicio">
+                            <input type="checkbox" id="miercoles2-ej8" onchange="tacharEjercicio('miercoles2-ej8')" />
+                            <label for="miercoles2-ej8"><strong>Press Militar</strong></label>
+                        </div>
+                        <details>
+                            <summary>Detalles</summary>
+                            <p><strong>Series:</strong> 2 series.</p>
+                            <p><strong>Reps:</strong> 7 repeticiones con un brazo, 7 repeticiones con el otro, 7 repeticiones con ambos brazos.</p>
+                            <p><strong>Video:</strong></p>
+                            <video controls width="320" height="240">
+                                <source src="${get_videos_path('miercoles', 'press_militar.mp4')}" type="video/mp4" />
+                                Tu navegador no soporta la reproducción de videos.
+                            </video>
+                            <p><strong>Descripción:</strong> Sostén una mancuerna en cada mano a la altura de los hombros. Realiza 7 repeticiones con un brazo, luego 7 repeticiones con el otro, y finalmente 7 repeticiones con ambos brazos juntos, manteniendo el core contraído y una postura estable.</p>
+                        </details>
+        
+                        <div class="ejercicio">
+                            <input type="checkbox" id="miercoles2-ej9" onchange="tacharEjercicio('miercoles2-ej9')" />
+                            <label for="miercoles2-ej9"><strong>Elevación Lateral Individual (1 1/2)</strong></label>
+                        </div>
+                        <details>
+                            <summary>Detalles</summary>
+                            <p><strong>Series:</strong> 2 series.</p>
+                            <p><strong>Reps:</strong> 8 repeticiones (una y media).</p>
+                            <p><strong>Video:</strong></p>
+                            <video controls width="320" height="240">
+                                <source src="${get_videos_path('miercoles', 'elevacion_1_y_medio.mp4')}" type="video/mp4" />
+                                Tu navegador no soporta la reproducción de videos.
+                            </video>
+                            <p><strong>Descripción:</strong> Sostén una mancuerna en una mano. Eleva la mancuerna lateralmente hasta la altura del hombro, baja solo hasta la mitad manteniendo la tensión alta (sin dejar que el impulso baje la mancuerna por completo), y vuelve a subir. Esto cuenta como una repetición y media. Repite con el otro brazo.</p>
+                        </details>
+                    </div>
+                </div>
+            `
         },
         jueves2: {
             titulo: "JUEVES - SEMANA 2",
