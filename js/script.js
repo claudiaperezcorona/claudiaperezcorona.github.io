@@ -44,184 +44,207 @@ function mostrarEntrenamiento(dia) {
         lunes1: {
             titulo: "LUNES - SEMANA 1",
             contenido: `
-                        <div id="contenido-entrenamiento">
-                        <!-- Calentamiento -->
-                        <div class="grupo-muscular calentamiento">
-                            <h4>CALENTAMIENTO</h4>
-                            <div class="ejercicio">
-                                <input type="checkbox" id="lunes1-ej1" onchange="tacharEjercicio('lunes1-ej1')" />
-                                <label for="lunes1-ej1"><strong>Manguito Rotador</strong></label>
-                            </div>
-                            <details>
-                                <summary>Detalles</summary>
-                                <p>Video:</p>
-                                <video controls width="320" height="240">
-                                    <source src="${get_videos_path('lunes', 'manguito_rotador.mp4')}" type="video/mp4" />
-                                    Tu navegador no soporta la reproducción de videos.
-                                </video>
-                                <p><strong>Series:</strong> 2 series.</p>
-                                <p><strong>Reps:</strong> 10 - 15 repeticiones.</p>
-                                <p><strong>Descripción:</strong> Activación SIN fatigar</p>
-                                <blockquote>
-                                    “Cuando haces trabajo de <strong>rotación externa</strong> antes de hacer press de banca, calientas el hombro <strong>más eficazmente</strong> y ayudas a <strong>despertar el manguito rotador</strong>, que es muy importante preparar antes de hacer press de banca."
-                                </blockquote>
-                                <p>
-                                    <strong>🔎 ¿Por qué?</strong><br />
-                                    Porque el <strong>manguito rotador</strong> es el encargado de <strong>mantener la cabeza del húmero centrada</strong> en la articulación. Si no está activo, la cabeza del húmero se desplaza y puede causar molestias o lesiones al hacer el press.
-                                </p>
-                            </details>
-                        </div>
+            <div id="contenido-entrenamiento">
+            <!-- Calentamiento -->
+            <div class="grupo-muscular calentamiento">
+                <h4>CALENTAMIENTO</h4>
+                <div class="ejercicio">
+                    <input type="checkbox" id="lunes1-ej1" onchange="tacharEjercicio('lunes1-ej1')" />
+                    <label for="lunes1-ej1"><strong>Calentamiento Manguito Rotador</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('lunes', 'manguito_rotador.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Series:</strong> 2 series.</p>
+                    <p><strong>Reps:</strong> 10 - 15 repeticiones.</p>
+                    <p><strong>Descripción:</strong> Activación SIN fatigar</p>
+                    <blockquote>
+                        “Cuando haces trabajo de <strong>rotación externa</strong> antes de hacer press de banca, calientas el hombro <strong>más eficazmente</strong> y ayudas a <strong>despertar el manguito rotador</strong>, que es muy importante preparar antes de hacer press de banca."
+                    </blockquote>
+                    <p>
+                        <strong>🔎 ¿Por qué?</strong><br />
+                        Porque el <strong>manguito rotador</strong> es el encargado de <strong>mantener la cabeza del húmero centrada</strong> en la articulación. Si no está activo, la cabeza del húmero se desplaza y puede causar molestias o lesiones al hacer el press.
+                    </p>
+                    <p><strong>Clave:</strong> Se hacen solo 1 o 2 series <strong>submáximas</strong> para activarlo sin fatigarlo, porque si se cansa, <strong>no podrá estabilizar</strong> el hombro durante el press.</p>
+                </details>
+            </div>
 
-                        <!-- Pecho -->
-                        <div class="grupo-muscular pecho">
-                            <h4>PECHO</h4>
-                            <div class="ejercicio">
-                                <input type="checkbox" id="lunes1-ej2" onchange="tacharEjercicio('lunes1-ej2')" />
-                                <label for="lunes1-ej2"><strong>Press Inclinado con Mancuernas</strong> (banco a 30°)</label>
-                            </div>
-                            <details>
-                                <summary>Detalles</summary>
-                                <p>Video:</p>
-                                <video controls width="320" height="240">
-                                    <source src="${get_videos_path('lunes', 'press_inclinado.mp4')}" type="video/mp4" />
-                                    Tu navegador no soporta la reproducción de videos.
-                                </video>
-                                <p><strong>Series:</strong> 3 series.</p>
-                                <p><strong>Reps:</strong> 5-8 repeticiones.</p>
-                                <p><strong>Clave:</strong> Pulgares arriba para más pecho y menos hombro.</p>
-                                <p><strong>Enfoque:</strong> Parte superior del pecho (clavicular).</p>
-                                <p><strong>Beneficio:</strong></p>
-                                <ul>
-                                    <li>El ángulo de 30° permite trabajar fibras superiores, comúnmente subdesarrolladas. 💪</li>
-                                    <li>Con mancuernas y pulgares arriba, logras mayor <strong>aducción</strong>, lo que activa más el pecho y menos los hombros. 🏋️</li>
-                                    <li>Carga pesada = <strong>tensión mecánica alta</strong>, clave para ganar fuerza y masa muscular. 📈</li>
-                                </ul>
-                                <p><strong>Por qué es de los mejores:</strong> Se combina el estímulo pesado (clave para fuerza y crecimiento) y la aducción, lo que optimiza la activación del pectoral superior.</p>
-                            </details>
-                            <div class="ejercicio">
-                                <input type="checkbox" id="lunes1-ej3" onchange="tacharEjercicio('lunes1-ej3')" />
-                                <label for="lunes1-ej3"><strong>Pec Deck (máquina de aperturas de pecho)</strong></label>
-                            </div>
-                            <details>
-                                <summary>Detalles</summary>
-                                <p>Foto:</p>
-                                <img src="${get_image_path('lunes', 'pec_deck.png')}" alt="Pec Deck" width="320" height="240" />
-                                <p><strong>Series:</strong> 2 series.</p>
-                                <p><strong>Reps:</strong> 8-10 repeticiones.</p>
-                                <p><strong>Enfoque:</strong></p>
-                                <ul>
-                                    <li>Zona media e interna del pecho (pectoral mayor) 💪</li>
-                                    <li>Porción esternal (central) del pectoral mayor.</li>
-                                    <li>Secundariamente involucra los deltoides anteriores.</li>
-                                </ul>
-                            </details>
-                            <div class="ejercicio">
-                                <input type="checkbox" id="lunes1-ej4" onchange="tacharEjercicio('lunes1-ej4')" />
-                                <label for="lunes1-ej4"><strong>Flexiones Déficit 1 y ½ con Escalera de Isometría</strong></label>
-                            </div>
-                            <details>
-                                <summary>Detalles</summary>
-                                <p>Video:</p>
-                                <video controls width="320" height="240">
-                                    <source src="${get_videos_path('lunes', 'flexiones_deficit.mp4')}" type="video/mp4" />
-                                    Tu navegador no soporta la reproducción de videos.
-                                </video>
-                                <p><strong>Series:</strong> 1</p>
-                                <p><strong>Reps:</strong> al fallo.</p>
-                            </details>
-                            <div class="ejercicio">
-                                <input type="checkbox" id="lunes1-ej8" onchange="tacharEjercicio('lunes1-ej8')" />
-                                <label for="lunes1-ej8"><strong>Pullover</strong></label>
-                            </div>
-                            <details>
-                                <summary>Detalles</summary>
-                                <p>Video:</p>
-                                <video controls width="320" height="240">
-                                    <source src="${get_videos_path('lunes', 'pullover.mp4')}" type="video/mp4" />
-                                    Tu navegador no soporta la reproducción de videos.
-                                </video>
-                                <p><strong>Series:</strong> 3 series</p>
-                                <p><strong>Reps:</strong> 6-8 reps</p>
-                                <p><strong>Nota:</strong> Lo pueden hacer en la polea reps</p>
-                            </details>
-                        </div>
+            <!-- Pecho -->
+            <div class="grupo-muscular pecho">
+                <h4>PECHO</h4>
+                <div class="ejercicio">
+                    <input type="checkbox" id="lunes1-ej2" onchange="tacharEjercicio('lunes1-ej2')" />
+                    <label for="lunes1-ej2"><strong>Press Inclinado con Mancuernas (Thumbs Up)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('lunes', 'press_inclinado.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Series:</strong> 3 series.</p>
+                    <p><strong>Reps:</strong> 8-10 repeticiones.</p>
+                    <p><strong>Zona del Pecho:</strong> Superior</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Pulgares mirando hacia arriba.</li>
+                        <li>Acerca los brazos entre sí en la parte alta del movimiento para una mayor contracción muscular.</li>
+                    </ul>
+                </details>
+                <div class="ejercicio">
+                    <input type="checkbox" id="lunes1-ej3" onchange="tacharEjercicio('lunes1-ej3')" />
+                    <label for="lunes1-ej3"><strong>Press de Cable con Parciales (Cable Crossover)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('lunes', 'cable_crossover.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Series:</strong> 3 series.</p>
+                    <p><strong>Reps:</strong> 8-10 + parciales.</p>
+                    <p><strong>Zona del Pecho:</strong> Media</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Inclínate adelante al abrir los brazos y atrás cuando los brazos se crucen frente al cuerpo.</li>
+                        <li>Esto excluye el trabajo del hombro, colocando énfasis total en el pecho.</li>
+                        <li>Realiza repeticiones parciales en la posición más elongada para enfatizar la tensión.</li>
+                    </ul>
+                </details>
+                <div class="ejercicio">
+                    <input type="checkbox" id="lunes1-ej4" onchange="tacharEjercicio('lunes1-ej4')" />
+                    <label for="lunes1-ej4"><strong>Fondos en Paralelas con Escalera 1.5 Reps (Dip Ladder)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('lunes', 'dip_ladder.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Series:</strong> 1 serie (al fallo).</p>
+                    <p><strong>Zona del Pecho:</strong> Inferior</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Baja lentamente hasta una posición cómoda, sin llevar los codos muy atrás del cuerpo.</li>
+                        <li>Realiza media repetición, sube, y luego baja completamente; esto cuenta como una repetición.</li>
+                        <li>Mantén 1 segundo abajo en la primera repetición, 2 segundos en la segunda, incrementando progresivamente.</li>
+                    </ul>
+                </details>
+                <div class="ejercicio">
+                    <input type="checkbox" id="lunes1-ej5" onchange="tacharEjercicio('lunes1-ej5')" />
+                    <label for="lunes1-ej5"><strong>Flexiones Déficit 1.5 Rep Pushup Ladder</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('lunes', 'flexiones_deficit.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Series:</strong> 1 serie (al fallo).</p>
+                    <p><strong>Zona del Pecho:</strong> Media e inferior</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Coloca las manos sobre plataformas para aumentar el rango de movimiento.</li>
+                        <li>Realiza media repetición, sube, luego baja completamente para una repetición.</li>
+                        <li>Incrementa el tiempo de pausa en la parte baja (1 segundo en la primera repetición, 2 segundos en la segunda, etc.).</li>
+                    </ul>
+                </details>
+            </div>
 
-                        <!-- Hombros -->
-                        <div class="grupo-muscular hombros">
-                            <h4>HOMBROS</h4>
-                            <div class="biserie">
-                                <div class="ejercicio">
-                                    <input type="checkbox" id="lunes1-ej5" onchange="tacharEjercicio('lunes1-ej5')" />
-                                    <label for="lunes1-ej5"><strong>Press Unilateral de Pie con Mancuerna</strong></label>
-                                </div>
-                                <div class="ejercicio">
-                                    <input type="checkbox" id="lunes1-ej6" onchange="tacharEjercicio('lunes1-ej6')" />
-                                    <label for="lunes1-ej6"><strong>Push Press con Mancuernas</strong></label>
-                                </div>
-                                <details>
-                                    <summary>Detalles de la Biserie</summary>
-                                    <p><strong>Series:</strong> 3 series (ambos ejercicios seguidos sin descanso)</p>
-                                    <p><strong>Reps:</strong> 6-8 repeticiones por ejercicio</p>
-                                    <p><strong>Video Press Unilateral de Pie con Mancuerna:</strong></p>
-                                    <video controls width="320" height="240">
-                                        <source src="${get_videos_path('lunes', 'press_unilateral_d_pie_c_mancuerna.mp4')}" type="video/mp4" />
-                                        Tu navegador no soporta la reproducción de videos.
-                                    </video>
-                                    <p><strong>Video Push Press con Mancuernas:</strong></p>
-                                    <video controls width="320" height="240">
-                                        <source src="${get_videos_path('lunes', 'push_press_con_mancuernas.mp4')}" type="video/mp4" />
-                                        Tu navegador no soporta la reproducción de videos.
-                                    </video>
-                                    <p><strong>Descripción:</strong> Realiza el Press Unilateral de Pie con Mancuerna seguido inmediatamente por el Push Press con Mancuernas. Descansa después de completar ambos ejercicios.</p>
-                                </details>
-                            </div>
-                            <div class="ejercicio">
-                                <input type="checkbox" id="lunes1-ej7" onchange="tacharEjercicio('lunes1-ej7')" />
-                                <label for="lunes1-ej7"><strong>Elevación Lateral con Trampa + Descendente</strong></label>
-                            </div>
-                            <details>
-                                <summary>Detalles</summary>
-                                <p>Video:</p>
-                                <video controls width="320" height="240">
-                                    <source src="${get_videos_path('lunes', 'elevacion_lateral_con_trampa.mp4')}" type="video/mp4" />
-                                    Tu navegador no soporta la reproducción de videos.
-                                </video>
-                                <p><strong>Series:</strong> 2 series</p>
-                                <p><strong>Reps:</strong> al fallo</p>
-                            </details>
-                        </div>
-
-                        <!-- Tríceps -->
-                        <div class="grupo-muscular triceps">
-                            <h4>TRÍCEPS</h4>
-                            <div class="ejercicio">
-                                <input type="checkbox" id="lunes1-ej9" onchange="tacharEjercicio('lunes1-ej9')" />
-                                <label for="lunes1-ej9"><strong>Jalón con Rotación para Tríceps</strong></label>
-                            </div>
-                            <details>
-                                <summary>Detalles</summary>
-                                <p>Video:</p>
-                                <video controls width="320" height="240">
-                                    <source src="${get_videos_path('lunes', 'jalon_con_rotacion__triceps.mp4')}" type="video/mp4" />
-                                    Tu navegador no soporta la reproducción de videos.
-                                </video>
-                                <p><strong>Series:</strong> 2 series</p>
-                                <p><strong>Reps:</strong> 8 reps</p>
-                                <p><strong>Descripción:</strong></p>
-                                <ul>
-                                    <li>- Es una variante del jalón de tríceps clásico en polea.</li>
-                                    <li>- En vez de solo bajar la barra, al final haces una <strong>rotación</strong> para llevar el brazo <strong>detrás del cuerpo</strong></li>
-                                </ul>
-                                <p><strong>¿Por qué es de los mejores?:</strong></p>
-                                <ul>
-                                    <li>- Ataca directamente la <strong>cabeza larga del tríceps</strong></li>
-                                    <li>- Esa rotación final aumenta la contracción y el rango de movimiento.</li>
-                                    <li>- Rompe con la ejecución típica, aumentando la efectividad del ejercicio.</li>
-                                </ul>
-                            </details>
-                        </div>
+            <!-- Hombros -->
+            <div class="grupo-muscular hombros">
+                <h4>HOMBROS</h4>
+                <div class="triserie">
+                    <div class="ejercicio">
+                        <input type="checkbox" id="lunes1-ej6" onchange="tacharEjercicio('lunes1-ej6')" />
+                        <label for="lunes1-ej6"><strong>Press Militar de Pie</strong></label>
                     </div>
-                    `
+                    <div class="ejercicio">
+                        <input type="checkbox" id="lunes1-ej7" onchange="tacharEjercicio('lunes1-ej7')" />
+                        <label for="lunes1-ej7"><strong>Press Unilateral de Pie</strong></label>
+                    </div>
+                    <div class="ejercicio">
+                        <input type="checkbox" id="lunes1-ej8" onchange="tacharEjercicio('lunes1-ej8')" />
+                        <label for="lunes1-ej8"><strong>Push Press con Mancuernas</strong></label>
+                    </div>
+                    <details>
+                        <summary>Detalles de la Triserie</summary>
+                        <p><strong>Series:</strong> 3 series (los tres ejercicios seguidos sin descanso)</p>
+                        <p><strong>Reps Press Militar:</strong> 10 repeticiones</p>
+                        <p><strong>Reps Press Unilateral:</strong> 6 repeticiones</p>
+                        <p><strong>Reps Push Press:</strong> 8 repeticiones</p>
+                        <p><strong>Video Press Militar de Pie:</strong></p>
+                        <video controls width="320" height="240">
+                            <source src="${get_videos_path('lunes', 'press_militar_pie.mp4')}" type="video/mp4" />
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                        <p><strong>Ejecución Press Militar:</strong></p>
+                        <ul>
+                            <li>Usa peso elevado, realiza el press por encima de la cabeza sin respaldo.</li>
+                            <li>Mantén control total del movimiento.</li>
+                        </ul>
+                        <p><strong>Video Press Unilateral de Pie:</strong></p>
+                        <video controls width="320" height="240">
+                            <source src="${get_videos_path('lunes', 'press_unilateral.mp4')}" type="video/mp4" />
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                        <p><strong>Ejecución Press Unilateral:</strong></p>
+                        <ul>
+                            <li>Realiza el movimiento alternando cada brazo, mantén el core activado.</li>
+                            <li>Mejora equilibrio y trabaja asimetrías.</li>
+                        </ul>
+                        <p><strong>Video Push Press con Mancuernas:</strong></p>
+                        <video controls width="320" height="240">
+                            <source src="${get_videos_path('lunes', 'push_press_mancuernas.mp4')}" type="video/mp4" />
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                        <p><strong>Ejecución Push Press:</strong></p>
+                        <ul>
+                            <li>Usa un ligero impulso de piernas para elevar mancuernas.</li>
+                            <li>Aprovecha la explosividad del movimiento para manejar pesos mayores.</li>
+                        </ul>
+                        <p><strong>Descripción:</strong> Realiza el Press Militar de Pie, seguido inmediatamente por el Press Unilateral de Pie, y termina con el Push Press con Mancuernas. Descansa después de completar los tres ejercicios.</p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Tríceps -->
+            <div class="grupo-muscular triceps">
+                <h4><td class="grupo-muscular triceps">
+                    <h4>TRÍCEPS</h4>
+                    <div class="ejercicio">
+                        <input type="checkbox" id="lunes1-ej9" onchange="tacharEjercicio('lunes1-ej9')" />
+                        <label for="lunes1-ej9"><strong>Jalón con Rotación para Tríceps (Polea con Barra)</strong></label>
+                    </div>
+                    <details>
+                        <summary>Detalles</summary>
+                        <p>Video:</p>
+                        <video controls width="320" height="240">
+                            <source src="${get_videos_path('lunes', 'jalon_rotacion_triceps.mp4')}" type="video/mp4" />
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                        <p><strong>Series:</strong> 2 series</p>
+                        <p><strong>Reps:</strong> 8 repeticiones</p>
+                        <p Robin Hood for this particular tale is a bit different from the standard outlaw who stole from the rich and gave to the poor. <strong>Zona del Tríceps:</strong> Cabeza larga (énfasis en contracción y rango extendido)</p>
+                        <p><strong>Ejecución:</strong></p>
+                        <ul>
+                            <li>Desde la posición inicial de un jalón clásico en polea, realiza un movimiento descendente controlado.</li>
+                            <li>Al llegar al punto bajo del movimiento, realiza una rotación llevando el brazo hacia atrás del cuerpo, enfatizando la contracción total del tríceps.</li>
+                            <li>Esta variación aumenta considerablemente el rango de movimiento y estimula intensamente la cabeza larga del músculo, mejorando tanto la fuerza como el desarrollo estético.</li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+        </div>
+            `
         },
         martes1: {
             titulo: "MARTES - SEMANA 1",
