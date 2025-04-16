@@ -290,28 +290,243 @@ function mostrarEntrenamiento(dia) {
         miercoles1: {
             titulo: "MIÉRCOLES - SEMANA 1",
             contenido: `
-                        <div id="contenido-entrenamiento">
-                        <!-- Espalda -->
-                        <div class="grupo-muscular espalda">
-                            <h4>ESPALDA</h4>
-                            <div class="ejercicio">
-                                <input type="checkbox" id="miercoles1-ej1" onchange="tacharEjercicio('miercoles1-ej1')" />
-                                <label for="miercoles1-ej1"><strong>Remo Muerto Explosivo con Barra</strong></label>
-                            </div>
-                            <details>
-                                <summary>Detalles</summary>
-                                <p>Video:</p>
-                                <video controls width="320" height="240">
-                                    <source src="${get_videos_path('miercoles', 'remo_muerto_explosivo.mp4')}" type="video/mp4" />
-                                    Tu navegador no soporta la reproducción de videos.
-                                </video>
-                                <p><strong>Series:</strong> 3 series</p>
-                                <p><strong>Reps:</strong> 8-10 repeticiones</p>
-                                <p><strong>Descripción:</strong> Desarrolla potencia y explosividad. Refuerza la parte media de la espalda.</p>
-                            </details>
-                        </div>
-                    </div>
-                    `
+            <div id="contenido-entrenamiento">
+            <!-- Explicación Repeticiones Efectivas -->
+    <div class="explicacion-entrenamiento">
+        <h4>EXPLICACIÓN: REPETICIONES EFECTIVAS</h4>
+        <p><strong>Objetivo:</strong> Alcanzar <strong>20 repeticiones efectivas</strong> por ejercicio, divididas en bloques con pausas cortas para mantener un estado de <strong>fatiga máxima</strong>. Esta técnica maximiza la <strong>hipertrofia muscular</strong> al enfocarse en la <strong>intensidad</strong> y la <strong>acumulación de fatiga</strong> con series densas y controladas.</p>
+        <h5>⏱️ ¿Cómo funciona?</h5>
+        <ul>
+            <li><strong>Ignition Set:</strong> Realiza <strong>12 repeticiones al fallo</strong> con un peso que te lleve al límite técnico.</li>
+            <li><strong>Descanso:</strong> Descansa <strong>15 segundos</strong> tras el Ignition Set.</li>
+            <li><strong>Repeticiones Efectivas:</strong> Continúa con bloques de repeticiones (ej. 5 reps) con <strong>10 segundos de pausa</strong> entre bloques, hasta sumar <strong>20 repeticiones efectivas</strong>.</li>
+            <li><strong>Flexibilidad:</strong> Los bloques pueden variar según la fatiga (ej. 5+5+5+5 o 7+7+6), pero siempre deben ser exigentes y con buena técnica.</li>
+        </ul>
+        <p><strong>Ejemplo:</strong></p>
+        <ul>
+            <li>Ignition Set: 12 reps al fallo.</li>
+            <li>Descanso: 15 seg.</li>
+            <li>Bloques: 5 reps + 10 seg pausa + 5 reps + 10 seg pausa + 5 reps + 10 seg pausa + 5 reps = 20 reps efectivas.</li>
+        </ul>
+        <p><strong>¿Por qué es efectivo?</strong> Genera alta <strong>tensión mecánica</strong> y <strong>estrés metabólico</strong>, clave para el crecimiento muscular, con menos series totales. Ajusta los bloques según fatiga y mantén la forma impecable.</p>
+    </div>
+    <!-- Calentamiento -->
+    <div class="grupo-muscular calentamiento">
+        <h4>CALENTAMIENTO</h4>
+        <div class="ejercicio">
+            <input type="checkbox" id="miercoles1-ej1" onchange="tacharEjercicio('miercoles1-ej1')" />
+            <label for="miercoles1-ej1"><strong>Pullups (Dominadas)</strong></label>
+        </div>
+        <details>
+            <summary>Detalles</summary>
+            <p>Video:</p>
+            <video controls width="320" height="240">
+                <source src="${get_videos_path('miercoles', 'pullups.mp4')}" type="video/mp4" />
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+            <p><strong>Series:</strong> 3 series.</p>
+            <p><strong>Reps:</strong> No llegues al fallo. Es solo un Primer.</p>
+            <p><strong>Parte trabajada:</strong> Ejercicio compuesto para dorsales, brazos y hombros.</p>
+            <p><strong>Ejecución:</strong></p>
+            <ul>
+                <li>Con peso corporal: Haz pocas repeticiones.</li>
+                <li>Con banda de asistencia: Realiza pocas repeticiones.</li>
+                <li>Cambia la posición de las manos.</li>
+            </ul>
+            <p><strong>Descripción:</strong> Sin agotamiento, realiza pocas repeticiones para activar los músculos.</p>
+        </details>
+    </div>
+
+    <!-- Espalda -->
+    <div class="grupo-muscular espalda">
+        <h4>ESPALDA</h4>
+        <div class="ejercicio">
+            <input type="checkbox" id="miercoles1-ej2" onchange="tacharEjercicio('miercoles1-ej2')" />
+            <label for="miercoles1-ej2"><strong>Remo con Barra (Barbell Rows)</strong></label>
+        </div>
+        <details>
+            <summary>Detalles</summary>
+            <p>Video:</p>
+            <video controls width="320" height="240">
+                <source src="${get_videos_path('miercoles', 'barbell_rows(remo_com_barra).mp4')}" type="video/mp4" />
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+            <p><strong>Ignition Set:</strong> 12 repeticiones al fallo.</p>
+            <p><strong>20 Reps Efectivas:</strong> Divididas en bloques (ej. 5 + 5 + 5 + 5) con 10 seg entre bloques.</p>
+            <p><strong>Músculos trabajados:</strong> Espalda media, dorsales, romboides, trapecios, erectores espinales.</p>
+            <p><strong>Ejecución:</strong></p>
+            <ul>
+                <li>Carga moderadamente pesada.</li>
+                <li>Mantén el torso inclinado, sin arquear la espalda.</li>
+                <li>Enfócate en una contracción fuerte en la parte final del movimiento.</li>
+            </ul>
+            <p><strong>Importancia:</strong> Base de la fuerza horizontal para toda la espalda. Movimiento clave y pesado para iniciar.</p>
+        </details>
+
+        <div class="ejercicio">
+            <input type="checkbox" id="miercoles1-ej3" onchange="tacharEjercicio('miercoles1-ej3')" />
+            <label for="miercoles1-ej3"><strong>Lat Pulldowns (Agarre Ancho)</strong></label>
+        </div>
+        <details>
+            <summary>Detalles</summary>
+            <p>Video:</p>
+            <video controls width="320" height="240">
+                <source src="${get_videos_path('miercoles', 'lat_pull_down_wide.mp4')}" type="video/mp4" />
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+            <p><strong>Ignition Set:</strong> 12 repeticiones al fallo.</p>
+            <p><strong>20 Reps Efectivas:</strong> Divididas con pausas de 10 seg.</p>
+            <p><strong>Músculos trabajados:</strong> Dorsales y redondo mayor.</p>
+            <p><strong>Ejecución:</strong></p>
+            <ul>
+                <li>Usa un agarre amplio en la barra recta.</li>
+                <li>Saca los codos bien al frente al subir para exagerar el estiramiento de los dorsales.</li>
+                <li>Contrae al máximo al bajar.</li>
+            </ul>
+            <p><strong>Importancia:</strong> El estiramiento controlado del dorsal mejora el crecimiento muscular. Agarre amplio activa más el redondo mayor.</p>
+        </details>
+
+        <div class="ejercicio">
+            <input type="checkbox" id="miercoles1-ej4" onchange="tacharEjercicio('miercoles1-ej4')" />
+            <label for="miercoles1-ej4"><strong>Remo con Cable Sentado con Codos Anchos (Seated Cable Rows Wide)</strong></label>
+        </div>
+        <details>
+            <summary>Detalles</summary>
+            <p>Video:</p>
+            <video controls width="320" height="240">
+                <source src="${get_videos_path('miercoles', 'seated_cable_rows_wide.mp4')}" type="video/mp4" />
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+            <p><strong>Ignition Set:</strong> 12 repeticiones al fallo.</p>
+            <p><strong>20 Reps Efectivas:</strong> Divididas con pausas de 10 seg.</p>
+            <p><strong>Músculos trabajados:</strong> Espalda superior y deltoides posteriores.</p>
+            <p><strong>Ejecución:</strong></p>
+            <ul>
+                <li>Codos hacia afuera, abre bien el pecho.</li>
+                <li>Tira hacia la base del pecho sin perder tensión.</li>
+                <li>Mantén el control en la fase excéntrica.</li>
+            </ul>
+            <p><strong>Importancia:</strong> Excelente para estimular la parte alta de la espalda y mejorar el grosor escapular.</p>
+        </details>
+
+        <div class="ejercicio">
+            <input type="checkbox" id="miercoles1-ej5" onchange="tacharEjercicio('miercoles1-ej5')" />
+            <label for="miercoles1-ej5"><strong>Jalón Alto con Mancuernas (DB High Pulls)</strong></label>
+        </div>
+        <details>
+            <summary>Detalles</summary>
+            <p>Video:</p>
+            <video controls width="320" height="240">
+                <source src="${get_videos_path('miercoles', 'db_high_pulls.mp4')}" type="video/mp4" />
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+            <p><strong>Ignition Set:</strong> 12 repeticiones al fallo.</p>
+            <p><strong>20 Reps Efectivas:</strong> Mismo patrón: bloques con pausas de 10 seg.</p>
+            <p><strong>Músculos trabajados:</strong> Trapecios, deltoides posteriores, espalda alta.</p>
+            <p><strong>Ejecución:</strong></p>
+            <ul>
+                <li>Eleva las mancuernas manteniendo las muñecas por encima de los codos.</li>
+                <li>No conviertas el ejercicio en un remo erguido.</li>
+                <li>Controla y detente si la forma se deteriora.</li>
+            </ul>
+            <p><strong>Importancia:</strong> Mejora la fuerza escapular y la salud de los hombros. Excelente para reforzar la postura.</p>
+        </details>
+
+        <div class="ejercicio">
+            <input type="checkbox" id="miercoles1-ej6" onchange="tacharEjercicio('miercoles1-ej6')" />
+            <label for="miercoles1-ej6"><strong>Jalón ROM (Agarre Inverso con Enfoque en Elongación)</strong></label>
+        </div>
+        <details>
+            <summary>Detalles</summary>
+            <p>Video:</p>
+            <video controls width="320" height="240">
+                <source src="${get_videos_path('miercoles', 'jalon_rom_inverse.mp4')}" type="video/mp4" />
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+            <p><strong>Ignition Set:</strong> 12 repeticiones moderadas (no tan pesadas por estar al final).</p>
+            <p><strong>20 Reps Efectivas:</strong> Realiza bloques pausados, manteniendo la pausa en estiramiento.</p>
+            <p><strong>Músculos trabajados:</strong> Dorsales con énfasis en elongación.</p>
+            <p><strong>Ejecución:</strong></p>
+            <ul>
+                <li>Agarre supino (palmas hacia ti).</li>
+                <li>Baja la barra hasta el pecho, sube completamente para estirar los dorsales al máximo.</li>
+                <li>Haz una pausa breve en la parte más alta de cada repetición para reforzar la elongación.</li>
+            </ul>
+            <p><strong>Importancia:</strong> Activa fibras que muchas veces no se trabajan. Crucial al final por su foco en estiramiento + control.</p>
+        </details>
+
+        <div class="ejercicio">
+            <input type="checkbox" id="miercoles1-ej7" onchange="tacharEjercicio('miercoles1-ej7')" />
+            <label for="miercoles1-ej7"><strong>Remo Invertido con Peso Corporal (Inverted Rows)</strong></label>
+        </div>
+        <details>
+            <summary>Detalles</summary>
+            <p>Video:</p>
+            <video controls width="320" height="240">
+                <source src="${get_videos_path('miercoles', 'inverted_rows.mp4')}" type="video/mp4" />
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+            <p><strong>Técnica:</strong> Escalera de retención estática.</p>
+            <p><strong>Reps:</strong> No se cuentan repeticiones, sino tiempo bajo tensión.</p>
+            <p><strong>Músculos trabajados:</strong> Espalda media, deltoides posteriores, romboides.</p>
+            <p><strong>Ejecución especial:</strong></p>
+            <ul>
+                <li>Lleva el pecho lo más cerca posible de la barra.</li>
+                <li>Mantente en la posición alta de la repetición por 5 segundos.</li>
+                <li>Baja lentamente.</li>
+                <li>Repite.</li>
+            </ul>
+            <p><strong>Importancia:</strong> Ejercicio fundamental para corregir posturas encorvadas y fortalecer la resistencia de los músculos posturales.</p>
+        </details>
+    </div>
+
+    <!-- Bíceps -->
+    <div class="grupo-muscular biceps">
+        <h4>BÍCEPS</h4>
+        <div class="ejercicio">
+            <input type="checkbox" id="miercoles1-ej8" onchange="tacharEjercicio('miercoles1-ej8')" />
+            <label for="miercoles1-ej8"><strong>Curl con Mancuernas (Dumbbell Curl)</strong></label>
+        </div>
+        <details>
+            <summary>Detalles</summary>
+            <p>Video:</p>
+            <video controls width="320" height="240">
+                <source src="${get_videos_path('miercoles', 'dumbbell_curl.mp4')}" type="video/mp4" />
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+            <p><strong>Series:</strong> 1 serie (1 minuto).</p>
+            <p><strong>Reps:</strong> 12-15 repeticiones.</p>
+            <p><strong>Ejecución:</strong></p>
+            <ul>
+                <li>Realiza un curl con mancuernas de pie, con ambas manos al mismo tiempo.</li>
+                <li>Usa un peso que permita 12-15 repeticiones.</li>
+                <li>Sigue el tempo: Rep 1: 1s arriba, 1s abajo; Rep 2: 2s arriba, 2s abajo; Rep 3: 3s arriba, 3s abajo; Rep 4: 4s arriba, 4s abajo; Rep 5: 5s arriba, 5s abajo; Rep 6: 5s arriba, 5s abajo; Rep 7: 4s arriba, 4s abajo; Rep 8: 3s arriba, 3s abajo; Rep 9: 2s arriba, 2s abajo; Rep 10: 1s arriba, 1s abajo.</li>
+                <li>Mantén el control, evita balancear el cuerpo o usar impulso.</li>
+            </ul>
+        </details>
+
+        <div class="ejercicio">
+            <input type="checkbox" id="miercoles1-ej9" onchange="tacharEjercicio('miercoles1-ej9')" />
+            <label for="miercoles1-ej9"><strong>Curl de Arrastre con Mancuernas (Cable Stretch Drag Curl)</strong></label>
+        </div>
+        <details>
+            <summary>Detalles</summary>
+            <p>Video:</p>
+            <video controls width="320" height="240">
+                <source src="${get_videos_path('miercoles', 'cable_stretch_drag_curl.mp4')}" type="video/mp4" />
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+            <p><strong>Series:</strong> 1 serie (1 minuto).</p>
+            <p><strong>Reps:</strong> 12-15 repeticiones.</p>
+            <p><strong>Ejecución:</strong></p>
+            <ul>
+                <li>Mantén los codos hacia atrás para enfocarte en la cabeza larga del bíceps (que da el "pico").</li>
+                <li>Sigue el mismo tempo: Rep 1: 1s arriba, 1s abajo; Rep 2: 2s arriba, 2s abajo; Rep 3: 3s arriba, 3s abajo; Rep 4: 4s arriba, 4s abajo; Rep 5: 5s arriba, 5s abajo; Rep 6: 5s arriba, 5s abajo; Rep 7: 4s arriba, 4s abajo; Rep 8: 3s arriba, 3s abajo; Rep 9: 2s arriba, 2s abajo; Rep 10: 1s arriba, 1s abajo.</li>
+            </ul>
+        </details>
+    </div>
+</div>
+`
         },
         jueves1: {
             titulo: "JUEVES - SEMANA 1",
