@@ -531,28 +531,227 @@ function mostrarEntrenamiento(dia) {
         jueves1: {
             titulo: "JUEVES - SEMANA 1",
             contenido: `
-                        <div id="contenido-entrenamiento">
-                        <!-- Pecho -->
-                        <div class="grupo-muscular pecho">
-                            <h4>PECHO</h4>
-                            <div class="ejercicio">
-                                <input type="checkbox" id="jueves1-ej1" onchange="tacharEjercicio('jueves1-ej1')" />
-                                <label for="jueves1-ej1"><strong>Press de Banca Plano con Mancuernas</strong></label>
-                            </div>
-                            <details>
-                                <summary>Detalles</summary>
-                                <p>Video:</p>
-                                <video controls width="320" height="240">
-                                    <source src="${get_videos_path('jueves', 'press_banca_plano.mp4')}" type="video/mp4" />
-                                    Tu navegador no soporta la reproducción de videos.
-                                </video>
-                                <p><strong>Series:</strong> 3 series</p>
-                                <p><strong>Reps:</strong> 5-8 repeticiones</p>
-                                <p><strong>Descripción:</strong> Enfócate en el pectoral medio. Carga pesada para fuerza y masa muscular.</p>
-                            </details>
-                        </div>
+            <div id="contenido-entrenamiento">
+            <!-- Abductores -->
+            <div class="grupo-muscular abductores">
+                <h4>ABDUCTORES</h4>
+                <div class="ejercicio">
+                    <input type="checkbox" id="jueves1-ej1" onchange="tacharEjercicio('jueves1-ej1')" />
+                    <label for="jueves1-ej1"><strong>Abducciones en Máquina en Pirámide (Abduction Machine Pyramid)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('jueves', 'abduction_machine.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Series:</strong> 2 series.</p>
+                    <p><strong>Reps:</strong> 15 + 10 + 8 por serie.</p>
+                    <p><strong>Parte trabajada:</strong> Abductores (glúteo medio, tensor de la fascia lata).</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Comienza con el peso más ligero: 15 repeticiones.</li>
+                        <li>Aumenta el peso: 10 repeticiones.</li>
+                        <li>Aumenta el peso nuevamente: 8 repeticiones.</li>
+                        <li>Mantén el movimiento controlado, abriendo las piernas completamente.</li>
+                    </ul>
+                    <p><strong>Importancia:</strong> Fortalece los abductores, mejorando la estabilidad de la cadera y la apariencia estética del glúteo medio.</p>
+                </details>
+            </div>
+
+            <!-- Biserie: Femorales -->
+            <div class="grupo-muscular femorales">
+                <h4>FEMORALES (Biserie)</h4>
+                <div class="biserie">
+                    <div class="ejercicio">
+                        <input type="checkbox" id="jueves1-ej2" onchange="tacharEjercicio('jueves1-ej2')" />
+                        <label for="jueves1-ej2"><strong>Peso Muerto con Mancuerna (Dumbbell Deadlift)</strong></label>
                     </div>
-                    `
+                    <div class="ejercicio">
+                        <input type="checkbox" id="jueves1-ej3" onchange="tacharEjercicio('jueves1-ej3')" />
+                        <label for="jueves1-ej3"><strong>Máquina de Femoral Sentado (Seated Hamstring Curl)</strong></label>
+                    </div>
+                    <details>
+                        <summary>Detalles de la Biserie</summary>
+                        <h5>Peso Muerto con Mancuerna</h5>
+                        <p>Video:</p>
+                        <video controls width="320" height="240">
+                            <source src="${get_videos_path('jueves', 'dumbbell_deadlift.mp4')}" type="video/mp4" />
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                        <p><strong>Series:</strong> 3 series.</p>
+                        <p><strong>Reps:</strong> 10 repeticiones.</p>
+                        <p><strong>Ejecución:</strong></p>
+                        <ul>
+                            <li>Sostén mancuernas, inclínate hacia adelante manteniendo la espalda recta, baja hasta sentir estiramiento en los femorales.</li>
+                            <li>Sube contrayendo glúteos y femorales.</li>
+                        </ul>
+                        <h5>Máquina de Femoral Sentado</h5>
+                        <p>Video:</p>
+                        <video controls width="320" height="240">
+                            <source src="${get_videos_path('jueves', 'seated_hamstring_curl.mp4')}" type="video/mp4" />
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                        <p><strong>Series:</strong> 3 series.</p>
+                        <p><strong>Reps:</strong> 5 + 10 + 15 repeticiones (sin descanso).</p>
+                        <p><strong>Ejecución:</strong></p>
+                        <ul>
+                            <li>5 repeticiones con el peso máximo posible.</li>
+                            <li>Disminuye el peso: 10 repeticiones.</li>
+                            <li>Disminuye nuevamente: 15 repeticiones.</li>
+                        </ul>
+                        <p><strong>Importancia:</strong> Combina un ejercicio compuesto (peso muerto) con uno aislado (curl), maximizando la fuerza y hipertrofia en femorales.</p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Glúteos -->
+            <div class="grupo-muscular gluteos">
+                <h4>GLÚTEOS</h4>
+                <div class="ejercicio">
+                    <input type="checkbox" id="jueves1-ej4" onchange="tacharEjercicio('jueves1-ej4')" />
+                    <label for="jueves1-ej4"><strong>Elevación de Cadera (Hip Thrust)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('jueves', 'hip_thrust.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Series:</strong> 2 series.</p>
+                    <p><strong>Reps:</strong> 12 (12 seg pausa alta) + 10 (10 seg pausa alta) + 6 (6 seg pausa alta).</p>
+                    <p><strong>Parte trabajada:</strong> Glúteos, femorales.</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Realiza 12 repeticiones manteniendo 12 segundos en la parte alta, 10 repeticiones con 10 segundos, 6 repeticiones con 6 segundos.</li>
+                        <li>Variante opcional: Mantén la pausa en la posición baja en lugar de la alta.</li>
+                        <li>Usa una barra o mancuerna, apoyando la espalda en un banco.</li>
+                    </ul>
+                    <p><strong>Importancia:</strong> Enfoca los glúteos con alta intensidad, usando pausas isométricas para maximizar la activación.</p>
+                </details>
+            </div>
+
+            <!-- Biserie: Glúteos y Cuádriceps -->
+            <div class="grupo-muscular gluteos-cuadriceps">
+                <h4>GLÚTEOS Y CUÁDRICEPS (Biserie)</h4>
+                <div class="biserie">
+                    <div class="ejercicio">
+                        <input type="checkbox" id="jueves1-ej5" onchange="tacharEjercicio('jueves1-ej5')" />
+                        <label for="jueves1-ej5"><strong>Sentadilla Sumo con Barra en Diagonal (Sumo Squat)</strong></label>
+                    </div>
+                    <div class="ejercicio">
+                        <input type="checkbox" id="jueves1-ej6" onchange="tacharEjercicio('jueves1-ej6')" />
+                        <label for="jueves1-ej6"><strong>Desplantes con Mancuernas (Dumbbell Lunges)</strong></label>
+                    </div>
+                    <details>
+                        <summary>Detalles de la Biserie</summary>
+                        <h5>Sentadilla Sumo con Barra en Diagonal</h5>
+                        <p>Video:</p>
+                        <video controls width="320" height="240">
+                            <source src="${get_videos_path('jueves', 'sumo_squat.mp4')}" type="video/mp4" />
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                        <p><strong>Series:</strong> 2 series.</p>
+                        <p><strong>Reps:</strong> 12 repeticiones.</p>
+                        <p><strong>Ejecución:</strong></p>
+                        <ul>
+                            <li>Usa un agarre diagonal, realiza 12 repeticiones pesadas con postura amplia.</li>
+                        </ul>
+                        <h5>Desplantes con Mancuernas</h5>
+                        <p>Video:</p>
+                        <video controls width="320" height="240">
+                            <source src="${get_videos_path('jueves', 'dumbbell_lunges.mp4')}" type="video/mp4" />
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                        <p><strong>Series:</strong> 2 series.</p>
+                        <p><strong>Reps:</strong> 8 pasos de ida + 8 pasos de vuelta.</p>
+                        <p><strong>Ejecución:</strong></p>
+                        <ul>
+                            <li>8 pasos de ida + 8 pasos de vuelta, manteniendo el torso erguido.</li>
+                        </ul>
+                        <p><strong>Importancia:</strong> La sentadilla sumo activa glúteos y abductores, mientras los desplantes añaden trabajo unilateral para estabilidad.</p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Pantorrillas -->
+            <div class="grupo-muscular pantorrillas">
+                <h4>PANTORRILLAS</h4>
+                <div class="ejercicio">
+                    <input type="checkbox" id="jueves1-ej7" onchange="tacharEjercicio('jueves1-ej7')" />
+                    <label for="jueves1-ej7"><strong>Pantorrilla Sentada para Sóleo (Seated Calf Raises)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('jueves', 'seated_calf_raises.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Series:</strong> 2 series.</p>
+                    <p><strong>Reps:</strong> Hasta el fallo.</p>
+                    <p><strong>Parte trabajada:</strong> Sóleo (pantorrilla profunda).</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>En una máquina de pantorrilla sentada, realiza repeticiones hasta el fallo con un rango completo.</li>
+                        <li>Mantén el movimiento controlado, con una breve pausa en la parte alta.</li>
+                    </ul>
+                    <p><strong>Importancia:</strong> El sóleo, activado con las rodillas flexionadas, contribuye al grosor de la pantorrilla, esencial para un desarrollo completo.</p>
+                </details>
+
+                <div class="ejercicio">
+                    <input type="checkbox" id="jueves1-ej8" onchange="tacharEjercicio('jueves1-ej8')" />
+                    <label for="jueves1-ej8"><strong>Elevación de Pantorrilla Sentada con Piernas Rectas (Straight-Leg Seated Calf Raise)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('jueves', 'straight_leg_calf_raise.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Series:</strong> 2 series.</p>
+                    <p><strong>Reps:</strong> 10 + 10 + 10 por serie.</p>
+                    <p><strong>Parte trabajada:</strong> Gastrocnemio (principalmente), sóleo (secundariamente).</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Siéntate con las piernas extendidas, talones colgando de la plataforma.</li>
+                        <li>Eleva los talones lo más alto posible, baja lentamente hasta el estiramiento máximo.</li>
+                        <li>Realiza 10 repeticiones por posición: puntas afuera, rectas, adentro.</li>
+                    </ul>
+                    <p><strong>Importancia:</strong> Aísla el gastrocnemio con piernas rectas, complementando el trabajo del sóleo y promoviendo definición.</p>
+                </details>
+            </div>
+
+            <!-- Abdominales -->
+            <div class="grupo-muscular abdominales">
+                <h4>ABDOMINALES</h4>
+                <div class="ejercicio">
+                    <input type="checkbox" id="jueves1-ej9" onchange="tacharEjercicio('jueves1-ej9')" />
+                    <label for="jueves1-ej9"><strong>Elevaciones de Piernas Colgado (Hanging Leg Raises)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('jueves', 'hanging_leg_raises.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Series:</strong> 3 series.</p>
+                    <p><strong>Reps:</strong> 20 repeticiones.</p>
+                    <p><strong>Parte trabajada:</strong> Recto abdominal, oblicuos.</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Cuelga de una barra, eleva las piernas rectas hasta formar un ángulo de 90 grados.</li>
+                        <li>Baja lentamente, evitando balanceo.</li>
+                    </ul>
+                    <p><strong>Importancia:</strong> Fortalece el core completo, con énfasis en la porción inferior del recto abdominal, mejorando estabilidad.</p>
+                </details>
+            </div>
+        </div>
+            `
         },
         viernes1: {
             titulo: "VIERNES - SEMANA 1",
