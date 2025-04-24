@@ -1,620 +1,340 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    /* Fondo de galaxia con estrellas */
-    background: url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(135deg, #0a0a23 0%, #1a1a3d 100%);
-    margin: 0;
-    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-active {
+    @apply bg-gradient-to-r from-blue-500 to-teal-400 shadow-md rounded-full px-4;
+}
+
+/* Estilos para la barra de navegación en dispositivos móviles */
+.nav-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    color: white;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
 }
 
-blockquote {
-    border-left: 4px solid #e91e63;
-    /* Rosa más vibrante para destacar */
-    padding-left: 15px;
-    color: #d32f2f;
-    margin: 15px 0;
-    font-style: italic;
-}
-
-h1 {
-    color: #2c3e50;
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 20px;
+.nav-container::-webkit-scrollbar {
     display: none;
 }
 
-#semanas {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-    width: 100%;
-    min-height: 100vh;
-    align-items: center;
+.nav-container a {
+    flex: 0 0 auto;
+    margin-right: 0.5rem;
 }
 
-#semanas div {
-    background: linear-gradient(45deg, #6280e4, #097bee);
-    /* Gradiente azul */
-    color: white;
-    padding: 30px 60px;
-    border-radius: 15px;
-    cursor: pointer;
-    text-align: center;
-    width: 500px;
-    max-width: 500px;
-    font-size: 4rem;
-    font-weight: 600;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#semanas div:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-#dias-semana1,
-#dias-semana2 {
-    background: transparent;
-    /* Fondo transparente para que se vea el fondo de galaxia */
-    padding: 30px;
-    border-radius: 20px;
-    width: 95vw;
-    max-width: 700px;
-    text-align: center;
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-#dias-semana1 h2,
-#dias-semana2 h2 {
-    color: white;
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-    position: relative;
-}
-
-#dias-semana1 h2::after,
-#dias-semana2 h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(45deg, #1e88e5, #e91e63);
-    margin: 10px auto;
-    border-radius: 2px;
-}
-
-.dias-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.dia {
-    padding: 20px;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 2.2rem;
-    font-weight: 600;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    animation: slideIn 0.5s ease-in-out forwards;
-    opacity: 0;
-    /* Fondo oscuro semitransparente para los botones */
-    background: rgba(0, 0, 0, 0.5);
-    /* Bordes neón */
-    border: 2px solid;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
-}
-
-/* Colores y bordes neón para cada día */
-.dia[data-day="lunes"] {
-    border-color: #42a5f5;
-    box-shadow: 0 0 15px #42a5f5;
-}
-
-.dia[data-day="lunes"]::before {
-    content: "💪";
-}
-
-.dia[data-day="martes"] {
-    border-color: #f06292;
-    box-shadow: 0 0 15px #f06292;
-}
-
-.dia[data-day="martes"]::before {
-    content: "🏋️";
-}
-
-.dia[data-day="miercoles"] {
-    border-color: #ffca28;
-    box-shadow: 0 0 15px #ffca28;
-}
-
-.dia[data-day="miercoles"]::before {
-    content: "💪";
-}
-
-.dia[data-day="jueves"] {
-    border-color: #ab47bc;
-    box-shadow: 0 0 15px #ab47bc;
-}
-
-.dia[data-day="jueves"]::before {
-    content: "🏋️";
-}
-
-.dia[data-day="viernes"] {
-    border-color: #66bb6a;
-    box-shadow: 0 0 15px #66bb6a;
-}
-
-.dia[data-day="viernes"]::before {
-    content: "🔥";
-}
-
-.dia:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
-    filter: brightness(1.2);
-}
-
-/* Animaciones */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
+@media (max-width: 640px) {
+    .nav-container a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
     }
 }
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Retraso en la animación para cada día */
-.dia:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.dia:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.dia:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.dia:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-.dia:nth-child(5) {
-    animation-delay: 0.5s;
-}
-
-#entrenamiento {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-    width: 95vw;
-    max-width: 650px;
-    text-align: left;
-}
-
-#entrenamiento h3 {
-    color: #2c3e50;
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    background: linear-gradient(45deg, #1e88e5, #42a5f5);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
+/* Estilos para la rutina */
 .grupo-muscular {
-    margin-bottom: 30px;
-    padding: 20px;
-    border-radius: 12px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.grupo-muscular:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    padding: 1.2rem .8rem;
+    border-radius: 1rem;
+    background: linear-gradient(90deg, #fff 60%, #e7f3fb 100%);
+    box-shadow: 0 7px 18px -4px rgba(17, 70, 140, 0.04);
 }
 
 .grupo-muscular h4 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    border-radius: 8px;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 600;
-    color: #fff;
-    position: relative;
-}
-
-.grupo-muscular.calentamiento {
-    background-color: #f1f3f5;
-}
-
-.grupo-muscular.calentamiento h4 {
-    background: linear-gradient(45deg, #6c757d, #95a5a6);
-}
-
-.grupo-muscular.calentamiento h4::before {
-    content: "🔥";
-    font-size: 1.5rem;
-}
-
-.grupo-muscular.pecho {
-    background-color: #e3f2fd;
-}
-
-.grupo-muscular.pecho h4 {
-    background: linear-gradient(45deg, #1e88e5, #42a5f5);
-}
-
-.grupo-muscular.pecho h4::before {
-    content: "💪";
-    font-size: 1.5rem;
-}
-
-.grupo-muscular.hombros {
-    background-color: #fce4ec;
-}
-
-.grupo-muscular.hombros h4 {
-    background: linear-gradient(45deg, #e91e63, #f06292);
-}
-
-.grupo-muscular.hombros h4::before {
-    content: "🏋️";
-    font-size: 1.5rem;
-}
-
-.grupo-muscular.triceps {
-    background-color: #fff3e0;
-}
-
-.grupo-muscular.triceps h4 {
-    background: linear-gradient(45deg, #fb8c00, #ffca28);
-}
-
-.grupo-muscular.triceps h4::before {
-    content: "💥";
-    font-size: 1.5rem;
-}
-
-.grupo-muscular.cuadriceps {
-    background-color: #e0f7fa;
-}
-
-.grupo-muscular.cuadriceps h4 {
-    background: linear-gradient(45deg, #0288d1, #4fc3f7);
-}
-
-.grupo-muscular.cuadriceps h4::before {
-    content: "🏋️‍♀️";
-    font-size: 1.5rem;
-}
-
-.grupo-muscular.espalda {
-    background-color: #f3e5f5;
-}
-
-.grupo-muscular.espalda h4 {
-    background: linear-gradient(45deg, #8e24aa, #ab47bc);
-}
-
-.grupo-muscular.espalda h4::before {
-    content: "🏋️‍♂️";
-    font-size: 1.5rem;
-}
-
-.boton-volver {
-    position: fixed;
-    /* Fija el botón en la pantalla */
-    top: 20px;
-    /* Distancia desde la parte superior */
-    right: 20px;
-    /* Distancia desde la derecha */
-    background: linear-gradient(45deg, #1e3a8a, #3b82f6);
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    /* Reducimos el padding para hacerlo más pequeño */
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    /* Reducimos el tamaño de la fuente */
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    /* Reducimos el espacio entre el icono y el texto */
-    transition: transform 0.2s ease, background 0.3s ease;
-    z-index: 1000;
-    /* Aseguramos que el botón esté por encima de otros elementos */
-}
-
-.boton-volver:hover {
-    background: linear-gradient(45deg, #1e3a8a, #2563eb);
-    transform: scale(1.05);
-    /* Cambiamos el efecto hover para que no se mueva hacia arriba */
-}
-
-.boton-volver .icon {
-    font-size: 1rem;
-}
-
-.boton-volver-dias {
-    position: fixed;
-    /* Fija el botón en la pantalla */
-    top: 20px;
-    /* Distancia desde la parte superior */
-    right: 20px;
-    /* Distancia desde la derecha */
-    background: linear-gradient(45deg, #1e3a8a, #3b82f6);
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    /* Reducimos el padding para hacerlo más pequeño */
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    /* Reducimos el tamaño de la fuente */
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    /* Reducimos el espacio entre el icono y el texto */
-    transition: transform 0.2s ease, background 0.3s ease;
-    z-index: 1000;
-    /* Aseguramos que el botón esté por encima de otros elementos */
-}
-
-.boton-volver-dias:hover {
-    background: linear-gradient(45deg, #1565c0, #1e88e5);
-    transform: scale(1.05);
-    /* Cambiamos el efecto hover para que no se mueva hacia arriba */
-}
-
-.boton-volver-dias .icon {
-    font-size: 1rem;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #007AFF;
+    margin-bottom: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
 }
 
 .ejercicio {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-    padding: 15px;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.ejercicio:hover {
-    background-color: #f9f9f9;
-    transform: translateY(-2px);
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .ejercicio input[type="checkbox"] {
-    transform: scale(1.8);
-    accent-color: #1e88e5;
+    accent-color: #d6e1ff;
 }
 
 .ejercicio label {
-    flex: 1;
-    cursor: pointer;
-    font-weight: 500;
-    color: #2c3e50;
+    font-size: 1.1rem;
+    color: #1f2937;
 }
 
-.ejercicio.tachado label {
+.ejercicio label.tachado {
     text-decoration: line-through;
-    color: #95a5a6;
+    color: #6b7280;
 }
 
 details {
-    margin-bottom: 15px;
-    padding: 15px;
-    border-radius: 8px;
-    background-color: #fff4f4e7;
-    border: 1px solid #e9ecef;
-    transition: background-color 0.2s ease;
+    margin-left: 1.7rem;
+    margin-bottom: 1rem;
+    background: #F8FAFC;
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+    box-shadow: 0 2px 12px rgba(27, 70, 150, 0.042);
+    border: 1px solid #E0E7EF;
 }
 
-details:hover {
-    background-color: #ddeeffee;
+details summary {
+    font-weight: bold;
+    color: #0B2544;
+    cursor: pointer;
 }
 
-details p {
-    color: #181616;
-    /* Cambia el color del texto en los <p> dentro de details */
+details p,
+details ul,
+details blockquote {
+    margin-top: 0.5rem;
+    color: #374151;
 }
 
 details ul {
-    color: #140d0d;
-    /* Si hay listas dentro de details, también puedes cambiar su color */
+    list-style-type: disc;
+    margin-left: 1.5rem;
 }
 
-summary {
-    cursor: pointer;
-    font-weight: 500;
-    color: #34495e;
-    font-size: 1.3rem;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.2s ease;
+details blockquote {
+    border-left: 4px solid #1e3a8a;
+    padding-left: 1rem;
+    font-style: italic;
+    color: #4b5563;
 }
 
-summary:hover {
-    background-color: #e9ecef;
-}
-
-summary::marker {
-    color: #1e88e5;
-}
-
-.biserie {
-    background-color: #fff;
-    border: 2px solid #e91e63;
-    /* Borde rosa para que coincida con el tema de Hombros */
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 20px;
-    position: relative;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-.biserie::before {
-    content: "🔄 Biserie";
-    position: absolute;
-    top: -12px;
-    left: 15px;
-    background-color: #e91e63;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
+.triserie .ejercicio,
 .biserie .ejercicio {
-    margin-bottom: 10px;
-    /* Reducir el margen entre los ejercicios de la biserie */
+    margin-left: 1rem;
 }
 
-.biserie .ejercicio:last-child {
-    margin-bottom: 0;
-    /* Eliminar el margen del último ejercicio */
+/* Animación para el modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-@media (max-width: 600px) {
-    h1 {
-        font-size: 3rem;
-        display: none;
-    }
+.animate-fade-in {
+    animation: fadeIn 0.21s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-    #semanas div {
-        width: 200px;
-        max-width: 200px;
-        font-size: 2rem;
-        padding: 30px 60px;
-    }
+/* Estilo para el modal */
+#modal-rutina>div {
+    background: #f8efd9 !important;
+    border: 1px solid #e2dac8 !important;
+    box-shadow: 0 8px 32px 0 rgba(31, 31, 31, 0.18);
+}
 
-    #dias-semana1,
-    #dias-semana2 {
-        width: 98vw;
-        max-width: 400px;
-        padding: 10px;
-    }
+/* Estilo para el look beige vintage en la rutina */
+.rutina-vintage details {
+    background: #f0e2cb !important;
+    color: #4b3a29 !important;
+    border-radius: .5em;
+    padding: 0.7em;
+    border: none;
+}
 
-    #dias-semana1 h2,
-    #dias-semana2 h2 {
-        font-size: 1.8rem;
-    }
+.rutina-vintage details blockquote {
+    border-left: 4px solid #b89b69 !important;
+    padding-left: 1rem;
+    font-style: italic;
+    color: #1b140c !important;
+}
 
-    #entrenamiento {
-        width: 95vw;
-        padding: 20px;
-    }
+.rutina-vintage h3 {
+    font-size: 2.75rem !important;
+    font-weight: 800;
+    color: #2D4731 !important;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.01em;
+    line-height: 1.1;
+}
 
-    #entrenamiento h3 {
-        font-size: 2.2rem;
+.rutina-vintage h4 {
+    font-size: 1.65rem !important;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: #bc6331 !important;
+    text-transform: uppercase;
+    margin-bottom: .35em;
+}
+
+.rutina-vintage h3+hr,
+.rutina-vintage .hr-vintage {
+    border: none;
+    border-top: 3px solid #e2dac8 !important;
+    margin: 0.7em 0 1.1em 0;
+    height: 0;
+    width: 100%;
+}
+
+.rutina-vintage .grupo-muscular {
+    margin-bottom: 2.1em;
+    background: none !important;
+    box-shadow: none !important;
+    padding: 0;
+}
+
+.rutina-vintage label,
+.rutina-vintage .ejercicio label {
+    color: #47604c !important;
+    font-size: 1.3rem !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.rutina-vintage input[type="checkbox"] {
+    accent-color: #d2bea0 !important;
+    width: 1.4em;
+    height: 1.4em;
+    border: 2px solid #cbb594;
+    border-radius: 0.3em;
+    margin-right: 0.7em;
+    vertical-align: middle;
+}
+
+.rutina-vintage details {
+    background: #e8d6bb !important;
+    border-radius: 0.8em !important;
+    padding: 0.2em 0.5em 0.8em 0.5em !important;
+    margin-top: 1em;
+    margin-bottom: 0.6em;
+    border: none;
+    color: #453418;
+    box-shadow: none !important;
+}
+
+.rutina-vintage details summary {
+    background: #e0cbaa !important;
+    color: #88602c !important;
+    border-radius: 0.45em;
+    padding: 0.5em 2.2em 0.5em 1.8em;
+    margin-bottom: 0.9em;
+    font-weight: bold;
+    font-size: 1.18em;
+    position: relative;
+    cursor: pointer;
+}
+
+.rutina-vintage details summary::before {
+    content: "▸";
+    display: inline-block;
+    color: #88602c;
+    font-size: 1.12em;
+    font-weight: bold;
+    position: absolute;
+    left: 0.7em;
+}
+
+.rutina-vintage details[open] summary::before {
+    content: "▾";
+}
+
+.rutina-vintage .ejercicio {
+    margin-bottom: 1em;
+}
+
+.rutina-vintage details p,
+.rutina-vintage details ul {
+    font-size: 1.06em;
+    color: #453418;
+}
+
+.rutina-vintage .tachado {
+    text-decoration: line-through;
+    color: #b6a595 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .grupo-muscular {
+        background: linear-gradient(90deg, #222834 60%, #1b2737 100%);
     }
 
     .grupo-muscular h4 {
-        font-size: 1.6rem;
+        color: #61dafb;
     }
 
-    .ejercicio {
-        font-size: 1.3rem;
-        padding: 12px;
+    .ejercicio label {
+        color: #d1d5db;
     }
 
-    .ejercicio input[type="checkbox"] {
-        transform: scale(1.5);
+    .ejercicio label.tachado {
+        color: #9ca3af;
     }
 
-    summary {
-        font-size: 1.2rem;
+    details {
+        background: #253046;
+        border: 1px solid #162447;
     }
 
-    details p {
-        font-size: 1.1rem;
+    details summary {
+        color: #70bfff;
     }
 
-    .dia {
-        font-size: 2rem;
-        padding: 18px;
+    details p,
+    details ul,
+    details blockquote {
+        color: #cadfff;
     }
 
-    .boton-volver {
-        top: 15px;
-        /* Ajustamos la posición para móviles */
-        right: 15px;
-        padding: 6px 12px;
-        /* Más pequeño en móviles */
-        font-size: 1rem;
-        /* Texto más pequeño */
+    details blockquote {
+        border-left-color: #e6eef7;
     }
 
-    .boton-volver .icon {
-        font-size: 0.8rem;
-        /* Icono más pequeño en móviles */
+    #modal-rutina>div {
+        background: #f8efd9 !important;
+        border: 1px solid #e2dac8 !important;
+        box-shadow: 0 8px 32px 0 rgba(31, 31, 31, 0.18);
     }
 
-    .boton-volver-dias {
-        top: 15px;
-        /* Ajustamos la posición para móviles */
-        right: 15px;
-        padding: 6px 12px;
-        /* Más pequeño en móviles */
-        font-size: 1rem;
-        /* Texto más pequeño */
+    .rutina-vintage {
+        background: #f5ecde !important;
+        color: #314638 !important;
     }
 
-    .boton-volver-dias .icon {
-        font-size: 0.8rem;
-        /* Icono más pequeño en móviles */
+    .rutina-vintage h3,
+    .rutina-vintage h4 {
+        color: #2D4731 !important;
+    }
+
+    .rutina-vintage h4 {
+        color: #b06531 !important;
+    }
+
+    .rutina-vintage .ejercicio label {
+        color: #222d1b !important;
+    }
+
+    .rutina-vintage details summary {
+        background: #efdabc !important;
+        color: #684b1e !important;
+    }
+
+    .rutina-vintage details {
+        background: #f0e2cb !important;
+        color: #2a1f14 !important;
+    }
+
+    .rutina-vintage details blockquote {
+        border-left: 4px solid #b89b69 !important;
+        color: #2a1f14 !important;
+    }
+
+    .rutina-vintage input[type="checkbox"] {
+        accent-color: #cfa969 !important;
+    }
+
+    .rutina-vintage .tachado {
+        color: #b6a595 !important;
     }
 }

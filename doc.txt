@@ -1,0 +1,14 @@
+/project
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   ├── main.js
+│   ├── utils.js
+│   ├── rutinas/
+│   │   ├── semana1.js
+│   │   └── semana2.js
+└── assets/
+    └── videos/
+        ├── lunes/
+        └── miercoles/
