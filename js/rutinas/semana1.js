@@ -66,7 +66,197 @@ function cargarContenidoModalRutinaDia1() {
                     <p><strong>Importancia:</strong> Prepara los hombros para ejercicios pesados, reduciendo el riesgo de lesiones en el manguito rotador.</p>
                 </details>
             </div>
-            <!-- Resto de la rutina del Día 1 (omitido por brevedad) -->
+            <div class="grupo-muscular">
+                <h4>PECHO</h4>
+                <div class="ejercicio">
+                    <input type="checkbox" id="lunes1-ej2" onchange="tacharEjercicio('lunes1-ej2')" />
+                    <label for="lunes1-ej2"><strong>Thumbs Up DB Incline Bench (Press Inclinado con Mancuernas)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('lunes', 'press_inclinado.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Parte trabajada:</strong> Pecho superior (porción clavicular del pectoral mayor).</p>
+                    <p><strong>Series:</strong> 3 series.</p>
+                    <p><strong>Reps:</strong> 8-10 repeticiones hasta el fallo técnico.</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>En un banco inclinado, sostén las mancuernas con los pulgares hacia arriba (agarre semi-supino).</li>
+                        <li>Baja controladamente hasta que los codos estén en línea con el pecho, luego sube acercando las mancuernas para maximizar la contracción.</li>
+                    </ul>
+                    <p><strong>Importancia:</strong> Enfoca la porción superior del pecho, clave para un desarrollo estético equilibrado. El agarre con pulgares arriba reduce el estrés en los hombros.</p>
+                </details>
+                <div class="ejercicio">
+                    <input type="checkbox" id="lunes1-ej3" onchange="tacharEjercicio('lunes1-ej3')" />
+                    <label for="lunes1-ej3"><strong>Cable Crossover (Press de Cable con Parciales)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('lunes', 'cable_crossover.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Parte trabajada:</strong> Pecho medio (porción esternal del pectoral mayor).</p>
+                    <p><strong>Series:</strong> 3 series.</p>
+                    <p><strong>Reps:</strong> 8-10 repeticiones hasta el fallo + parciales.</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>En una polea, inclínate hacia adelante al abrir los brazos y hacia atrás al cruzarlos frente al cuerpo para aislar el pecho.</li>
+                        <li>Tras el fallo, realiza repeticiones parciales en la posición más elongada (brazos abiertos) para aumentar la tensión.</li>
+                    </ul>
+                    <p><strong>Importancia:</strong> Maximiza la contracción y el estiramiento del pecho medio, promoviendo hipertrofia mediante la tensión constante de las poleas.</p>
+                </details>
+                <div class="ejercicio">
+                    <input type="checkbox" id="lunes1-ej4" onchange="tacharEjercicio('lunes1-ej4')" />
+                    <label for="lunes1-ej4"><strong>Dip Ladder / Weighted Dips (Fondos en Paralelas con Escalera)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('lunes', 'dip_ladder.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Parte trabajada:</strong> Pecho inferior (porción abdominal del pectoral mayor).</p>
+                    <p><strong>Series:</strong> 1 serie.</p>
+                    <p><strong>Reps:</strong> Hasta el fallo absoluto con escalera de retención.</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Usa peso adicional si es posible. Baja lentamente hasta una profundidad cómoda, evitando llevar los codos demasiado atrás.</li>
+                        <li>Realiza 1 repetición completa + media repetición (baja a mitad, sube, baja completamente). Incrementa el tiempo en la posición baja (1 seg, 2 seg, etc.).</li>
+                    </ul>
+                    <p><strong>Importancia:</strong> Enfoca intensamente el pecho inferior con un movimiento compuesto. La escalera de retención maximiza el tiempo bajo tensión.</p>
+                </details>
+                <div class="ejercicio">
+                    <input type="checkbox" id="lunes1-ej5" onchange="tacharEjercicio('lunes1-ej5')" />
+                    <label for="lunes1-ej5"><strong>Pushup Ladder (Flexiones Déficit con Escalera 1.5 Reps)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('lunes', 'flexiones_deficit.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Parte trabajada:</strong> Pecho medio e inferior.</p>
+                    <p><strong>Series:</strong> 1 serie.</p>
+                    <p><strong>Reps:</strong> Hasta el fallo absoluto.</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Coloca las manos sobre plataformas para mayor rango de movimiento.</li>
+                        <li>Realiza 1 repetición completa + media repetición (baja a mitad, sube, baja completamente). Incrementa el tiempo en la posición baja (1 seg, 2 seg, etc.).</li>
+                        <li>Continúa hasta el fallo absoluto.</li>
+                    </ul>
+                    <p><strong>Importancia:</strong> Agota el pecho con un ejercicio de peso corporal, aprovechando el rango ampliado y la retención para maximizar la hipertrofia.</p>
+                </details>
+            </div>
+            <div class="grupo-muscular">
+                <h4>HOMBROS</h4>
+                <div class="triserie">
+                    <div class="ejercicio">
+                        <input type="checkbox" id="lunes1-ej6" onchange="tacharEjercicio('lunes1-ej6')" />
+                        <label for="lunes1-ej6"><strong>Press Militar de Pie</strong></label>
+                    </div>
+                    <div class="ejercicio">
+                        <input type="checkbox" id="lunes1-ej7" onchange="tacharEjercicio('lunes1-ej7')" />
+                        <label for="lunes1-ej7"><strong>Press Unilateral de Pie</strong></label>
+                    </div>
+                    <div class="ejercicio">
+                        <input type="checkbox" id="lunes1-ej8" onchange="tacharEjercicio('lunes1-ej8')" />
+                        <label for="lunes1-ej8"><strong>Push Press con Mancuernas</strong></label>
+                    </div>
+                    <details>
+                        <summary>Detalles de la Triserie</summary>
+                        <p><strong>Series:</strong> 3 series (los tres ejercicios seguidos sin descanso)</p>
+                        <p><strong>Reps Press Militar:</strong> 10 repeticiones</p>
+                        <p><strong>Zona del Hombro (Press Militar):</strong> Anterior y Medial</p>
+                        <p><strong>Ejecución Press Militar:</strong></p>
+                        <ul>
+                            <li>Usa peso elevado, realiza el press por encima de la cabeza sin respaldo.</li>
+                            <li>Mantén control total del movimiento.</li>
+                        </ul>
+                        <p><strong>Video Press Militar de Pie:</strong></p>
+                        <video controls width="320" height="240">
+                            <source src="${get_videos_path('lunes', 'press_militar_pie.mp4')}" type="video/mp4" />
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                        <p><strong>Reps Press Unilateral:</strong> 6 repeticiones</p>
+                        <p><strong>Zona del Hombro (Press Unilateral):</strong> Anterior</p>
+                        <p><strong>Ejecución Press Unilateral:</strong></p>
+                        <ul>
+                            <li>Realiza el movimiento alternando cada brazo, mantén el core activado.</li>
+                            <li>Mejora equilibrio y trabaja asimetrías.</li>
+                        </ul>
+                        <p><strong>Video Press Unilateral de Pie:</strong></p>
+                        <video controls width="320" height="240">
+                            <source src="${get_videos_path('lunes', 'press_unilateral.mp4')}" type="video/mp4" />
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                        <p><strong>Reps Push Press:</strong> 8 repeticiones</p>
+                        <p><strong>Zona del Hombro (Push Press):</strong> Anterior y Medial</p>
+                        <p><strong>Ejecución Push Press:</strong></p>
+                        <ul>
+                            <li>Usa un ligero impulso de piernas para elevar mancuernas.</li>
+                            <li>Aprovecha la explosividad del movimiento para manejar pesos mayores.</li>
+                        </ul>
+                        <p><strong>Video Push Press con Mancuernas:</strong></p>
+                        <video controls width="320" height="240">
+                            <source src="${get_videos_path('lunes', 'push_press_mancuernas.mp4')}" type="video/mp4" />
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                        <p><strong>Descripción:</strong> Realiza el Press Militar de Pie, seguido inmediatamente por el Press Unilateral de Pie, y termina con el Push Press con Mancuernas. Descansa después de completar los tres ejercicios.</p>
+                    </details>
+                </div>
+            </div>
+            <div class="grupo-muscular">
+                <h4>TRÍCEPS</h4>
+                <div class="ejercicio">
+                    <input type="checkbox" id="lunes1-ej9" onchange="tacharEjercicio('lunes1-ej9')" />
+                    <label for="lunes1-ej9"><strong>Pullover PJR (con mancuerna)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('lunes', 'pullover_pjr.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Zona:</strong> Cabeza larga del tríceps y dorsales (asistentes).</p>
+                    <p><strong>Series:</strong> 3-4 series.</p>
+                    <p><strong>Reps:</strong> 8-12 repeticiones.</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Acostado, baja la mancuerna como si fuera un pullover.</li>
+                        <li>Luego sube extendiendo los codos, enfocándote en la extensión.</li>
+                    </ul>
+                    <p><strong>Por qué es bueno:</strong> Gran sobrecarga, activa la cabeza larga al máximo con ayuda de dorsales en la parte excéntrica.</p>
+                </details>
+                <div class="ejercicio">
+                    <input type="checkbox" id="lunes1-ej10" onchange="tacharEjercicio('lunes1-ej10')" />
+                    <label for="lunes1-ej10"><strong>Triceps Bodyweight Trunk Lift (Elevación de tronco para tríceps)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('lunes', 'triceps_trunk_lift.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Zona:</strong> Cabeza larga del tríceps.</p>
+                    <p><strong>Series:</strong> 3-4 series.</p>
+                    <p><strong>Reps:</strong> 10-15 repeticiones (al fallo).</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Puños cerrados, codos al suelo, eleva el torso extendiendo los codos.</li>
+                        <li>Controla la bajada.</li>
+                    </ul>
+                    <p><strong>Por qué es bueno:</strong> Trabajo sin peso, excelente activación de la cabeza larga gracias a la extensión del brazo detrás del cuerpo.</p>
+                </details>
+            </div>
         </div>
     `;
     return { title: 'Lunes: Pecho, Hombros y Tríceps', content: contenido };
@@ -86,7 +276,6 @@ function cargarContenidoModalRutinaDia2() {
                     <p>Video:</p>
                     <video controls width="320" height="240">
                         <source src="${get_videos_path('martes', 'piramide_sentadilla.mp4')}" type="video/mp4" />
-                        <source src="${get_videos_path('martes', 'piramide_sentadilla.webm')}" type="video/webm" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Parte trabajada:</strong> Cuádriceps, glúteos</p>
@@ -108,7 +297,151 @@ function cargarContenidoModalRutinaDia2() {
                     <p><strong>Por qué es efectiva:</strong> Activa el sistema nervioso y prepara el patrón de sentadilla con volumen leve antes de lo pesado.</p>
                 </details>
             </div>
-            <!-- Resto de la rutina del Día 2 (omitido por brevedad) -->
+            <div class="grupo-muscular">
+                <h4>CUÁDRICEPS / GLÚTEO</h4>
+                <div class="ejercicio">
+                    <input type="checkbox" id="dia2-ej2" onchange="tacharEjercicio('dia2-ej2')" />
+                    <label for="dia2-ej2"><strong>Sentadilla Búlgara con Mancuerna</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('martes', 'sentadilla_bulgara.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Parte trabajada:</strong> Cuádriceps, glúteos</p>
+                    <p><strong>Series:</strong> 4 series</p>
+                    <p><strong>Reps:</strong> 6 repeticiones por pierna</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Trabajo unilateral brutal.</li>
+                        <li>Mantén el torso levemente inclinado hacia el frente para más glúteo.</li>
+                        <li>Puedes usar banco bajo o step.</li>
+                    </ul>
+                    <p><strong>Importancia:</strong> Aísla cuádriceps y glúteo de forma intensa. Estabilidad y control = más conexión y crecimiento.</p>
+                </details>
+                <div class="ejercicio">
+                    <input type="checkbox" id="dia2-ej3" onchange="tacharEjercicio('dia2-ej3')" />
+                    <label for="dia2-ej3"><strong>Extensiones de Cuádriceps (con rotación de pies)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('martes', 'extensiones_cuadriceps.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Parte trabajada:</strong> Cuádriceps</p>
+                    <p><strong>Series:</strong> 4 series</p>
+                    <p><strong>Reps:</strong></p>
+                    <ul>
+                        <li>10 reps con puntas ligeramente hacia afuera</li>
+                        <li>10 reps con puntas al frente</li>
+                    </ul>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Aislamiento y tiempo bajo tensión.</li>
+                        <li>Estimula diferentes porciones del cuádriceps.</li>
+                    </ul>
+                    <p><strong>Importancia:</strong> Excelente para terminar de "pulir" el cuádriceps y activar fibras que no se trabajan en compuestos.</p>
+                </details>
+                <div class="ejercicio">
+                    <input type="checkbox" id="dia2-ej4" onchange="tacharEjercicio('dia2-ej4')" />
+                    <label for="dia2-ej4"><strong>Prensa 45 Grados (Combo)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('martes', 'prensa_45.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Parte trabajada:</strong> Cuádriceps, glúteos</p>
+                    <p><strong>Series:</strong> 3 series</p>
+                    <p><strong>Reps:</strong></p>
+                    <ul>
+                        <li>10 reps normales con piernas abiertas</li>
+                        <li>10 reps cortas con piernas casi cerradas (sin sacar pies)</li>
+                    </ul>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Combinación de rango completo y parcial.</li>
+                        <li>Pies a media altura y controla el rebote abajo.</li>
+                    </ul>
+                    <p><strong>Importancia:</strong> Estimula cuádriceps y glúteo desde diferentes ángulos. Las reps cortas finales destruyen las fibras agotadas.</p>
+                </details>
+            </div>
+            <div class="grupo-muscular">
+                <h4>BISERIE GLÚTEO + FEMORALES</h4>
+                <div class="biserie">
+                    <div class="ejercicio">
+                        <input type="checkbox" id="dia2-ej5" onchange="tacharEjercicio('dia2-ej5')" />
+                        <label for="dia2-ej5"><strong>Sentadilla Sumo con Mancuernas</strong></label>
+                    </div>
+                    <div class="ejercicio">
+                        <input type="checkbox" id="dia2-ej6" onchange="tacharEjercicio('dia2-ej6')" />
+                        <label for="dia2-ej6"><strong>Pasadas (Tijeras Caminando)</strong></label>
+                    </div>
+                    <details>
+                        <summary>Detalles de la Biserie</summary>
+                        <p><strong>Sentadilla Sumo con Mancuernas:</strong></p>
+                        <p>Video:</p>
+                        <video controls width="320" height="240">
+                            <source src="${get_videos_path('martes', 'sentadilla_sumo.mp4')}" type="video/mp4" />
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                        <p><strong>Parte trabajada:</strong> Aductores, glúteos</p>
+                        <p><strong>Series:</strong> 2 series</p>
+                        <p><strong>Reps:</strong> 12 repeticiones</p>
+                        <p><strong>Ejecución:</strong></p>
+                        <ul>
+                            <li>Piernas bien abiertas, bajada profunda.</li>
+                            <li>Trabaja aductores y glúteo a lo bestia.</li>
+                        </ul>
+                        <p><strong>Pasadas (Tijeras Caminando):</strong></p>
+                        <p>Video:</p>
+                        <video controls width="320" height="240">
+                            <source src="${get_videos_path('martes', 'pasadas.mp4')}" type="video/mp4" />
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                        <p><strong>Parte trabajada:</strong> Glúteos, femorales</p>
+                        <p><strong>Series:</strong> 2 series</p>
+                        <p><strong>Reps:</strong> 8 pasos ida + 8 pasos vuelta</p>
+                        <p><strong>Ejecución:</strong></p>
+                        <ul>
+                            <li>Estímulo unilateral y movilidad.</li>
+                            <li>Ideal para cerrar con bomba total sin maquinaria.</li>
+                        </ul>
+                        <p><strong>Importancia:</strong> No descanses entre sumo y pasadas. Vas directo. Esto da un pico de activación muscular y metabólica.</p>
+                    </details>
+                </div>
+            </div>
+            <div class="grupo-muscular">
+                <h4>PANTORRILLAS</h4>
+                <div class="ejercicio">
+                    <input type="checkbox" id="dia2-ej7" onchange="tacharEjercicio('dia2-ej7')" />
+                    <label for="dia2-ej7"><strong>Elevación de Talones (en prensa o de pie)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('martes', 'elevacion_talones.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Parte trabajada:</strong> Pantorrillas</p>
+                    <p><strong>Series:</strong> 3 series</p>
+                    <p><strong>Reps:</strong> 15-20 repeticiones</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Pausa de 1-2 segundos arriba.</li>
+                        <li>Bajada lenta y completa para estiramiento real.</li>
+                        <li>Si lo haces en prensa, controla que no se levante el talón de la máquina.</li>
+                    </ul>
+                    <p><strong>Importancia:</strong> Más control = más estímulo.</p>
+                </details>
+            </div>
         </div>
     `;
     return { title: 'Martes: Piernas Completo, Pantorrilla', content: contenido };
@@ -128,7 +461,6 @@ function cargarContenidoModalRutinaDia3() {
                     <p>Video:</p>
                     <video controls width="320" height="240">
                         <source src="${get_videos_path('miercoles', 'face_pulls.mp4')}" type="video/mp4" />
-                        <source src="${get_videos_path('miercoles', 'face_pulls.webm')}" type="video/webm" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Zona del Hombro:</strong> Posterior</p>
@@ -141,7 +473,249 @@ function cargarContenidoModalRutinaDia3() {
                     </ul>
                     <p><strong>Importancia:</strong> Activa el deltoides posterior, preparando los hombros para ejercicios de espalda.</p>
                 </details>
-                <!-- Resto de la rutina del Día 3 (omitido por brevedad) -->
+                <div class="ejercicio">
+                    <input type="checkbox" id="dia3-ej2" onchange="tacharEjercicio('dia3-ej2')" />
+                    <label for="dia3-ej2"><strong>Chin-Up (Dominada Supinada)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('miercoles', 'chin_up.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Zonas trabajadas:</strong> Cabeza larga y corta del bíceps, braquial</p>
+                    <p><strong>Series:</strong> 2 series (una isométrica y una dinámica)</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li><strong>Isométrico + Excéntrico:</strong> Mantente con la barbilla sobre la barra durante 10–20 segundos y baja lentamente (3–5 reps).</li>
+                        <li><strong>Dinámico:</strong> Repeticiones completas manteniendo un ángulo de codo abierto (~90º) para aislar el bíceps y no los dorsales.</li>
+                    </ul>
+                    <p><strong>Beneficios:</strong></p>
+                    <ul>
+                        <li>Activa todas las funciones del bíceps.</li>
+                        <li>Ideal para “despertar” fibras musculares profundas.</li>
+                        <li>Estimula fuerza real con peso corporal.</li>
+                    </ul>
+                </details>
+            </div>
+            <div class="grupo-muscular">
+                <h4>EJERCICIOS PRINCIPALES DE ESPALDA</h4>
+                <blockquote>
+                    <p><strong>Objetivo:</strong> Llegar a 20 repeticiones efectivas por ejercicio, divididas en bloques con pausas cortas para volver al estado de fatiga máxima. Esta técnica se enfoca en la intensidad y acumulación de fatiga, maximizando la hipertrofia con series densas y controladas.</p>
+                    <p><strong>¿Cómo funciona?</strong></p>
+                    <ul>
+                        <li>Realiza una “Ignition Set”: 12 repeticiones al fallo.</li>
+                        <li>Luego, descansa 15 segundos.</li>
+                        <li>Después, comienza la fase de repeticiones efectivas: Por ejemplo, 5 repeticiones + 10 seg de descanso + 5 + 10 seg + ... hasta llegar a 20.</li>
+                        <li>El número de repeticiones puede variar según la fatiga (ej: 7+7+6 también es válido).</li>
+                    </ul>
+                </blockquote>
+                <div class="ejercicio">
+                    <input type="checkbox" id="dia3-ej3" onchange="tacharEjercicio('dia3-ej3')" />
+                    <label for="dia3-ej3"><strong>Barbell Rows (Remo con Barra)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('miercoles', 'barbell_rows.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Músculos trabajados:</strong> Espalda media, dorsales, romboides, trapecios, erectores espinales</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Carga moderadamente pesada.</li>
+                        <li>Mantén el torso inclinado, sin arquear la espalda.</li>
+                        <li>Enfócate en una contracción fuerte en la parte final del movimiento.</li>
+                    </ul>
+                    <p><strong>Ignition Set:</strong> 12 repeticiones al fallo</p>
+                    <p><strong>20 Reps Efectivas:</strong> Divididas en bloques (ej. 5 + 5 + 5 + 5) with 10 seg entre bloques</p>
+                    <p><strong>Importancia:</strong> Base de la fuerza horizontal para toda la espalda. Movimiento clave y pesado para iniciar.</p>
+                </details>
+                <div class="ejercicio">
+                    <input type="checkbox" id="dia3-ej4" onchange="tacharEjercicio('dia3-ej4')" />
+                    <label for="dia3-ej4"><strong>Lat Pulldowns (Agarre Ancho)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('miercoles', 'lat_pulldowns.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Músculos trabajados:</strong> Dorsales y redondo mayor</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Usa un agarre amplio en la barra recta.</li>
+                        <li>Saca los codos bien al frente al subir para exagerar el estiramiento de los dorsales.</li>
+                        <li>Contrae al máximo al bajar.</li>
+                    </ul>
+                    <p><strong>Ignition Set:</strong> 12 repeticiones al fallo</p>
+                    <p><strong>20 Reps Efectivas:</strong> Divididas con pausas de 10 seg</p>
+                    <p><strong>Importancia:</strong> El estiramiento controlado del dorsal mejora el crecimiento muscular. Agarre amplio activa más el redondo mayor.</p>
+                </details>
+                <div class="ejercicio">
+                    <input type="checkbox" id="dia3-ej5" onchange="tacharEjercicio('dia3-ej5')" />
+                    <label for="dia3-ej5"><strong>Seated Cable Rows Wide (Remo con Cable Sentado con Codos Anchos)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('miercoles', 'seated_cable_rows.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Músculos trabajados:</strong> Espalda superior y deltoides posteriores</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Codos hacia afuera, abre bien el pecho.</li>
+                        <li>Tira hacia la base del pecho sin perder tensión.</li>
+                        <li>Mantén el control en la fase excéntrica.</li>
+                    </ul>
+                    <p><strong>Ignition Set:</strong> 12 repeticiones al fallo</p>
+                    <p><strong>20 Reps Efectivas:</strong> Divididas con pausas de 10 seg</p>
+                    <p><strong>Importancia:</strong> Excelente para estimular la parte alta de la espalda y mejorar el grosor escapular.</p>
+                </details>
+                <div class="ejercicio">
+                    <input type="checkbox" id="dia3-ej6" onchange="tacharEjercicio('dia3-ej6')" />
+                    <label for="dia3-ej6"><strong>DB High Pulls (Jalón Alto con Mancuernas)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('miercoles', 'db_high_pulls.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Músculos trabajados:</strong> Trapecios, deltoides posteriores, espalda alta</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Eleva las mancuernas manteniendo las muñecas por encima de los codos.</li>
+                        <li>No conviertas el ejercicio en un remo erguido.</li>
+                        <li>Controla y detente si la forma se deteriora.</li>
+                    </ul>
+                    <p><strong>Ignition Set:</strong> 12 repeticiones al fallo</p>
+                    <p><strong>20 Reps Efectivas:</strong> Mismo patrón: bloques con pausas de 10 seg</p>
+                    <p><strong>Importancia:</strong> Mejora la fuerza escapular y la salud de los hombros. Excelente para reforzar la postura.</p>
+                </details>
+                <div class="ejercicio">
+                    <input type="checkbox" id="dia3-ej7" onchange="tacharEjercicio('dia3-ej7')" />
+                    <label for="dia3-ej7"><strong>Jalón ROM (Agarre Inverso con Enfoque en Elongación)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('miercoles', 'jalon_rom.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Músculos trabajados:</strong> Dorsales con énfasis en elongación</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Agarre supino (palmas hacia ti).</li>
+                        <li>Baja la barra hasta el pecho, sube completamente para estirar los dorsales al máximo.</li>
+                        <li>Haz una pausa breve en la parte más alta de cada repetición para reforzar la elongación.</li>
+                    </ul>
+                    <p><strong>Ignition Set:</strong> 12 repeticiones moderadas (no tan pesadas por estar al final)</p>
+                    <p><strong>20 Reps Efectivas:</strong> Realiza bloques pausados como antes, manteniendo la pausa en estiramiento</p>
+                    <p><strong>Importancia:</strong> Activa fibras que muchas veces no se trabajan. Crucial al final por su foco en estiramiento + control.</p>
+                </details>
+                <div class="ejercicio">
+                    <input type="checkbox" id="dia3-ej8" onchange="tacharEjercicio('dia3-ej8')" />
+                    <label for="dia3-ej8"><strong>Inverted Rows (Remo Invertido con Peso Corporal)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('miercoles', 'inverted_rows.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Músculos trabajados:</strong> Espalda media, deltoides posteriores, romboides</p>
+                    <p><strong>Ejecución especial:</strong></p>
+                    <ul>
+                        <li>Lleva el pecho lo más cerca posible de la barra.</li>
+                        <li>Mantente en la posición alta de la repetición por 5 segundos.</li>
+                        <li>Baja lentamente.</li>
+                        <li>Repite.</li>
+                    </ul>
+                    <p><strong>Técnica:</strong> Escalera de retención estática</p>
+                    <p><strong>Reps:</strong> No se cuentan repeticiones, sino tiempo bajo tensión</p>
+                    <p><strong>Importancia:</strong> Ejercicio fundamental para corregir posturas encorvadas y fortalecer la resistencia de los músculos posturales.</p>
+                </details>
+                <blockquote>
+                    <p><strong>Ejemplo de Repeticiones Efectivas:</strong></p>
+                    <ul>
+                        <li>12 reps al fallo (Ignition Set)</li>
+                        <li>15 seg de descanso</li>
+                        <li>5 reps → 10 seg pausa</li>
+                        <li>5 reps → 10 seg pausa</li>
+                        <li>5 reps → 10 seg pausa</li>
+                        <li>5 reps → ¡Listo! 20 reps efectivas acumuladas</li>
+                    </ul>
+                    <p>Si no puedes mantener 5 reps por bloque, ajusta: 7 + 7 + 6, 6 + 6 + 5 + 3, etc. Lo importante es que las repeticiones se mantengan exigentes.</p>
+                </blockquote>
+            </div>
+            <div class="grupo-muscular">
+                <h4>BÍCEPS</h4>
+                <div class="ejercicio">
+                    <input type="checkbox" id="dia3-ej9" onchange="tacharEjercicio('dia3-ej9')" />
+                    <label for="dia3-ej9"><strong>Dumbbell Curl (Curl con Mancuernas) – Tempo Lento</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('miercoles', 'dumbbell_curl.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Zonas trabajadas:</strong> Cabeza corta (principal), cabeza larga y braquial (secundarios)</p>
+                    <p><strong>Series y repeticiones:</strong> 3 series de 10–12 reps</p>
+                    <p><strong>Tempo recomendado:</strong> 3 segundos arriba / 3 segundos abajo</p>
+                    <p><strong>Técnica:</strong></p>
+                    <ul>
+                        <li>De pie, con los codos pegados al torso.</li>
+                        <li>Eleva con supinación completa y baja controladamente.</li>
+                    </ul>
+                    <p><strong>Beneficios:</strong></p>
+                    <ul>
+                        <li>Aísla el bíceps con tensión constante.</li>
+                        <li>Mejora conexión mente-músculo.</li>
+                        <li>Evita el uso de impulso.</li>
+                    </ul>
+                </details>
+                <div class="ejercicio">
+                    <input type="checkbox" id="dia3-ej10" onchange="tacharEjercicio('dia3-ej10')" />
+                    <label for="dia3-ej10"><strong>Cable Stretch Drag Curl (Curl de arrastre en polea baja)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('miercoles', 'cable_drag_curl.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Zonas trabajadas:</strong> Principalmente cabeza larga del bíceps</p>
+                    <p><strong>Series y repeticiones:</strong> 3 series de 8–10 reps</p>
+                    <p><strong>Técnica:</strong></p>
+                    <ul>
+                        <li>Usa un cable en polea baja.</li>
+                        <li>Arrastra el mango a lo largo del cuerpo manteniendo los codos hacia atrás.</li>
+                    </ul>
+                    <p><strong>Beneficios:</strong></p>
+                    <ul>
+                        <li>Estiramiento máximo al inicio del movimiento.</li>
+                        <li>Tensión continua gracias al cable.</li>
+                        <li>Mayor activación del “pico” del bíceps.</li>
+                    </ul>
+                </details>
+            </div>
+            <div class="grupo-muscular">
+                <h4>CONSEJO FINAL</h4>
+                <blockquote>
+                    <p>Esta rutina <strong>no requiere muchas series por ejercicio</strong>. Cada bloque efectivo ya representa una carga brutal. Enfócate en la ejecución perfecta y el control del tiempo bajo tensión.</p>
+                </blockquote>
             </div>
         </div>
     `;
