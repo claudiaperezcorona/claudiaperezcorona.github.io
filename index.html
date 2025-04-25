@@ -154,14 +154,16 @@
     </main>
 
     <!-- MODAL DE RUTINA -->
-    <div id="modal-rutina" class="fixed inset-0 z-50 bg-[#F4EDE4]/70 dark:bg-[#1b2a42]/70 flex items-start sm:items-center justify-center hidden overflow-y-auto">
-        <div class="relative bg-[#f8efd9] dark:bg-[#f5ecde] rounded-2xl shadow-2xl p-4 sm:p-5 w-full max-w-[95vw] sm:max-w-lg mx-2 sm:mx-3 my-4 sm:my-0 animate-fade-in border border-[#dde6ee] dark:border-[#244060]">
-            <button onclick="cerrarModalRutina()" class="absolute top-2 right-3 sm:top-3 sm:right-4 text-2xl sm:text-3xl text-gray-400 hover:text-red-600 transition" aria-label="Cerrar">
-                ×
-            </button>
-            <h3 id="modal-rutina-title" class="text-xl sm:text-2xl font-extrabold mb-3 text-center text-[#314638] dark:text-teal-300"></h3>
-            <hr class="hr-vintage" />
-            <div id="contenido-modal-rutina" class="text-sm sm:text-base"></div>
+    <div id="modal-rutina" class="fixed inset-0 z-50 bg-[#F4EDE4]/70 dark:bg-[#1b2a42]/70 flex items-start justify-center hidden">
+        <div class="relative bg-[#f8efd9] dark:bg-[#f5ecde] rounded-2xl shadow-2xl w-full max-w-[95vw] sm:max-w-lg mx-2 sm:mx-3 pt-20 sm:pt-0 sm:mt-20 overflow-y-auto max-h-[90vh] animate-fade-in border border-[#dde6ee] dark:border-[#244060]">
+            <div class="sticky top-0 bg-[#f8efd9] dark:bg-[#f5ecde] z-10 p-4 sm:p-5">
+                <button onclick="cerrarModalRutina()" class="absolute top-2 right-3 sm:top-3 sm:right-4 text-2xl sm:text-3xl text-gray-400 hover:text-red-600 transition" aria-label="Cerrar">
+                    ×
+                </button>
+                <h3 id="modal-rutina-title" class="text-xl sm:text-2xl font-extrabold mb-3 text-center text-[#314638] dark:text-teal-300"></h3>
+                <hr class="hr-vintage" />
+            </div>
+            <div id="contenido-modal-rutina" class="p-4 sm:p-5 text-sm sm:text-base"></div>
         </div>
     </div>
 

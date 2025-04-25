@@ -24,44 +24,39 @@ body {
     margin-right: 0.5rem;
 }
 
-@media (max-width: 640px) {
-    .nav-container a {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-    }
-}
-
 /* Estilos para la rutina */
 .grupo-muscular {
-    margin-bottom: 2rem;
-    padding: 1.2rem .8rem;
-    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+    border-radius: 0.8rem;
     background: linear-gradient(90deg, #fff 60%, #e7f3fb 100%);
-    box-shadow: 0 7px 18px -4px rgba(17, 70, 140, 0.04);
+    box-shadow: 0 5px 12px -3px rgba(17, 70, 140, 0.04);
 }
 
 .grupo-muscular h4 {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: #007AFF;
-    margin-bottom: .8rem;
+    margin-bottom: 0.6rem;
     text-transform: uppercase;
-    letter-spacing: .05em;
+    letter-spacing: 0.05em;
 }
 
 .ejercicio {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 }
 
 .ejercicio input[type="checkbox"] {
     accent-color: #d6e1ff;
+    width: 1.2rem;
+    height: 1.2rem;
 }
 
 .ejercicio label {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #1f2937;
 }
 
@@ -71,12 +66,12 @@ body {
 }
 
 details {
-    margin-left: 1.7rem;
-    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+    margin-bottom: 0.8rem;
     background: #F8FAFC;
     border-radius: 0.5rem;
-    padding: 0.7rem;
-    box-shadow: 0 2px 12px rgba(27, 70, 150, 0.042);
+    padding: 0.6rem;
+    box-shadow: 0 2px 10px rgba(27, 70, 150, 0.042);
     border: 1px solid #E0E7EF;
 }
 
@@ -89,25 +84,33 @@ details summary {
 details p,
 details ul,
 details blockquote {
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
     color: #374151;
 }
 
 details ul {
     list-style-type: disc;
-    margin-left: 1.5rem;
+    margin-left: 1.2rem;
 }
 
 details blockquote {
     border-left: 4px solid #1e3a8a;
-    padding-left: 1rem;
+    padding-left: 0.8rem;
     font-style: italic;
     color: #4b5563;
 }
 
 .triserie .ejercicio,
 .biserie .ejercicio {
-    margin-left: 1rem;
+    margin-left: 0.8rem;
+}
+
+/* Estilo para videos responsivos */
+video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
 }
 
 /* Animación para el modal */
@@ -116,7 +119,6 @@ details blockquote {
         opacity: 0;
         transform: scale(0.97);
     }
-
     to {
         opacity: 1;
         transform: scale(1);
@@ -128,7 +130,11 @@ details blockquote {
 }
 
 /* Estilo para el modal */
-#modal-rutina>div {
+#modal-rutina {
+    overflow-y: auto;
+}
+
+#modal-rutina > div {
     background: #f8efd9 !important;
     border: 1px solid #e2dac8 !important;
     box-shadow: 0 8px 32px 0 rgba(31, 31, 31, 0.18);
@@ -138,20 +144,20 @@ details blockquote {
 .rutina-vintage details {
     background: #f0e2cb !important;
     color: #4b3a29 !important;
-    border-radius: .5em;
-    padding: 0.7em;
+    border-radius: 0.5em;
+    padding: 0.6em;
     border: none;
 }
 
 .rutina-vintage details blockquote {
     border-left: 4px solid #b89b69 !important;
-    padding-left: 1rem;
+    padding-left: 0.8rem;
     font-style: italic;
     color: #1b140c !important;
 }
 
 .rutina-vintage h3 {
-    font-size: 2.75rem !important;
+    font-size: 1.8rem !important;
     font-weight: 800;
     color: #2D4731 !important;
     margin-bottom: 0.5em;
@@ -160,25 +166,25 @@ details blockquote {
 }
 
 .rutina-vintage h4 {
-    font-size: 1.65rem !important;
+    font-size: 1.3rem !important;
     font-weight: 800;
     letter-spacing: 0.06em;
     color: #bc6331 !important;
     text-transform: uppercase;
-    margin-bottom: .35em;
+    margin-bottom: 0.3em;
 }
 
-.rutina-vintage h3+hr,
+.rutina-vintage h3 + hr,
 .rutina-vintage .hr-vintage {
     border: none;
-    border-top: 3px solid #e2dac8 !important;
-    margin: 0.7em 0 1.1em 0;
+    border-top: 2px solid #e2dac8 !important;
+    margin: 0.6em 0 0.9em 0;
     height: 0;
     width: 100%;
 }
 
 .rutina-vintage .grupo-muscular {
-    margin-bottom: 2.1em;
+    margin-bottom: 1.5em;
     background: none !important;
     box-shadow: none !important;
     padding: 0;
@@ -187,7 +193,7 @@ details blockquote {
 .rutina-vintage label,
 .rutina-vintage .ejercicio label {
     color: #47604c !important;
-    font-size: 1.3rem !important;
+    font-size: 1.1rem !important;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     line-height: 1.2;
@@ -195,20 +201,20 @@ details blockquote {
 
 .rutina-vintage input[type="checkbox"] {
     accent-color: #d2bea0 !important;
-    width: 1.4em;
-    height: 1.4em;
+    width: 1.2rem;
+    height: 1.2rem;
     border: 2px solid #cbb594;
     border-radius: 0.3em;
-    margin-right: 0.7em;
+    margin-right: 0.6em;
     vertical-align: middle;
 }
 
 .rutina-vintage details {
     background: #e8d6bb !important;
-    border-radius: 0.8em !important;
-    padding: 0.2em 0.5em 0.8em 0.5em !important;
-    margin-top: 1em;
-    margin-bottom: 0.6em;
+    border-radius: 0.6em !important;
+    padding: 0.2em 0.4em 0.6em 0.4em !important;
+    margin-top: 0.8em;
+    margin-bottom: 0.5em;
     border: none;
     color: #453418;
     box-shadow: none !important;
@@ -217,11 +223,11 @@ details blockquote {
 .rutina-vintage details summary {
     background: #e0cbaa !important;
     color: #88602c !important;
-    border-radius: 0.45em;
-    padding: 0.5em 2.2em 0.5em 1.8em;
-    margin-bottom: 0.9em;
+    border-radius: 0.4em;
+    padding: 0.4em 2em 0.4em 1.6em;
+    margin-bottom: 0.8em;
     font-weight: bold;
-    font-size: 1.18em;
+    font-size: 1.1em;
     position: relative;
     cursor: pointer;
 }
@@ -230,10 +236,10 @@ details blockquote {
     content: "▸";
     display: inline-block;
     color: #88602c;
-    font-size: 1.12em;
+    font-size: 1.1em;
     font-weight: bold;
     position: absolute;
-    left: 0.7em;
+    left: 0.6em;
 }
 
 .rutina-vintage details[open] summary::before {
@@ -241,18 +247,105 @@ details blockquote {
 }
 
 .rutina-vintage .ejercicio {
-    margin-bottom: 1em;
+    margin-bottom: 0.8em;
 }
 
 .rutina-vintage details p,
 .rutina-vintage details ul {
-    font-size: 1.06em;
+    font-size: 1rem;
     color: #453418;
 }
 
 .rutina-vintage .tachado {
     text-decoration: line-through;
     color: #b6a595 !important;
+}
+
+/* Media Queries para móviles */
+@media (max-width: 640px) {
+    .nav-container a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .grupo-muscular {
+        margin-bottom: 1rem;
+        padding: 0.6rem;
+    }
+
+    .grupo-muscular h4 {
+        font-size: 1rem;
+    }
+
+    .ejercicio {
+        gap: 0.4rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .ejercicio input[type="checkbox"] {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .ejercicio label {
+        font-size: 0.9rem;
+    }
+
+    details {
+        margin-left: 1.2rem;
+        margin-bottom: 0.6rem;
+        padding: 0.5rem;
+    }
+
+    details ul {
+        margin-left: 1rem;
+    }
+
+    .triserie .ejercicio,
+    .biserie .ejercicio {
+        margin-left: 0.6rem;
+    }
+
+    .rutina-vintage h3 {
+        font-size: 1.5rem !important;
+    }
+
+    .rutina-vintage h4 {
+        font-size: 1.1rem !important;
+    }
+
+    .rutina-vintage label,
+    .rutina-vintage .ejercicio label {
+        font-size: 0.95rem !important;
+    }
+
+    .rutina-vintage input[type="checkbox"] {
+        width: 1rem !important;
+        height: 1rem !important;
+        margin-right: 0.5em;
+    }
+
+    .rutina-vintage details {
+        margin-top: 0.6em;
+        margin-bottom: 0.4em;
+        padding: 0.2em 0.3em 0.5em 0.3em !important;
+    }
+
+    .rutina-vintage details summary {
+        font-size: 1rem;
+        padding: 0.3em 1.8em 0.3em 1.4em;
+        margin-bottom: 0.6em;
+    }
+
+    .rutina-vintage details summary::before {
+        left: 0.5em;
+        font-size: 1em;
+    }
+
+    .rutina-vintage details p,
+    .rutina-vintage details ul {
+        font-size: 0.9rem;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -291,8 +384,8 @@ details blockquote {
         border-left-color: #e6eef7;
     }
 
-    #modal-rutina>div {
-        background: #f8efd9 !important;
+    #modal-rutina > div {
+        background: #f5ecde !important;
         border: 1px solid #e2dac8 !important;
         box-shadow: 0 8px 32px 0 rgba(31, 31, 31, 0.18);
     }
@@ -327,7 +420,7 @@ details blockquote {
 
     .rutina-vintage details blockquote {
         border-left: 4px solid #b89b69 !important;
-        color: #2a1f14 !important;
+        color: "2a1f14 !important;
     }
 
     .rutina-vintage input[type="checkbox"] {
@@ -336,5 +429,29 @@ details blockquote {
 
     .rutina-vintage .tachado {
         color: #b6a595 !important;
+    }
+
+    /* Media Queries para móviles en modo oscuro */
+    @media (max-width: 640px) {
+        .grupo-muscular h4 {
+            color: #61dafb;
+        }
+
+        .ejercicio label {
+            color: #d1d5db;
+        }
+
+        .rutina-vintage h3,
+        .rutina-vintage h4 {
+            color: #2D4731 !important;
+        }
+
+        .rutina-vintage h4 {
+            color: #b06531 !important;
+        }
+
+        .rutina-vintage .ejercicio label {
+            color: #222d1b !important;
+        }
     }
 }

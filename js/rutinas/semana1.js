@@ -298,82 +298,84 @@ function cargarContenidoModalRutinaDia2() {
                 </details>
             </div>
             <div class="grupo-muscular">
-                <h4>CUÁDRICEPS / GLÚTEO</h4>
+                <div class="biserie">
+                    <h4>BISERIE</h4>
+                    <div class="ejercicio">
+                        <input type="checkbox" id="dia2-ej3" onchange="tacharEjercicio('dia2-ej3')" />
+                        <label for="dia2-ej3"><strong>Sentadilla Búlgara con Mancuerna</strong></label>
+                    </div>
+                    <div class="ejercicio">
+                        <input type="checkbox" id="dia2-ej4" onchange="tacharEjercicio('dia2-ej4')" />
+                        <label for="dia2-ej4"><strong>Extensiones de Cuádriceps (con rotación de pies)</strong></label>
+                    </div>
+                    <details>
+                        <summary>Detalles de la Biserie</summary>
+                        <p><strong>Sentadilla Búlgara con Mancuerna:</strong></p>
+                        <p>Video:</p>
+                        <video controls width="320" height="240">
+                            <source src="${get_videos_path('martes', 'sentadilla_bulgara.mp4')}" type="video/mp4" />
+                            <source src="${get_videos_path('martes', 'sentadilla_bulgara.webm')}" type="video/webm" />
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                        <p><strong>Parte trabajada:</strong> Cuádriceps, glúteos</p>
+                        <p><strong>Series:</strong> 4 series</p>
+                        <p><strong>Reps:</strong> 6 repeticiones por pierna</p>
+                        <p><strong>Enfoque:</strong> Trabajo unilateral brutal.</p>
+                        <p><strong>Beneficio:</strong></p>
+                        <ul>
+                            <li>Aísla cuádriceps y glúteo de forma intensa.</li>
+                            <li>Estabilidad y control = más conexión y crecimiento.</li>
+                            <li>Puedes usar banco bajo o step.</li>
+                        </ul>
+                        <p><strong>Tip:</strong> Mantén el torso levemente inclinado hacia el frente para más glúteo.</p>
+                        <p><strong>Extensiones de Cuádriceps (con rotación de pies):</strong></p>
+                        <p>Video:</p>
+                        <video controls width="320" height="240">
+                            <source src="${get_videos_path('martes', 'extensiones_cuadriceps.mp4')}" type="video/mp4" />
+                            <source src="${get_videos_path('martes', 'extensiones_cuadriceps.webm')}" type="video/webm" />
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                        <p><strong>Parte trabajada:</strong> Cuádriceps</p>
+                        <p><strong>Series:</strong> 4 series</p>
+                        <p><strong>Reps:</strong></p>
+                        <ul>
+                            <li>10 repeticiones con puntas ligeramente hacia afuera</li>
+                            <li>10 repeticiones con puntas al frente</li>
+                        </ul>
+                        <p><strong>Enfoque:</strong> Aislamiento y tiempo bajo tensión.</p>
+                        <p><strong>Beneficio:</strong></p>
+                        <ul>
+                            <li>Estimulas diferentes porciones del cuádriceps.</li>
+                            <li>Más control y congestión brutal.</li>
+                        </ul>
+                        <p><strong>Por qué es clave:</strong> Excelente para terminar de "pulir" el cuádriceps y activar fibras que no se trabajan en compuestos.</p>
+                    </details>
+                </div>
+                <h4>Prensa</h4>
                 <div class="ejercicio">
                     <input type="checkbox" id="dia2-ej2" onchange="tacharEjercicio('dia2-ej2')" />
-                    <label for="dia2-ej2"><strong>Sentadilla Búlgara con Mancuerna</strong></label>
+                    <label for="dia2-ej2"><strong>Prensa 45 Grados</strong></label>
                 </div>
                 <details>
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls width="320" height="240">
-                        <source src="${get_videos_path('martes', 'sentadilla_bulgara.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('martes', 'sentadilla_con_barra.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
-                    <p><strong>Parte trabajada:</strong> Cuádriceps, glúteos</p>
-                    <p><strong>Series:</strong> 4 series</p>
-                    <p><strong>Reps:</strong> 6 repeticiones por pierna</p>
-                    <p><strong>Ejecución:</strong></p>
-                    <ul>
-                        <li>Trabajo unilateral brutal.</li>
-                        <li>Mantén el torso levemente inclinado hacia el frente para más glúteo.</li>
-                        <li>Puedes usar banco bajo o step.</li>
-                    </ul>
-                    <p><strong>Importancia:</strong> Aísla cuádriceps y glúteo de forma intensa. Estabilidad y control = más conexión y crecimiento.</p>
-                </details>
-                <div class="ejercicio">
-                    <input type="checkbox" id="dia2-ej3" onchange="tacharEjercicio('dia2-ej3')" />
-                    <label for="dia2-ej3"><strong>Extensiones de Cuádriceps (con rotación de pies)</strong></label>
-                </div>
-                <details>
-                    <summary>Detalles</summary>
-                    <p>Video:</p>
-                    <video controls width="320" height="240">
-                        <source src="${get_videos_path('martes', 'extensiones_cuadriceps.mp4')}" type="video/mp4" />
-                        Tu navegador no soporta la reproducción de videos.
-                    </video>
-                    <p><strong>Parte trabajada:</strong> Cuádriceps</p>
-                    <p><strong>Series:</strong> 4 series</p>
-                    <p><strong>Reps:</strong></p>
-                    <ul>
-                        <li>10 reps con puntas ligeramente hacia afuera</li>
-                        <li>10 reps con puntas al frente</li>
-                    </ul>
-                    <p><strong>Ejecución:</strong></p>
-                    <ul>
-                        <li>Aislamiento y tiempo bajo tensión.</li>
-                        <li>Estimula diferentes porciones del cuádriceps.</li>
-                    </ul>
-                    <p><strong>Importancia:</strong> Excelente para terminar de "pulir" el cuádriceps y activar fibras que no se trabajan en compuestos.</p>
-                </details>
-                <div class="ejercicio">
-                    <input type="checkbox" id="dia2-ej4" onchange="tacharEjercicio('dia2-ej4')" />
-                    <label for="dia2-ej4"><strong>Prensa 45 Grados (Combo)</strong></label>
-                </div>
-                <details>
-                    <summary>Detalles</summary>
-                    <p>Video:</p>
-                    <video controls width="320" height="240">
-                        <source src="${get_videos_path('martes', 'prensa_45.mp4')}" type="video/mp4" />
-                        Tu navegador no soporta la reproducción de videos.
-                    </video>
-                    <p><strong>Parte trabajada:</strong> Cuádriceps, glúteos</p>
+                    <p><strong>Parte trabajada:</strong> Cuádriceps, glúteos, femorales</p>
                     <p><strong>Series:</strong> 3 series</p>
-                    <p><strong>Reps:</strong></p>
+                    <p><strong>Reps:</strong> 10 reps con piernas <strong>abiertas</strong> / 10 reps <strong>cortas</strong> con piernas casi cerradas (sin sacar pies)</p>
+                    <p><strong>Beneficio:</strong></p>
                     <ul>
-                        <li>10 reps normales con piernas abiertas</li>
-                        <li>10 reps cortas con piernas casi cerradas (sin sacar pies)</li>
+                        <li>Estimula cuádriceps y glúteo desde diferentes ángulos.</li>
+                        <li>Las reps cortas finales destruyen las fibras agotadas.</li>
                     </ul>
-                    <p><strong>Ejecución:</strong></p>
-                    <ul>
-                        <li>Combinación de rango completo y parcial.</li>
-                        <li>Pies a media altura y controla el rebote abajo.</li>
-                    </ul>
-                    <p><strong>Importancia:</strong> Estimula cuádriceps y glúteo desde diferentes ángulos. Las reps cortas finales destruyen las fibras agotadas.</p>
+                    <p><strong>Importancia:</strong> Ejercicio compuesto clave para fuerza y masa en las piernas, activando múltiples grupos musculares.</p>
                 </details>
             </div>
             <div class="grupo-muscular">
-                <h4>BISERIE GLÚTEO + FEMORALES</h4>
+                <h4>BISERIE</h4>
                 <div class="biserie">
                     <div class="ejercicio">
                         <input type="checkbox" id="dia2-ej5" onchange="tacharEjercicio('dia2-ej5')" />
@@ -736,7 +738,6 @@ function cargarContenidoModalRutinaDia4() {
                     <p>Video:</p>
                     <video controls width="320" height="240">
                         <source src="${get_videos_path('jueves', 'abduction_machine.mp4')}" type="video/mp4" />
-                        <source src="${get_videos_path('jueves', 'abduction_machine.webm')}" type="video/webm" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Parte trabajada:</strong> Abductores (glúteo medio, tensor de la fascia lata)</p>
@@ -769,7 +770,6 @@ function cargarContenidoModalRutinaDia4() {
                         <p>Video:</p>
                         <video controls width="320" height="240">
                             <source src="${get_videos_path('jueves', 'dumbbell_deadlift.mp4')}" type="video/mp4" />
-                            <source src="${get_videos_path('jueves', 'dumbbell_deadlift.webm')}" type="video/webm" />
                             Tu navegador no soporta la reproducción de videos.
                         </video>
                         <p><strong>Parte trabajada:</strong> Femorales, glúteos</p>
@@ -784,7 +784,6 @@ function cargarContenidoModalRutinaDia4() {
                         <p>Video:</p>
                         <video controls width="320" height="240">
                             <source src="${get_videos_path('jueves', 'seated_hamstring_curl.mp4')}" type="video/mp4" />
-                            <source src="${get_videos_path('jueves', 'seated_hamstring_curl.webm')}" type="video/webm" />
                             Tu navegador no soporta la reproducción de videos.
                         </video>
                         <p><strong>Parte trabajada:</strong> Femorales</p>
@@ -811,7 +810,6 @@ function cargarContenidoModalRutinaDia4() {
                     <p>Video:</p>
                     <video controls width="320" height="240">
                         <source src="${get_videos_path('jueves', 'hip_thrust.mp4')}" type="video/mp4" />
-                        <source src="${get_videos_path('jueves', 'hip_thrust.webm')}" type="video/webm" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Parte trabajada:</strong> Glúteos, femorales</p>
@@ -843,7 +841,6 @@ function cargarContenidoModalRutinaDia4() {
                         <p>Video:</p>
                         <video controls width="320" height="240">
                             <source src="${get_videos_path('jueves', 'sumo_squat.mp4')}" type="video/mp4" />
-                            <source src="${get_videos_path('jueves', 'sumo_squat.webm')}" type="video/webm" />
                             Tu navegador no soporta la reproducción de videos.
                         </video>
                         <p><strong>Parte trabajada:</strong> Glúteos, cuádriceps, abductores</p>
@@ -857,7 +854,6 @@ function cargarContenidoModalRutinaDia4() {
                         <p>Video:</p>
                         <video controls width="320" height="240">
                             <source src="${get_videos_path('jueves', 'dumbbell_lunges.mp4')}" type="video/mp4" />
-                            <source src="${get_videos_path('jueves', 'dumbbell_lunges.webm')}" type="video/webm" />
                             Tu navegador no soporta la reproducción de videos.
                         </video>
                         <p><strong>Parte trabajada:</strong> Glúteos, cuádriceps</p>
@@ -882,7 +878,6 @@ function cargarContenidoModalRutinaDia4() {
                     <p>Video:</p>
                     <video controls width="320" height="240">
                         <source src="${get_videos_path('jueves', 'seated_calf_raises.mp4')}" type="video/mp4" />
-                        <source src="${get_videos_path('jueves', 'seated_calf_raises.webm')}" type="video/webm" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Parte trabajada:</strong> Sóleo (pantorrilla profunda)</p>
@@ -904,7 +899,6 @@ function cargarContenidoModalRutinaDia4() {
                     <p>Video:</p>
                     <video controls width="320" height="240">
                         <source src="${get_videos_path('jueves', 'straight_leg_calf_raise.mp4')}" type="video/mp4" />
-                        <source src="${get_videos_path('jueves', 'straight_leg_calf_raise.webm')}" type="video/webm" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Parte trabajada:</strong> Gastrocnemio (principalmente), sóleo (secundariamente)</p>
@@ -930,7 +924,6 @@ function cargarContenidoModalRutinaDia4() {
                     <p>Video:</p>
                     <video controls width="320" height="240">
                         <source src="${get_videos_path('jueves', 'hanging_leg_raises.mp4')}" type="video/mp4" />
-                        <source src="${get_videos_path('jueves', 'hanging_leg_raises.webm')}" type="video/webm" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Parte trabajada:</strong> Recto abdominal, oblicuos</p>
@@ -961,9 +954,8 @@ function cargarContenidoModalRutinaDia5() {
                 <details>
                     <summary>Detalles</summary>
                     <p>Video:</p>
-                    <video controls width="320" height="240">
-                        <source src="${get_videos_path('lunes', 'band_pull_apart.mp4')}" type="video/mp4" />
-                        <source src="${get_videos_path('lunes', 'band_pull_apart.webm')}" type="video/webm" />
+                    <video controls>
+                        <source src="${get_videos_path('viernes', 'band_pull_apart.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Parte trabajada:</strong> Espalda media, trapecios inferiores, manguito rotador</p>
@@ -977,7 +969,190 @@ function cargarContenidoModalRutinaDia5() {
                     <p><strong>Importancia:</strong> Estabiliza los hombros y activa la espalda media, preparando el cuerpo para movimientos de press pesados.</p>
                 </details>
             </div>
-            <!-- Resto de la rutina del Día 5 (omitido por brevedad) -->
+            <div class="grupo-muscular">
+                <h4>PECHO</h4>
+                <div class="ejercicio">
+                    <input type="checkbox" id="dia5-ej2" onchange="tacharEjercicio('dia5-ej2')" />
+                    <label for="dia5-ej2"><strong>DB Bench Press (Press de Banca con Mancuernas en Banco Plano)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls>
+                        <source src="${get_videos_path('viernes', 'db_bench_press.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Parte trabajada:</strong> Pecho medio (porción esternal del pectoral mayor)</p>
+                    <p><strong>Series:</strong> 3 series</p>
+                    <p><strong>Reps:</strong> 8-10 repeticiones hasta el fallo técnico</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>En un banco plano, baja las mancuernas controladamente hasta que los codos estén en línea con el pecho.</li>
+                        <li>Sube con fuerza, manteniendo la técnica para maximizar el estímulo muscular.</li>
+                    </ul>
+                    <p><strong>Importancia:</strong> Movimiento fundamental para desarrollar fuerza y masa en el pecho medio, con mayor rango de movimiento que el press con barra.</p>
+                </details>
+                <div class="ejercicio">
+                    <input type="checkbox" id="dia5-ej3" onchange="tacharEjercicio('dia5-ej3')" />
+                    <label for="dia5-ej3"><strong>DB Floor Flys (Fly con Mancuernas en el Suelo)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls>
+                        <source src="${get_videos_path('viernes', 'db_floor_flys.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Parte trabajada:</strong> Pecho medio</p>
+                    <p><strong>Series:</strong> 3 series</p>
+                    <p><strong>Reps:</strong> 8-10 repeticiones + excéntricas al fallo</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Acuéstate en el suelo, baja las mancuernas lentamente hasta que los codos toquen suavemente el suelo.</li>
+                        <li>Tras las repeticiones completas, realiza bajadas excéntricas lentas (subiendo recto y bajando controlado).</li>
+                    </ul>
+                    <p><strong>Importancia:</strong> Aísla el pecho medio con un estiramiento seguro, limitado por el suelo, ideal para hipertrofia.</p>
+                    <p><strong>Variante:</strong> Peck Deck.</p>
+                    <p><strong>Foto:</strong></p>
+                    <img src="${get_image_path('viernes', 'pec_deck.png')}" alt="Pec Deck" width="320" height="240" />
+                    <p><strong>Descripción:</strong> Siéntate en la máquina Peck Deck con los codos a la altura de los hombros y los antebrazos apoyados en las almohadillas. Junta las almohadillas frente a tu pecho, enfocándote en la contracción del pectoral, y regresa lentamente a la posición inicial para maximizar el estiramiento.</p>
+                    <p><strong>Enfoque:</strong> Trabajo de aislamiento para el pecho, con énfasis en la contracción y el estiramiento.</p>
+                    <p><strong>Beneficio:</strong> La máquina permite un movimiento controlado que aísla el pecho, minimizando la intervención de otros músculos. Es ideal para trabajar la parte media del pectoral con seguridad.</p>
+                </details>
+                <div class="ejercicio">
+                    <input type="checkbox" id="dia5-ej4" onchange="tacharEjercicio('dia5-ej4')" />
+                    <label for="dia5-ej4"><strong>High to Low Crossovers (Cruces en Polea Alta a Baja)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls>
+                        <source src="${get_videos_path('viernes', 'high_to_low_crossovers.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Parte trabajada:</strong> Pecho inferior</p>
+                    <p><strong>Series:</strong> 3 series</p>
+                    <p><strong>Reps:</strong> 10-12 repeticiones hasta el fallo + parciales</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>En una polea alta, cruza las manos en la parte baja del movimiento para maximizar la contracción.</li>
+                        <li>Tras el fallo, realiza repeticiones parciales en la posición baja.</li>
+                    </ul>
+                    <p><strong>Importancia:</strong> Enfoca el pecho inferior con tensión constante, complementando ejercicios compuestos.</p>
+                </details>
+                <div class="ejercicio">
+                    <input type="checkbox" id="dia5-ej5" onchange="tacharEjercicio('dia5-ej5')" />
+                    <label for="dia5-ej5"><strong>Prision Yard Push Up (Flexiones con Tensión Continua)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls>
+                        <source src="${get_videos_path('viernes', 'prision_yard_push_up.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Parte trabajada:</strong> Pecho completo (énfasis en tensión continua)</p>
+                    <p><strong>Series:</strong> 1 serie</p>
+                    <p><strong>Reps:</strong> Hasta el fallo absoluto</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Realiza flexiones a un ritmo rápido sin subir completamente, manteniendo tensión constante en el pecho.</li>
+                        <li>Continúa hasta el fallo absoluto.</li>
+                    </ul>
+                    <p><strong>Importancia:</strong> Agota el pecho al final de la sesión, maximizando la fatiga muscular con un ejercicio de peso corporal.</p>
+                </details>
+            </div>
+            <div class="grupo-muscular">
+                <h4>HOMBROS</h4>
+                <div class="biserie">
+                    <div class="ejercicio">
+                        <input type="checkbox" id="dia5-ej6" onchange="tacharEjercicio('dia5-ej6')" />
+                        <label for="dia5-ej6"><strong>Elevación Lateral con Trampa</strong></label>
+                    </div>
+                    <div class="ejercicio">
+                        <input type="checkbox" id="dia5-ej7" onchange="tacharEjercicio('dia5-ej7')" />
+                        <label for="dia5-ej7"><strong>Elevación Lateral Estricta 1½</strong></label>
+                    </div>
+                    <details>
+                        <summary>Detalles de la Biserie</summary>
+                        <p><strong>Elevación Lateral con Trampa:</strong></p>
+                        <p>Video:</p>
+                        <video controls>
+                            <source src="${get_videos_path('viernes', 'lateral_raise_cheat.mp4')}" type="video/mp4" />
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                        <p><strong>Zona del Hombro:</strong> Medial</p>
+                        <p><strong>Series:</strong> 3 series</p>
+                        <p><strong>Reps:</strong> 10 (peso alto)</p>
+                        <p><strong>Ejecución:</strong></p>
+                        <ul>
+                            <li>Usa un ligero impulso controlado para levantar la mancuerna.</li>
+                            <li>Enfócate en la bajada lenta para aprovechar la tensión excéntrica.</li>
+                        </ul>
+                        <p><strong>Elevación Lateral Estricta 1½:</strong></p>
+                        <p>Video:</p>
+                        <video controls>
+                            <source src="${get_videos_path('viernes', 'lateral_raise_strict.mp4')}" type="video/mp4" />
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                        <p><strong>Zona del Hombro:</strong> Medial</p>
+                        <p><strong>Series:</strong> 3 series</p>
+                        <p><strong>Reps:</strong> 6 (peso bajo)</p>
+                        <p><strong>Ejecución:</strong></p>
+                        <ul>
+                            <li>Levanta completamente, baja a mitad de camino y vuelve a subir antes de bajar totalmente.</li>
+                            <li>Mantén constante tensión muscular.</li>
+                        </ul>
+                        <p><strong>Importancia:</strong> Combina fuerza con control para maximizar la hipertrofia del deltoides medial.</p>
+                    </details>
+                </div>
+            </div>
+            <div class="grupo-muscular">
+                <h4>TRÍCEPS</h4>
+                <div class="ejercicio">
+                    <input type="checkbox" id="dia5-ej8" onchange="tacharEjercicio('dia5-ej8')" />
+                    <label for="dia5-ej8"><strong>Rotational Triceps Pushdown (Jalón de Tríceps con Rotación)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls>
+                        <source src="${get_videos_path('viernes', 'rotational_triceps_pushdown_explicacion.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('viernes', 'rotational_triceps_pushdown_ejecucion.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Zona:</strong> Cabeza larga (principal), también medial y lateral</p>
+                    <p><strong>Series:</strong> 3-4 series</p>
+                    <p><strong>Reps:</strong> 10-12 repeticiones por lado</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Usa cuerda o barra, gira ligeramente al final del jalón.</li>
+                        <li>Lleva los brazos hacia atrás al final del movimiento.</li>
+                    </ul>
+                    <p><strong>Importancia:</strong> Permite llevar el brazo hacia extensión del hombro, lo que estimula mejor la cabeza larga.</p>
+                </details>
+                <div class="ejercicio">
+                    <input type="checkbox" id="dia5-ej9" onchange="tacharEjercicio('dia5-ej9')" />
+                    <label for="dia5-ej9"><strong>Cable Overhead Triceps Extension (Extensión con Cable)</strong></label>
+                </div>
+                <details>
+                    <summary>Detalles</summary>
+                    <p>Video:</p>
+                    <video controls>
+                        <source src="${get_videos_path('viernes', 'cable_overhead_triceps_extension.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <p><strong>Zona:</strong> Principalmente cabeza larga</p>
+                    <p><strong>Series:</strong> 3-4 series</p>
+                    <p><strong>Reps:</strong> 12-15 repeticiones</p>
+                    <p><strong>Ejecución:</strong></p>
+                    <ul>
+                        <li>Coloca el cable en posición baja.</li>
+                        <li>Baja hacia frente/cabeza como una extensión, manteniendo tensión constante.</li>
+                    </ul>
+                    <p><strong>Importancia:</strong> Mejora la resistencia en la parte final del movimiento donde normalmente se pierde tensión con mancuernas.</p>
+                </details>
+            </div>
         </div>
     `;
     return { title: 'Viernes: Pecho, Hombros y Tríceps', content: contenido };
