@@ -10,30 +10,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap">
     <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/utils.js"></script>
+    <script defer src="js/rutinas/semana1.js"></script>
+    <script defer src="js/rutinas/semana2.js"></script>
+    <script defer src="js/main.js"></script>
 </head>
 
-<body class="bg-[#ebf5f4] dark:bg-[#1b2a42] text-gray-800 dark:text-gray-200 transition-colors duration-300 min-h-screen">
+<body
+    class="bg-[#ebf5f4] dark:bg-[#1b2a42] text-gray-800 dark:text-gray-200 transition-colors duration-300 min-h-screen">
 
     <!-- Header -->
-    <header class="bg-gradient-to-r from-teal-500 to-blue-500 dark:from-blue-800 dark:to-teal-700 text-white fixed w-full z-20 shadow-lg">
+    <header
+        class="bg-gradient-to-r from-teal-500 to-blue-500 dark:from-blue-800 dark:to-teal-700 text-white fixed w-full z-20 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16 sm:h-20">
-            <button onclick="goBack()" aria-label="Atrás" class="flex items-center space-x-2 hover:bg-white hover:bg-opacity-10 py-2 px-4 rounded-full text-sm sm:text-base transition shadow-md">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <button onclick="goBack()" aria-label="Atrás"
+                class="flex items-center space-x-2 hover:bg-white hover:bg-opacity-10 py-2 px-4 rounded-full text-sm sm:text-base transition shadow-md">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                 </svg>
                 <span class="hidden sm:inline">Atrás</span>
             </button>
             <div class="flex items-center space-x-3">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 sm:h-9 sm:w-9 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20 5h-2V3h-2v2H8V3H6v2H4a1 1 0 00-1 1v12a1 1 0 001 1h2v2h2v-2h8v2h2v-2h2a1 1 0 001-1V6a1 1 0 00-1-1zM4 18V6h2v12H4zm14 0V6h2v12h-2z" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 sm:h-9 sm:w-9 text-white drop-shadow-lg"
+                    fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M20 5h-2V3h-2v2H8V3H6v2H4a1 1 0 00-1 1v12a1 1 0 001 1h2v2h2v-2h8v2h2v-2h2a1 1 0 001-1V6a1 1 0 00-1-1zM4 18V6h2v12H4zm14 0V6h2v12h-2z" />
                 </svg>
                 <span class="text-xl sm:text-2xl font-extrabold tracking-wider drop-shadow-xl">ClamFit</span>
             </div>
-            <button id="theme-toggle" aria-label="Cambiar tema" class="p-2 rounded-full hover:bg-white hover:bg-opacity-20 focus:outline-none transition shadow-md">
-                <svg id="icon-light" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6 hidden" fill="currentColor" viewBox="0 0 20 20">
+            <button id="theme-toggle" aria-label="Cambiar tema"
+                class="p-2 rounded-full hover:bg-white hover:bg-opacity-20 focus:outline-none transition shadow-md">
+                <svg id="icon-light" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6 hidden"
+                    fill="currentColor" viewBox="0 0 20 20">
                     <path d="M10 2a1 1 0 011 1v1a1 1 0 01-2 0V3a1 1 0 011-1z" />
                 </svg>
-                <svg id="icon-dark" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" fill="currentColor" viewBox="0 0 20 20">
+                <svg id="icon-dark" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" fill="currentColor"
+                    viewBox="0 0 20 20">
                     <path d="M17.293 13.293A8 8 0 116.707 2.707a7 7 0 1010.586 10.586z" />
                 </svg>
             </button>
@@ -41,11 +54,17 @@
         <nav class="bg-teal-600 dark:bg-teal-700 text-white">
             <div class="max-w-7xl mx-auto px-4 py-2">
                 <div class="nav-container">
-                    <a href="#home" onclick="showSection('home')" id="nav-home" class="py-2 px-3 sm:px-4 font-medium rounded-full hover:bg-white hover:bg-opacity-10 transition text-sm sm:text-base">Inicio</a>
-                    <a href="#rutina" onclick="showSection('rutina')" id="nav-rutina" class="py-2 px-3 sm:px-4 font-medium rounded-full hover:bg-white hover:bg-opacity-10 transition text-sm sm:text-base">15 Días</a>
-                    <a href="#ejercicios" onclick="showSection('ejercicios')" id="nav-ejercicios" class="py-2 px-3 sm:px-4 font-medium rounded-full hover:bg-white hover:bg-opacity-10 transition text-sm sm:text-base">Ejercicios</a>
-                    <a href="#musculos" onclick="showSection('musculos')" id="nav-musculos" class="py-2 px-3 sm:px-4 font-medium rounded-full hover:bg-white hover:bg-opacity-10 transition text-sm sm:text-base">Músculos</a>
-                    <a href="#estiramientos" onclick="showSection('estiramientos')" id="nav-estiramientos" class="py-2 px-3 sm:px-4 font-medium rounded-full hover:bg-white hover:bg-opacity-10 transition text-sm sm:text-base">Estiramientos</a>
+                    <a href="#home" id="nav-home"
+                        class="py-2 px-3 sm:px-4 font-medium rounded-full hover:bg-white hover:bg-opacity-10 transition text-sm sm:text-base">Inicio</a>
+                    <a href="#rutina" id="nav-rutina"
+                        class="py-2 px-3 sm:px-4 font-medium rounded-full hover:bg-white hover:bg-opacity-10 transition text-sm sm:text-base">15
+                        Días</a>
+                    <a href="#ejercicios" id="nav-ejercicios"
+                        class="py-2 px-3 sm:px-4 font-medium rounded-full hover:bg-white hover:bg-opacity-10 transition text-sm sm:text-base">Ejercicios</a>
+                    <a href="#musculos" id="nav-musculos"
+                        class="py-2 px-3 sm:px-4 font-medium rounded-full hover:bg-white hover:bg-opacity-10 transition text-sm sm:text-base">Músculos</a>
+                    <a href="#estiramientos" id="nav-estiramientos"
+                        class="py-2 px-3 sm:px-4 font-medium rounded-full hover:bg-white hover:bg-opacity-10 transition text-sm sm:text-base">Estiramientos</a>
                 </div>
             </div>
         </nav>
@@ -56,12 +75,16 @@
         <!-- Home / Hero -->
         <section id="view-home" class="">
             <div class="text-center py-8 sm:py-10 md:py-14 bg-white dark:bg-[#1A2330] rounded-2xl shadow-xl space-y-4">
-                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-700">
+                <h1
+                    class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-700">
                     Tu plan, tu ritmo
                 </h1>
-                <p class="mb-4 text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300">Transforma tu cuerpo y tu mente en solo 15 días. 💪</p>
-                <button onclick="showSection('rutina')" class="bg-gradient-to-tr from-blue-600 to-teal-400 shadow-lg text-white px-6 sm:px-7 md:px-10 py-2 sm:py-3 rounded-full text-base sm:text-lg md:text-xl font-bold hover:from-blue-700 hover:to-teal-500 hover:shadow-2xl active:scale-95 transition flex items-center justify-center mx-auto gap-2">
-                    <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <p class="mb-4 text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300">Transforma tu cuerpo y
+                    tu mente en solo 15 días. 💪</p>
+                <button onclick="showSection('rutina')"
+                    class="bg-gradient-to-tr from-blue-600 to-teal-400 shadow-lg text-white px-6 sm:px-7 md:px-10 py-2 sm:py-3 rounded-full text-base sm:text-lg md:text-xl font-bold hover:from-blue-700 hover:to-teal-500 hover:shadow-2xl active:scale-95 transition flex items-center justify-center mx-auto gap-2">
+                    <svg class="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                     Empezar Rutina de 15 días
@@ -70,59 +93,77 @@
         </section>
 
         <!-- Selector Rutina 15 días -->
-        <section id="view-rutina" class="hidden bg-white dark:bg-[#1A2330] shadow-xl rounded-2xl p-4 sm:p-6 md:p-10 transition-colors duration-300">
-            <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold mb-6 flex items-center gap-2 text-gray-800 dark:text-white">
-                <svg class="h-6 w-6 sm:h-7 sm:w-7 text-teal-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 17l4-4-4-4m8 8V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2h8a2 2 0 002-2z" />
+        <section id="view-rutina"
+            class="hidden bg-white dark:bg-[#1A2330] shadow-xl rounded-2xl p-4 sm:p-6 md:p-10 transition-colors duration-300">
+            <h2
+                class="text-xl sm:text-2xl md:text-3xl font-extrabold mb-6 flex items-center gap-2 text-gray-800 dark:text-white">
+                <svg class="h-6 w-6 sm:h-7 sm:w-7 text-teal-500" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M8 17l4-4-4-4m8 8V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2h8a2 2 0 002-2z" />
                 </svg>
                 Rutina de 15 días
             </h2>
             <div class="flex flex-col sm:flex-row gap-4 md:gap-8 justify-center items-center w-full">
-                <button id="btn-sem1" class="w-full sm:w-auto max-w-xs min-w-[120px] sm:min-w-[135px] py-3 sm:py-4 px-4 text-sm sm:text-base md:text-lg bg-gradient-to-tr from-teal-400 to-blue-500 text-white dark:from-teal-700 dark:to-blue-800 rounded-xl font-semibold shadow-md border border-blue-300 dark:border-teal-800 transition hover:scale-105 hover:shadow-2xl focus:outline-none mb-2 sm:mb-0">
+                <button id="btn-sem1"
+                    class="w-full sm:w-auto max-w-xs min-w-[120px] sm:min-w-[135px] py-3 sm:py-4 px-4 text-sm sm:text-base md:text-lg bg-gradient-to-tr from-teal-400 to-blue-500 text-white dark:from-teal-700 dark:to-blue-800 rounded-xl font-semibold shadow-md border border-blue-300 dark:border-teal-800 transition hover:scale-105 hover:shadow-2xl focus:outline-none mb-2 sm:mb-0">
                     Semana 1
                     <span class="block text-xs font-normal text-white/90 dark:text-white/60">Inicia aquí</span>
                 </button>
-                <button id="btn-sem2" class="w-full sm:w-auto max-w-xs min-w-[120px] sm:min-w-[135px] py-3 sm:py-4 px-4 text-sm sm:text-base md:text-lg bg-gradient-to-tr from-blue-500 to-teal-400 text-white dark:from-blue-800 dark:to-teal-700 rounded-xl font-semibold shadow-md border border-blue-300 dark:border-teal-800 transition hover:scale-105 hover:shadow-2xl focus:outline-none">
+                <button id="btn-sem2"
+                    class="w-full sm:w-auto max-w-xs min-w-[120px] sm:min-w-[135px] py-3 sm:py-4 px-4 text-sm sm:text-base md:text-lg bg-gradient-to-tr from-blue-500 to-teal-400 text-white dark:from-blue-800 dark:to-teal-700 rounded-xl font-semibold shadow-md border border-blue-300 dark:border-teal-800 transition hover:scale-105 hover:shadow-2xl focus:outline-none">
                     Semana 2
-                    <span class="block text-xs font-normal text-white/90 dark:text-white/60">Próximamente</span>
+                    <span class="block text-xs font-normal text-white/90 dark:text-white/60">Inicia aquí</span>
                 </button>
             </div>
         </section>
 
         <!-- Detalle Semana -->
-        <section id="view-detail" class="hidden bg-white dark:bg-[#1A2330] shadow-xl rounded-2xl p-4 sm:p-6 md:p-10 transition-colors duration-300">
-            <h2 id="detail-title" class="text-xl sm:text-2xl md:text-3xl font-extrabold mb-6 text-gray-800 dark:text-white">
+        <section id="view-detail"
+            class="hidden bg-white dark:bg-[#1A2330] shadow-xl rounded-2xl p-4 sm:p-6 md:p-10 transition-colors duration-300">
+            <h2 id="detail-title"
+                class="text-xl sm:text-2xl md:text-3xl font-extrabold mb-6 text-gray-800 dark:text-white">
                 Detalle Semana
             </h2>
             <div id="content-detail"></div>
         </section>
 
         <!-- Ejercicios por músculo -->
-        <section id="view-ejercicios" class="hidden bg-white dark:bg-[#1A2330] shadow-xl rounded-2xl p-4 sm:p-6 md:p-10 transition-colors duration-300">
+        <section id="view-ejercicios"
+            class="hidden bg-white dark:bg-[#1A2330] shadow-xl rounded-2xl p-4 sm:p-6 md:p-10 transition-colors duration-300">
             <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold mb-6 text-gray-800 dark:text-white">
                 Ejercicios por grupo muscular
             </h2>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
-                <button class="flex flex-col items-center justify-center p-4 sm:p-5 bg-gradient-to-tr from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 rounded-xl shadow-md hover:scale-105 transition gap-2 group">
-                    <svg class="h-7 w-7 sm:h-8 sm:w-8 text-blue-500 group-hover:scale-110 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-width="2" d="M11 21h-1a1 1 0 01-1-1v-1a1 1 0 00-1-1V9a5 5 0 019 0v10a1 1 0 01-1 1h-1" />
+                <button
+                    class="flex flex-col items-center justify-center p-4 sm:p-5 bg-gradient-to-tr from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 rounded-xl shadow-md hover:scale-105 transition gap-2 group">
+                    <svg class="h-7 w-7 sm:h-8 sm:w-8 text-blue-500 group-hover:scale-110 transition" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-width="2"
+                            d="M11 21h-1a1 1 0 01-1-1v-1a1 1 0 00-1-1V9a5 5 0 019 0v10a1 1 0 01-1 1h-1" />
                     </svg>
                     <span class="font-semibold text-sm sm:text-base">Pecho</span>
                 </button>
-                <button class="flex flex-col items-center justify-center p-4 sm:p-5 bg-gradient-to-tr from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 rounded-xl shadow-md hover:scale-105 transition gap-2 group">
-                    <svg class="h-7 w-7 sm:h-8 sm:w-8 text-blue-700 group-hover:scale-110 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <button
+                    class="flex flex-col items-center justify-center p-4 sm:p-5 bg-gradient-to-tr from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 rounded-xl shadow-md hover:scale-105 transition gap-2 group">
+                    <svg class="h-7 w-7 sm:h-8 sm:w-8 text-blue-700 group-hover:scale-110 transition" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-width="2" d="M12 2l4 4-4 4-4-4 4-4zm0 6v4m0 4l-4 4 4 4 4-4-4-4z" />
                     </svg>
                     <span class="font-semibold text-sm sm:text-base">Espalda</span>
                 </button>
-                <button class="flex flex-col items-center justify-center p-4 sm:p-5 bg-gradient-to-tr from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 rounded-xl shadow-md hover:scale-105 transition gap-2 group">
-                    <svg class="h-7 w-7 sm:h-8 sm:w-8 text-teal-500 group-hover:scale-110 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <button
+                    class="flex flex-col items-center justify-center p-4 sm:p-5 bg-gradient-to-tr from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 rounded-xl shadow-md hover:scale-105 transition gap-2 group">
+                    <svg class="h-7 w-7 sm:h-8 sm:w-8 text-teal-500 group-hover:scale-110 transition" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-width="2" d="M16 21v-2a4 4 0 00-8 0v2" />
                     </svg>
                     <span class="font-semibold text-sm sm:text-base">Piernas</span>
                 </button>
-                <button class="flex flex-col items-center justify-center p-4 sm:p-5 bg-gradient-to-tr from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 rounded-xl shadow-md hover:scale-105 transition gap-2 group">
-                    <svg class="h-7 w-7 sm:h-8 sm:w-8 text-teal-700 group-hover:scale-110 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <button
+                    class="flex flex-col items-center justify-center p-4 sm:p-5 bg-gradient-to-tr from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 rounded-xl shadow-md hover:scale-105 transition gap-2 group">
+                    <svg class="h-7 w-7 sm:h-8 sm:w-8 text-teal-700 group-hover:scale-110 transition" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-width="2" d="M19 11h-2V9a4 4 0 00-8 0v2H5" />
                     </svg>
                     <span class="font-semibold text-sm sm:text-base">Hombros</span>
@@ -131,36 +172,49 @@
         </section>
 
         <!-- Anatomía y Músculos -->
-        <section id="view-musculos" class="hidden bg-white dark:bg-[#1A2330] shadow-xl rounded-2xl p-4 sm:p-6 md:p-10 transition-colors duration-300">
-            <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold mb-6 text-gray-800 dark:text-white">Anatomía y músculos</h2>
+        <section id="view-musculos"
+            class="hidden bg-white dark:bg-[#1A2330] shadow-xl rounded-2xl p-4 sm:p-6 md:p-10 transition-colors duration-300">
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold mb-6 text-gray-800 dark:text-white">Anatomía y
+                músculos</h2>
             <div class="flex flex-col items-center">
-                <div class="mb-4 w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 rounded-full bg-gradient-to-tr from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center shadow-inner">
+                <div
+                    class="mb-4 w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 rounded-full bg-gradient-to-tr from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center shadow-inner">
                     <span class="text-gray-500 dark:text-gray-400 text-5xl sm:text-6xl">?</span>
                 </div>
-                <p class="text-center text-base sm:text-lg text-gray-700 dark:text-gray-300 mt-2">[Ilustración interactiva aquí]</p>
+                <p class="text-center text-base sm:text-lg text-gray-700 dark:text-gray-300 mt-2">[Ilustración
+                    interactiva aquí]</p>
             </div>
         </section>
 
         <!-- Estiramientos y Calentamientos -->
-        <section id="view-estiramientos" class="hidden bg-white dark:bg-[#1A2330] shadow-xl rounded-2xl p-4 sm:p-6 md:p-10 transition-colors duration-300">
-            <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold mb-6 text-gray-800 dark:text-white">Estiramientos y calentamientos</h2>
+        <section id="view-estiramientos"
+            class="hidden bg-white dark:bg-[#1A2330] shadow-xl rounded-2xl p-4 sm:p-6 md:p-10 transition-colors duration-300">
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold mb-6 text-gray-800 dark:text-white">Estiramientos
+                y calentamientos</h2>
             <div class="flex flex-col items-center">
-                <div class="mb-4 w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-tr from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center shadow-inner">
+                <div
+                    class="mb-4 w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-tr from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center shadow-inner">
                     <span class="text-gray-400 text-4xl sm:text-5xl">⚡</span>
                 </div>
-                <p class="text-center text-base sm:text-lg text-gray-700 dark:text-gray-300 mt-2">[Rutinas de movilidad]</p>
+                <p class="text-center text-base sm:text-lg text-gray-700 dark:text-gray-300 mt-2">[Rutinas de movilidad]
+                </p>
             </div>
         </section>
     </main>
 
     <!-- MODAL DE RUTINA -->
-    <div id="modal-rutina" class="fixed inset-0 z-50 bg-[#F4EDE4]/70 dark:bg-[#1b2a42]/70 flex items-start justify-center hidden">
-        <div class="relative bg-[#f8efd9] dark:bg-[#f5ecde] rounded-2xl shadow-2xl w-full max-w-[95vw] sm:max-w-lg mx-2 sm:mx-3 pt-20 sm:pt-0 sm:mt-20 overflow-y-auto max-h-[90vh] animate-fade-in border border-[#dde6ee] dark:border-[#244060]">
+    <div id="modal-rutina"
+        class="fixed inset-0 z-50 bg-[#F4EDE4]/70 dark:bg-[#1b2a42]/70 flex items-start justify-center hidden">
+        <div
+            class="relative bg-[#f8efd9] dark:bg-[#f5ecde] rounded-2xl shadow-2xl w-full max-w-[95vw] sm:max-w-lg mx-2 sm:mx-3 pt-20 sm:pt-0 sm:mt-20 overflow-y-auto max-h-[90vh] animate-fade-in border border-[#dde6ee] dark:border-[#244060]">
             <div class="sticky top-0 bg-[#f8efd9] dark:bg-[#f5ecde] z-10 p-4 sm:p-5">
-                <button onclick="cerrarModalRutina()" class="absolute top-2 right-3 sm:top-3 sm:right-4 text-2xl sm:text-3xl text-gray-400 hover:text-red-600 transition" aria-label="Cerrar">
+                <button onclick="cerrarModalRutina()"
+                    class="absolute top-2 right-3 sm:top-3 sm:right-4 text-3xl sm:text-4xl text-black hover:text-red-600 transition font-bold"
+                    aria-label="Cerrar">
                     ×
                 </button>
-                <h3 id="modal-rutina-title" class="text-xl sm:text-2xl font-extrabold mb-3 text-center text-[#314638] dark:text-teal-300"></h3>
+                <h3 id="modal-rutina-title"
+                    class="text-xl sm:text-2xl font-extrabold mb-3 text-center text-[#314638] dark:text-teal-300"></h3>
                 <hr class="hr-vintage" />
             </div>
             <div id="contenido-modal-rutina" class="p-4 sm:p-5 text-sm sm:text-base"></div>

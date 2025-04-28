@@ -119,6 +119,7 @@ video {
         opacity: 0;
         transform: scale(0.97);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -134,10 +135,19 @@ video {
     overflow-y: auto;
 }
 
-#modal-rutina > div {
+#modal-rutina>div {
     background: #f8efd9 !important;
     border: 1px solid #e2dac8 !important;
     box-shadow: 0 8px 32px 0 rgba(31, 31, 31, 0.18);
+}
+
+
+/* Contenedor del título del modal */
+#modal-rutina .sticky {
+    top: 0;
+    background: #f8efd9;
+    z-index: 10;
+    padding: 0.8rem 1rem;
 }
 
 /* Estilo para el look beige vintage en la rutina */
@@ -174,7 +184,7 @@ video {
     margin-bottom: 0.3em;
 }
 
-.rutina-vintage h3 + hr,
+.rutina-vintage h3+hr,
 .rutina-vintage .hr-vintage {
     border: none;
     border-top: 2px solid #e2dac8 !important;
@@ -306,6 +316,13 @@ video {
         margin-left: 0.6rem;
     }
 
+    #modal-rutina .sticky {
+        position: static !important;
+        padding: 0.6rem 0.8rem;
+        top: auto;
+        z-index: auto;
+    }
+
     .rutina-vintage h3 {
         font-size: 1.5rem !important;
     }
@@ -354,7 +371,7 @@ video {
     }
 
     .grupo-muscular h4 {
-        color: #61dafb;
+        color: #d4551a;
     }
 
     .ejercicio label {
@@ -384,10 +401,18 @@ video {
         border-left-color: #e6eef7;
     }
 
-    #modal-rutina > div {
+    #modal-rutina>div {
         background: #f5ecde !important;
         border: 1px solid #e2dac8 !important;
         box-shadow: 0 8px 32px 0 rgba(31, 31, 31, 0.18);
+    }
+
+    #modal-rutina .sticky {
+        background: #f5ecde;
+    }
+
+    #modal-rutina-title {
+        color: #1f2937; /* Forzar el mismo color en modo oscuro */
     }
 
     .rutina-vintage {
@@ -421,6 +446,7 @@ video {
     .rutina-vintage details blockquote {
         border-left: 4px solid #b89b69 !important;
         color: "2a1f14 !important;
+
     }
 
     .rutina-vintage input[type="checkbox"] {
@@ -454,4 +480,8 @@ video {
             color: #222d1b !important;
         }
     }
+}
+
+#modal-rutina-title {
+    color: #1f2937; /* Color en modo claro, gris oscuro */
 }
