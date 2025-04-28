@@ -67,6 +67,7 @@ function cargarContenidoModalRutinaDia1Sem2() {
                         <li>Luego realiza jalones completos con control.</li>
                     </ul>
                 </details>
+                <br>
                 <div class="ejercicio">
                     <input type="checkbox" id="dia1sem2-ej2" onchange="tacharEjercicio('dia1sem2-ej2')" />
                     <label for="dia1sem2-ej2"><strong>Face Pulls</strong></label>
