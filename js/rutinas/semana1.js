@@ -515,9 +515,12 @@ function cargarContenidoModalRutinaDia3() {
             </div>
             <div class="grupo-muscular">
                 <h4>EJERCICIOS PRINCIPALES DE ESPALDA</h4>
+                <br>
                 <blockquote>
                     <p><strong>Objetivo:</strong> Llegar a 20 repeticiones efectivas por ejercicio, divididas en bloques con pausas cortas para volver al estado de fatiga máxima. Esta técnica se enfoca en la intensidad y acumulación de fatiga, maximizando la hipertrofia con series densas y controladas.</p>
+                    <br>
                     <p><strong>¿Cómo funciona?</strong></p>
+                    <br>    
                     <ul>
                         <li>Realiza una “Ignition Set”: 12 repeticiones al fallo.</li>
                         <li>Luego, descansa 15 segundos.</li>
@@ -525,6 +528,7 @@ function cargarContenidoModalRutinaDia3() {
                         <li>El número de repeticiones puede variar según la fatiga (ej: 7+7+6 también es válido).</li>
                     </ul>
                 </blockquote>
+                <br>
                 <div class="ejercicio">
                     <input type="checkbox" id="dia3-ej3" onchange="tacharEjercicio('dia3-ej3')" />
                     <label for="dia3-ej3"><strong>Barbell Rows (Remo con Barra)</strong></label>
@@ -547,6 +551,7 @@ function cargarContenidoModalRutinaDia3() {
                     <p><strong>20 Reps Efectivas:</strong> Divididas en bloques (ej. 5 + 5 + 5 + 5) with 10 seg entre bloques</p>
                     <p><strong>Importancia:</strong> Base de la fuerza horizontal para toda la espalda. Movimiento clave y pesado para iniciar.</p>
                 </details>
+                <br>
                 <div class="ejercicio">
                     <input type="checkbox" id="dia3-ej4" onchange="tacharEjercicio('dia3-ej4')" />
                     <label for="dia3-ej4"><strong>Lat Pulldowns (Agarre Ancho)</strong></label>
@@ -569,6 +574,7 @@ function cargarContenidoModalRutinaDia3() {
                     <p><strong>20 Reps Efectivas:</strong> Divididas con pausas de 10 seg</p>
                     <p><strong>Importancia:</strong> El estiramiento controlado del dorsal mejora el crecimiento muscular. Agarre amplio activa más el redondo mayor.</p>
                 </details>
+                <br>
                 <div class="ejercicio">
                     <input type="checkbox" id="dia3-ej5" onchange="tacharEjercicio('dia3-ej5')" />
                     <label for="dia3-ej5"><strong>Seated Cable Rows Wide (Remo con Cable Sentado con Codos Anchos)</strong></label>
@@ -591,6 +597,7 @@ function cargarContenidoModalRutinaDia3() {
                     <p><strong>20 Reps Efectivas:</strong> Divididas con pausas de 10 seg</p>
                     <p><strong>Importancia:</strong> Excelente para estimular la parte alta de la espalda y mejorar el grosor escapular.</p>
                 </details>
+                <br>
                 <div class="ejercicio">
                     <input type="checkbox" id="dia3-ej6" onchange="tacharEjercicio('dia3-ej6')" />
                     <label for="dia3-ej6"><strong>DB High Pulls (Jalón Alto con Mancuernas)</strong></label>
@@ -613,6 +620,7 @@ function cargarContenidoModalRutinaDia3() {
                     <p><strong>20 Reps Efectivas:</strong> Mismo patrón: bloques con pausas de 10 seg</p>
                     <p><strong>Importancia:</strong> Mejora la fuerza escapular y la salud de los hombros. Excelente para reforzar la postura.</p>
                 </details>
+                <br>
                 <div class="ejercicio">
                     <input type="checkbox" id="dia3-ej7" onchange="tacharEjercicio('dia3-ej7')" />
                     <label for="dia3-ej7"><strong>Jalón ROM (Agarre Inverso con Enfoque en Elongación)</strong></label>
@@ -635,6 +643,7 @@ function cargarContenidoModalRutinaDia3() {
                     <p><strong>20 Reps Efectivas:</strong> Realiza bloques pausados como antes, manteniendo la pausa en estiramiento</p>
                     <p><strong>Importancia:</strong> Activa fibras que muchas veces no se trabajan. Crucial al final por su foco en estiramiento + control.</p>
                 </details>
+                <br>
                 <div class="ejercicio">
                     <input type="checkbox" id="dia3-ej8" onchange="tacharEjercicio('dia3-ej8')" />
                     <label for="dia3-ej8"><strong>Inverted Rows (Remo Invertido con Peso Corporal)</strong></label>
@@ -658,6 +667,7 @@ function cargarContenidoModalRutinaDia3() {
                     <p><strong>Reps:</strong> No se cuentan repeticiones, sino tiempo bajo tensión</p>
                     <p><strong>Importancia:</strong> Ejercicio fundamental para corregir posturas encorvadas y fortalecer la resistencia de los músculos posturales.</p>
                 </details>
+                <br>
                 <blockquote>
                     <p><strong>Ejemplo de Repeticiones Efectivas:</strong></p>
                     <ul>
@@ -672,6 +682,7 @@ function cargarContenidoModalRutinaDia3() {
                 </blockquote>
             </div>
             <div class="grupo-muscular">
+                <br>
                 <h4>BÍCEPS</h4>
                 <div class="ejercicio">
                     <input type="checkbox" id="dia3-ej9" onchange="tacharEjercicio('dia3-ej9')" />
@@ -699,6 +710,7 @@ function cargarContenidoModalRutinaDia3() {
                         <li>Evita el uso de impulso.</li>
                     </ul>
                 </details>
+                <br>
                 <div class="ejercicio">
                     <input type="checkbox" id="dia3-ej10" onchange="tacharEjercicio('dia3-ej10')" />
                     <label for="dia3-ej10"><strong>Cable Stretch Drag Curl (Curl de arrastre en polea baja)</strong></label>
@@ -725,6 +737,7 @@ function cargarContenidoModalRutinaDia3() {
                     </ul>
                 </details>
             </div>
+            <br>
             <div class="grupo-muscular">
                 <h4>CONSEJO FINAL</h4>
                 <blockquote>
