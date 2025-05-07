@@ -52,7 +52,7 @@ function cargarContenidoModalRutinaDia1() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls width="320" height="240">
-                        <source src="${get_videos_path('lunes', 'manguito_rotador.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Chest', 'banded_er.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Parte trabajada:</strong> Manguito rotador, estabilizadores del hombro.</p>
@@ -76,7 +76,7 @@ function cargarContenidoModalRutinaDia1() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls width="320" height="240">
-                        <source src="${get_videos_path('lunes', 'press_inclinado.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Chest', 'thumbs_up_db_incline.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Parte trabajada:</strong> Pecho superior (porción clavicular del pectoral mayor).</p>
@@ -97,7 +97,7 @@ function cargarContenidoModalRutinaDia1() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls width="320" height="240">
-                        <source src="${get_videos_path('lunes', 'cable_crossover.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Chest', 'cable_crossover.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Parte trabajada:</strong> Pecho medio (porción esternal del pectoral mayor).</p>
@@ -118,7 +118,7 @@ function cargarContenidoModalRutinaDia1() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls width="320" height="240">
-                        <source src="${get_videos_path('lunes', 'dip_ladder.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Chest', 'dip_ladder.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Parte trabajada:</strong> Pecho inferior (porción abdominal del pectoral mayor).</p>
@@ -139,7 +139,7 @@ function cargarContenidoModalRutinaDia1() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls width="320" height="240">
-                        <source src="${get_videos_path('lunes', 'flexiones_deficit.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Chest', 'flexiones_deficit.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Parte trabajada:</strong> Pecho medio e inferior.</p>
@@ -171,7 +171,13 @@ function cargarContenidoModalRutinaDia1() {
                     </div>
                     <details>
                         <summary>Detalles de la Triserie</summary>
+                        <br>
                         <p><strong>Series:</strong> 3 series (los tres ejercicios seguidos sin descanso)</p>
+                        <br>
+                        <p><strong>Descripción:</strong> Realiza el Press Militar de Pie, seguido inmediatamente por el Press Unilateral de Pie, y termina con el Push Press con Mancuernas. Descansa después de completar los tres ejercicios.</p>
+                        <br>
+                        <strong>-------------------------</strong>
+                        <br>
                         <p><strong>Reps Press Militar:</strong> 10 repeticiones</p>
                         <p><strong>Zona del Hombro (Press Militar):</strong> Anterior y Medial</p>
                         <p><strong>Ejecución Press Militar:</strong></p>
@@ -179,11 +185,9 @@ function cargarContenidoModalRutinaDia1() {
                             <li>Usa peso elevado, realiza el press por encima de la cabeza sin respaldo.</li>
                             <li>Mantén control total del movimiento.</li>
                         </ul>
-                        <p><strong>Video Press Militar de Pie:</strong></p>
-                        <video controls width="320" height="240">
-                            <source src="${get_videos_path('lunes', 'press_militar_pie.mp4')}" type="video/mp4" />
-                            Tu navegador no soporta la reproducción de videos.
-                        </video>
+                        <br>
+                        <strong>-------------------------</strong>
+                        <br>
                         <p><strong>Reps Press Unilateral:</strong> 6 repeticiones</p>
                         <p><strong>Zona del Hombro (Press Unilateral):</strong> Anterior</p>
                         <p><strong>Ejecución Press Unilateral:</strong></p>
@@ -191,11 +195,9 @@ function cargarContenidoModalRutinaDia1() {
                             <li>Realiza el movimiento alternando cada brazo, mantén el core activado.</li>
                             <li>Mejora equilibrio y trabaja asimetrías.</li>
                         </ul>
-                        <p><strong>Video Press Unilateral de Pie:</strong></p>
-                        <video controls width="320" height="240">
-                            <source src="${get_videos_path('lunes', 'press_unilateral.mp4')}" type="video/mp4" />
-                            Tu navegador no soporta la reproducción de videos.
-                        </video>
+                        <br>
+                        <strong>-------------------------</strong>
+                        <br>
                         <p><strong>Reps Push Press:</strong> 8 repeticiones</p>
                         <p><strong>Zona del Hombro (Push Press):</strong> Anterior y Medial</p>
                         <p><strong>Ejecución Push Press:</strong></p>
@@ -203,12 +205,13 @@ function cargarContenidoModalRutinaDia1() {
                             <li>Usa un ligero impulso de piernas para elevar mancuernas.</li>
                             <li>Aprovecha la explosividad del movimiento para manejar pesos mayores.</li>
                         </ul>
-                        <p><strong>Video Push Press con Mancuernas:</strong></p>
+                        <br>
+                        <p><strong>Video de la Triserie:</strong></p>
                         <video controls width="320" height="240">
-                            <source src="${get_videos_path('lunes', 'push_press_mancuernas.mp4')}" type="video/mp4" />
+                            <source src="${get_videos_path('Shoulder', 'dumbbell_standing_overhead_press.mp4')}" type="video/mp4" />
                             Tu navegador no soporta la reproducción de videos.
                         </video>
-                        <p><strong>Descripción:</strong> Realiza el Press Militar de Pie, seguido inmediatamente por el Press Unilateral de Pie, y termina con el Push Press con Mancuernas. Descansa después de completar los tres ejercicios.</p>
+                        <br>
                     </details>
                 </div>
             </div>
@@ -222,7 +225,7 @@ function cargarContenidoModalRutinaDia1() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls width="320" height="240">
-                        <source src="${get_videos_path('lunes', 'pullover_pjr.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Triceps', 'pullover_PJR.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Zona:</strong> Cabeza larga del tríceps y dorsales (asistentes).</p>
@@ -241,11 +244,20 @@ function cargarContenidoModalRutinaDia1() {
                 </div>
                 <details>
                     <summary>Detalles</summary>
-                    <p>Video:</p>
+                    <br>
+                    <p><strong>Explicacion:</strong></p>
                     <video controls width="320" height="240">
-                        <source src="${get_videos_path('lunes', 'triceps_trunk_lift.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Triceps', 'triceps_bodyweight_trunk_lift_explicacion.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
+                    <br>
+                    <br>
+                    <p><strong>Ejecucion:</strong></p>
+                    <video controls width="320" height="240">
+                        <source src="${get_videos_path('Triceps', 'triceps_bodyweight_trunk_lift_ejecucion.mp4')}" type="video/mp4" />
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                    <br>
                     <p><strong>Zona:</strong> Cabeza larga del tríceps.</p>
                     <p><strong>Series:</strong> 3-4 series.</p>
                     <p><strong>Reps:</strong> 10-15 repeticiones (al fallo).</p>
@@ -462,7 +474,7 @@ function cargarContenidoModalRutinaDia3() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls width="320" height="240">
-                        <source src="${get_videos_path('miercoles', 'face_pulls.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Back', 'face_pulls.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Zona del Hombro:</strong> Posterior</p>
@@ -483,7 +495,7 @@ function cargarContenidoModalRutinaDia3() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls width="320" height="240">
-                        <source src="${get_videos_path('miercoles', 'chin_up.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Back', 'chin_up.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Zonas trabajadas:</strong> Cabeza larga y corta del bíceps, braquial</p>
@@ -521,7 +533,7 @@ function cargarContenidoModalRutinaDia3() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls width="320" height="240">
-                        <source src="${get_videos_path('miercoles', 'barbell_rows.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Back', 'barbell_rows.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Músculos trabajados:</strong> Espalda media, dorsales, romboides, trapecios, erectores espinales</p>
@@ -543,7 +555,7 @@ function cargarContenidoModalRutinaDia3() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls width="320" height="240">
-                        <source src="${get_videos_path('miercoles', 'lat_pulldowns.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Back', 'lat_pull_down_wide.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Músculos trabajados:</strong> Dorsales y redondo mayor</p>
@@ -565,7 +577,7 @@ function cargarContenidoModalRutinaDia3() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls width="320" height="240">
-                        <source src="${get_videos_path('miercoles', 'seated_cable_rows.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Back', 'seated_cable_rows_wide.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Músculos trabajados:</strong> Espalda superior y deltoides posteriores</p>
@@ -587,7 +599,7 @@ function cargarContenidoModalRutinaDia3() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls width="320" height="240">
-                        <source src="${get_videos_path('miercoles', 'db_high_pulls.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Back', 'db_high_pulls.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Músculos trabajados:</strong> Trapecios, deltoides posteriores, espalda alta</p>
@@ -609,7 +621,7 @@ function cargarContenidoModalRutinaDia3() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls width="320" height="240">
-                        <source src="${get_videos_path('miercoles', 'jalon_rom.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Back', 'jalon_rom_inverse.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Músculos trabajados:</strong> Dorsales con énfasis en elongación</p>
@@ -631,7 +643,7 @@ function cargarContenidoModalRutinaDia3() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls width="320" height="240">
-                        <source src="${get_videos_path('miercoles', 'inverted_rows.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Back', 'inverted_rows.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Músculos trabajados:</strong> Espalda media, deltoides posteriores, romboides</p>
@@ -669,7 +681,7 @@ function cargarContenidoModalRutinaDia3() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls width="320" height="240">
-                        <source src="${get_videos_path('miercoles', 'dumbbell_curl.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Biceps', 'dumbbell_curl.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Zonas trabajadas:</strong> Cabeza corta (principal), cabeza larga y braquial (secundarios)</p>
@@ -695,7 +707,7 @@ function cargarContenidoModalRutinaDia3() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls width="320" height="240">
-                        <source src="${get_videos_path('miercoles', 'cable_drag_curl.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Biceps', 'cable_stretch_drag_curl.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Zonas trabajadas:</strong> Principalmente cabeza larga del bíceps</p>
@@ -955,7 +967,7 @@ function cargarContenidoModalRutinaDia5() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls>
-                        <source src="${get_videos_path('viernes', 'band_pull_apart.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Chest', 'band_pull_apart.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Parte trabajada:</strong> Espalda media, trapecios inferiores, manguito rotador</p>
@@ -979,7 +991,7 @@ function cargarContenidoModalRutinaDia5() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls>
-                        <source src="${get_videos_path('viernes', 'db_bench_press.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Chest', 'db_bench_press.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Parte trabajada:</strong> Pecho medio (porción esternal del pectoral mayor)</p>
@@ -1000,7 +1012,7 @@ function cargarContenidoModalRutinaDia5() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls>
-                        <source src="${get_videos_path('viernes', 'db_floor_flys.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Chest', 'db_floor_flys.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Parte trabajada:</strong> Pecho medio</p>
@@ -1027,7 +1039,7 @@ function cargarContenidoModalRutinaDia5() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls>
-                        <source src="${get_videos_path('viernes', 'high_to_low_crossovers.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Chest', 'high_to_low_crossovers.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Parte trabajada:</strong> Pecho inferior</p>
@@ -1048,7 +1060,7 @@ function cargarContenidoModalRutinaDia5() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls>
-                        <source src="${get_videos_path('viernes', 'prision_yard_push_up.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Chest', 'prision_yard_push_up.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Parte trabajada:</strong> Pecho completo (énfasis en tensión continua)</p>
@@ -1078,7 +1090,7 @@ function cargarContenidoModalRutinaDia5() {
                         <p><strong>Elevación Lateral con Trampa:</strong></p>
                         <p>Video:</p>
                         <video controls>
-                            <source src="${get_videos_path('viernes', 'lateral_raise_cheat.mp4')}" type="video/mp4" />
+                            <source src="${get_videos_path('Shoulder', 'lateral_raise_cheat.mp4')}" type="video/mp4" />
                             Tu navegador no soporta la reproducción de videos.
                         </video>
                         <p><strong>Zona del Hombro:</strong> Medial</p>
@@ -1092,7 +1104,7 @@ function cargarContenidoModalRutinaDia5() {
                         <p><strong>Elevación Lateral Estricta 1½:</strong></p>
                         <p>Video:</p>
                         <video controls>
-                            <source src="${get_videos_path('viernes', 'lateral_raise_strict.mp4')}" type="video/mp4" />
+                            <source src="${get_videos_path('Shoulder', 'lateral_raise_strict.mp4')}" type="video/mp4" />
                             Tu navegador no soporta la reproducción de videos.
                         </video>
                         <p><strong>Zona del Hombro:</strong> Medial</p>
@@ -1117,8 +1129,8 @@ function cargarContenidoModalRutinaDia5() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls>
-                        <source src="${get_videos_path('viernes', 'rotational_triceps_pushdown_explicacion.mp4')}" type="video/mp4" />
-                        <source src="${get_videos_path('viernes', 'rotational_triceps_pushdown_ejecucion.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Triceps', 'rotational_triceps_pushdown_explicacion.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Triceps', 'rotational_triceps_pushdown_ejecucion.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Zona:</strong> Cabeza larga (principal), también medial y lateral</p>
@@ -1139,7 +1151,7 @@ function cargarContenidoModalRutinaDia5() {
                     <summary>Detalles</summary>
                     <p>Video:</p>
                     <video controls>
-                        <source src="${get_videos_path('viernes', 'cable_overhead_triceps_extension.mp4')}" type="video/mp4" />
+                        <source src="${get_videos_path('Triceps', 'cable_overhead_triceps_extension.mp4')}" type="video/mp4" />
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                     <p><strong>Zona:</strong> Principalmente cabeza larga</p>
